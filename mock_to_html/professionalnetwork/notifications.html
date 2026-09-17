@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Notifications · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+</head><body>
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search..."><div class="hub-search-filter"><span>⚙</span><span>Filters</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">♛</span>Upgrade</button><button class="profile-trigger"><div class="avatar">MT<span class="avatar-online"></span></div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span>Notifications</div>
+  <h1 class="page-title">Notifications</h1>
+  <p class="page-sub">Stay updated on activity across your network, opportunities, and groups.</p>
+</div></div>
+
+<div class="layout-2col">
+  <aside class="sidebar">
+    <div class="card card-accent-top">
+      <div class="card-header"><span class="card-title">Filter</span></div>
+      <nav class="side-nav">
+        <a class="side-nav-item active"><span class="side-nav-icon">📬</span><span>All</span><span class="side-nav-badge">8</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">👥</span><span>Networks</span><span class="side-nav-badge">3</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">🚀</span><span>Opportunities</span><span class="side-nav-badge">2</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">📖</span><span>Learnings</span><span class="side-nav-badge">1</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">👤</span><span>Groups</span><span class="side-nav-badge">2</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">💳</span><span>Billing</span></a>
+      </nav>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="card-title">Settings</span></div>
+      <div class="card-body"><button class="btn btn-outline btn-block btn-sm" onclick="location.href='settings.html'">⚙ Notification Preferences</button></div>
+    </div>
+  </aside>
+
+  <main>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+      <div style="font-size:.85rem;color:var(--ink2)">Showing <strong style="color:var(--ink)">8</strong> unread notifications</div>
+      <button class="btn btn-ghost btn-sm">Mark All as Read</button>
+    </div>
+
+    <div class="card" style="margin-bottom:10px;border-left:3px solid var(--gold)"><div class="card-body" style="padding:14px 16px">
+      <div style="display:flex;gap:12px"><div class="avatar" style="width:38px;height:38px;flex-shrink:0">SA</div><div style="flex:1"><div style="font-size:.85rem"><strong>Sasol Recruiter</strong> sent you a message about <strong>Senior Labor Relations Manager</strong></div><div style="font-size:.72rem;color:var(--muted);margin-top:4px">3 hours ago · <span class="tag tag-gold">Opportunity</span></div></div><div class="status-dot" style="background:var(--gold);align-self:center"></div></div>
+    </div></div>
+
+    <div class="card" style="margin-bottom:10px;border-left:3px solid var(--gold)"><div class="card-body" style="padding:14px 16px">
+      <div style="display:flex;gap:12px"><div class="avatar" style="width:38px;height:38px;flex-shrink:0">NK</div><div style="flex:1"><div style="font-size:.85rem"><strong>Naledi Khumalo</strong> accepted your connection request</div><div style="font-size:.72rem;color:var(--muted);margin-top:4px">5 hours ago · <span class="tag">Network</span></div></div><div class="status-dot" style="background:var(--gold);align-self:center"></div></div>
+    </div></div>
+
+    <div class="card" style="margin-bottom:10px;border-left:3px solid var(--gold)"><div class="card-body" style="padding:14px 16px">
+      <div style="display:flex;gap:12px"><div class="avatar" style="width:38px;height:38px;flex-shrink:0">JM</div><div style="flex:1"><div style="font-size:.85rem"><strong>James Mwangi</strong> mentioned you in <strong>Labor Law Practitioners</strong></div><div style="font-size:.72rem;color:var(--muted);margin-top:4px">8 hours ago · <span class="tag">Group</span></div></div><div class="status-dot" style="background:var(--gold);align-self:center"></div></div>
+    </div></div>
+
+    <div class="card" style="margin-bottom:10px"><div class="card-body" style="padding:14px 16px">
+      <div style="display:flex;gap:12px"><div class="avatar" style="width:38px;height:38px;flex-shrink:0;background:var(--gold);color:var(--ink)">🏆</div><div style="flex:1"><div style="font-size:.85rem">You earned a <strong>Certificate of Completion</strong> in <strong>Employment Law Foundations</strong></div><div style="font-size:.72rem;color:var(--muted);margin-top:4px">1 day ago · <span class="tag">Learning</span></div></div></div>
+    </div></div>
+
+    <div class="card" style="margin-bottom:10px"><div class="card-body" style="padding:14px 16px">
+      <div style="display:flex;gap:12px"><div class="avatar" style="width:38px;height:38px;flex-shrink:0">RS</div><div style="flex:1"><div style="font-size:.85rem"><strong>Rachel Sithole</strong> endorsed you for <strong>Mediation</strong></div><div style="font-size:.72rem;color:var(--muted);margin-top:4px">1 day ago · <span class="tag">Skill</span></div></div></div>
+    </div></div>
+
+    <div class="card" style="margin-bottom:10px"><div class="card-body" style="padding:14px 16px">
+      <div style="display:flex;gap:12px"><div class="avatar" style="width:38px;height:38px;flex-shrink:0;background:var(--ink);color:var(--gold)">✦</div><div style="flex:1"><div style="font-size:.85rem"><strong>AI Career Coach:</strong> 3 new roles match your profile — check your recommendations</div><div style="font-size:.72rem;color:var(--muted);margin-top:4px">2 days ago · <span class="tag tag-gold">AI Insight</span></div></div></div>
+    </div></div>
+
+    <div class="card" style="margin-bottom:10px"><div class="card-body" style="padding:14px 16px">
+      <div style="display:flex;gap:12px"><div class="avatar" style="width:38px;height:38px;flex-shrink:0">AB</div><div style="flex:1"><div style="font-size:.85rem"><strong>Amara Bekele</strong> invited you to <strong>Pan-African HR Network</strong></div><div style="font-size:.72rem;color:var(--muted);margin-top:4px">2 days ago · <span class="tag">Group</span></div></div><button class="btn btn-gold btn-sm">Accept</button></div>
+    </div></div>
+
+    <div class="card"><div class="card-body" style="padding:14px 16px">
+      <div style="display:flex;gap:12px"><div class="avatar" style="width:38px;height:38px;flex-shrink:0;background:var(--ink);color:var(--gold)">📅</div><div style="flex:1"><div style="font-size:.85rem">Reminder: <strong>SADC Labor Law Summit</strong> begins in 3 days</div><div style="font-size:.72rem;color:var(--muted);margin-top:4px">3 days ago · <span class="tag">Event</span></div></div></div>
+    </div></div>
+  </main>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Labor Relations & Employment Strategy.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Platform</h4><ul><li>Directory</li><li>Networks</li><li>Opportunities</li></ul></div>
+  <div class="footer-col"><h4>Legal</h4><ul><li>Privacy</li><li>Terms</li><li>GDPR</li></ul></div>
+  <div class="footer-col"><h4>Support</h4><ul><li>Help</li><li>Tickets</li><li>Status</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA</span><span>v3.2.1</span></div></footer>
+</body></html>

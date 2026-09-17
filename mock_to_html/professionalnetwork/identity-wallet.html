@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Digital Identity Wallet · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search credentials..."><div class="hub-search-filter"><span>⚙</span><span>Wallet</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Pro</button><button class="profile-trigger"><div class="avatar">MT<span class="avatar-online"></span></div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span>Digital Identity Wallet</div>
+  <h1 class="page-title">Digital Identity Wallet</h1>
+  <p class="page-sub">All your verified credentials, IDs, and licenses in one cryptographic wallet. Share what you choose, with whom you choose — nothing more.</p>
+</div></div>
+
+<div class="layout-full">
+
+  <div class="wallet-hero">
+    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;position:relative">
+      <div style="flex:1;min-width:280px">
+        <span class="tag tag-gold" style="margin-bottom:12px;display:inline-block">◆ SELF-SOVEREIGN IDENTITY</span>
+        <h2 style="font-family:var(--serif);font-size:1.5rem;margin-bottom:8px">Your identity, cryptographically yours</h2>
+        <p style="opacity:.88;font-size:.88rem">7 credentials in your wallet. All verified on-chain. Share selectively with QR codes, links, or in-app. Never expose more than necessary.</p>
+      </div>
+      <button class="btn btn-gold">+ Add New Credential</button>
+    </div>
+  </div>
+
+  <div class="grid-4" style="margin-bottom:24px">
+    <div class="stat-card"><div class="label">Credentials</div><div class="value">7</div><div class="delta">All verified</div></div>
+    <div class="stat-card"><div class="label">Trust Score</div><div class="value">94</div><div class="delta">Top 5%</div></div>
+    <div class="stat-card"><div class="label">Shares This Month</div><div class="value">18</div><div class="delta">All audited</div></div>
+    <div class="stat-card"><div class="label">Expiring Soon</div><div class="value" style="color:var(--warn)">1</div><div class="delta down">SABPP in 45 days</div></div>
+  </div>
+
+  <div class="grid-2" style="align-items:start;margin-bottom:24px">
+    <div class="id-card">
+      <span class="verified">◆ Verified</span>
+      <div class="flag">🇿🇦</div>
+      <div class="country">Republic of South Africa</div>
+      <div class="name">Mokoena Thabo</div>
+      <div class="role">Labor Relations Strategist · DOB 1985-03-15</div>
+      <div class="data">
+        <div><div class="field">ID Number</div><div class="value">8503155***08</div></div>
+        <div><div class="field">DID</div><div class="value">did:yuba:0x4a7b...9c12</div></div>
+        <div><div class="field">Issued</div><div class="value">2019-06-12</div></div>
+        <div><div class="field">Anchored</div><div class="value">Block #18.4M</div></div>
+      </div>
+    </div>
+
+    <div class="card card-accent-gold">
+      <div class="card-header"><span class="card-title">◆ Selective Disclosure</span></div>
+      <div class="card-body">
+        <p style="font-size:.82rem;color:var(--ink2);line-height:1.6;margin-bottom:14px">Generate a link or QR code that reveals only what's needed. Zero-knowledge proofs mean verifiers confirm claims without seeing your data.</p>
+        <div style="background:var(--bg);border-radius:2px;padding:16px;text-align:center;margin-bottom:14px">
+          <svg class="qr-mock" viewBox="0 0 100 100"><rect width="100" height="100" fill="#fff"/><g fill="#122A4D"><rect x="10" y="10" width="20" height="20"/><rect x="70" y="10" width="20" height="20"/><rect x="10" y="70" width="20" height="20"/><rect x="15" y="15" width="10" height="10" fill="#fff"/><rect x="75" y="15" width="10" height="10" fill="#fff"/><rect x="15" y="75" width="10" height="10" fill="#fff"/><rect x="40" y="15" width="5" height="5"/><rect x="50" y="15" width="5" height="5"/><rect x="40" y="30" width="5" height="5"/><rect x="50" y="30" width="5" height="5"/><rect x="40" y="45" width="5" height="5"/><rect x="55" y="45" width="5" height="5"/><rect x="45" y="55" width="5" height="5"/><rect x="60" y="55" width="5" height="5"/><rect x="40" y="65" width="5" height="5"/><rect x="50" y="65" width="5" height="5"/><rect x="40" y="80" width="5" height="5"/><rect x="50" y="80" width="5" height="5"/><rect x="65" y="40" width="5" height="5"/><rect x="70" y="50" width="5" height="5"/><rect x="80" y="50" width="5" height="5"/><rect x="85" y="60" width="5" height="5"/><rect x="65" y="70" width="5" height="5"/><rect x="80" y="80" width="5" height="5"/></g></svg>
+          <div style="font-size:.72rem;color:var(--muted);margin-top:10px">Scan to verify credentials</div>
+        </div>
+        <div style="font-size:.78rem;color:var(--ink2);line-height:1.8">
+          <label style="display:flex;align-items:center;gap:8px;padding:6px 0"><input type="checkbox" checked> Identity (name, DOB)</label>
+          <label style="display:flex;align-items:center;gap:8px;padding:6px 0"><input type="checkbox" checked> LLM Credential</label>
+          <label style="display:flex;align-items:center;gap:8px;padding:6px 0"><input type="checkbox"> CIArb Fellowship (in progress)</label>
+          <label style="display:flex;align-items:center;gap:8px;padding:6px 0"><input type="checkbox"> Employment History</label>
+          <label style="display:flex;align-items:center;gap:8px;padding:6px 0"><input type="checkbox"> Contact Info</label>
+        </div>
+        <button class="btn btn-gold btn-block btn-sm" style="margin-top:14px">Generate Share Link</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-accent-gold">
+    <div class="card-header"><span class="card-title">◆ Your Credential Wallet (7)</span><span style="font-size:.68rem;color:var(--gold);cursor:pointer">+ Add</span></div>
+    <div class="card-body" style="padding:14px">
+
+      <div class="cred-tile">
+        <div class="icon">🎓</div>
+        <div class="info">
+          <div class="name">LLM in Labor Law</div>
+          <div class="issuer">University of Pretoria · Issued 2012-11-15</div>
+          <div class="chain">0x4a7b...9c12 · Block #18,442,109</div>
+        </div>
+        <span class="tag tag-ok">On-chain</span>
+      </div>
+
+      <div class="cred-tile">
+        <div class="icon">📜</div>
+        <div class="info">
+          <div class="name">Certified Mediator (CIArb)</div>
+          <div class="issuer">Chartered Institute of Arbitrators · Issued 2018-04-22</div>
+          <div class="chain">0x2e91...4a77 · Block #18,398,201</div>
+        </div>
+        <span class="tag tag-ok">On-chain</span>
+      </div>
+
+      <div class="cred-tile">
+        <div class="icon">⚖</div>
+        <div class="info">
+          <div class="name">Admitted Attorney of the High Court</div>
+          <div class="issuer">Law Society of South Africa · Issued 2010-09-03</div>
+          <div class="chain">0x8c3f...1b04 · Block #17,201,443</div>
+        </div>
+        <span class="tag tag-ok">On-chain</span>
+      </div>
+
+      <div class="cred-tile">
+        <div class="icon">📖</div>
+        <div class="info">
+          <div class="name">HR Professional (SABPP)</div>
+          <div class="issuer">South African Board for People Practices · Issued 2016-01-20</div>
+          <div class="chain">0x5d1e...7a92 · Block #17,842,116</div>
+        </div>
+        <span class="tag tag-warn">⚠ Expires in 45 days</span>
+      </div>
+
+      <div class="cred-tile">
+        <div class="icon">🌍</div>
+        <div class="info">
+          <div class="name">Advanced Labor Policy Certification</div>
+          <div class="issuer">ILO International Training Centre · Issued 2014-06-12</div>
+          <div class="chain">0x9b8c...3f11 · Block #18,002,984</div>
+        </div>
+        <span class="tag tag-ok">On-chain</span>
+      </div>
+
+      <div class="cred-tile pending">
+        <div class="icon">⏳</div>
+        <div class="info">
+          <div class="name">CIArb Fellowship</div>
+          <div class="issuer">Chartered Institute of Arbitrators · Submitted 2024-08-15</div>
+          <div class="chain">Verification in progress · ETA 2024-12-01</div>
+        </div>
+        <span class="tag tag-warn">Pending</span>
+      </div>
+
+      <div class="cred-tile pending">
+        <div class="icon">🆔</div>
+        <div class="info">
+          <div class="name">National ID (South Africa)</div>
+          <div class="issuer">Department of Home Affairs · Issued 2019-06-12</div>
+          <div class="chain">Anchored as did:yuba:0x4a7b...9c12</div>
+        </div>
+        <span class="tag tag-ok">Verified</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Identity Wallet · Own your credentials.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Wallet</h4><ul><li>Credentials</li><li>Identity</li><li>Shares</li><li>History</li></ul></div>
+  <div class="footer-col"><h4>Privacy</h4><ul><li>Selective Disclosure</li><li>Zero Knowledge</li><li>Revocation</li><li>Audit</li></ul></div>
+  <div class="footer-col"><h4>Support</h4><ul><li>Docs</li><li>DIDs</li><li>Help</li><li>Contact</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Identity Wallet v3.2.1</span><span>7 credentials · All verified</span></div></footer>
+</body></html>

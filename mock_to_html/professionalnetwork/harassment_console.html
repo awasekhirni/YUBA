@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Harassment Investigation Console · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+
+<div style="background:#3A1F1F;color:#F5D7D7;padding:8px 24px;display:flex;align-items:center;gap:16px;font-size:.72rem;flex-wrap:wrap">
+  <span style="font-weight:bold;text-transform:uppercase;letter-spacing:1px;color:#E8A0A0">◆ Investigation Mode</span>
+  <span style="opacity:.8">All actions are logged to audit trail · Confidential</span>
+</div>
+
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search case, user, evidence..."><div class="hub-search-filter"><span>⚙</span><span>Case #847</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#3A1F1F,#A83232)">S3</div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span><a href="trust-safety-dashboard.html">Trust & Safety</a><span class="breadcrumb-sep">/</span>Investigation Console</div>
+  <h1 class="page-title">Harassment Investigation Console</h1>
+  <p class="page-sub">Deep-dive investigation workspace for the safety team. Full evidence, communication patterns, and determination tools.</p>
+</div></div>
+
+<div class="layout-full">
+  <div class="inv-layout">
+    <!-- Left: Case Queue -->
+    <div class="inv-cases">
+      <div style="padding:14px 16px;border-bottom:1px solid var(--line);background:var(--white);position:sticky;top:0;z-index:1">
+        <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700">Assigned to You</div>
+      </div>
+      <div class="case-item active"><div class="id">#847 · Stalking</div><div class="meta">Reported 3d ago · High priority</div></div>
+      <div class="case-item"><div class="id">#851 · Harassment</div><div class="meta">Reported 1d ago · Med priority</div></div>
+      <div class="case-item"><div class="id">#846 · Impersonation</div><div class="meta">Reported 4d ago · High priority</div></div>
+      <div class="case-item"><div class="id">#844 · Spam</div><div class="meta">Reported 5d ago · Low priority</div></div>
+      <div class="case-item"><div class="id">#841 · Credential Fraud</div><div class="meta">Reported 6d ago · Med priority</div></div>
+    </div>
+
+    <!-- Center: Case Detail -->
+    <div class="inv-main">
+      <div style="display:flex;justify-content:space-between;align-items:start;gap:12px;flex-wrap:wrap;margin-bottom:16px">
+        <div>
+          <h2 style="font-family:var(--serif);font-size:1.3rem;margin-bottom:4px">Case #847 · Stalking Report</h2>
+          <div style="font-size:.78rem;color:var(--muted)">Filed by: User #42 (Mokoena Thabo) · Reported: User #28471</div>
+        </div>
+        <span class="tag tag-danger">⚑ High Priority</span>
+      </div>
+
+      <div class="card" style="margin-bottom:16px">
+        <div class="card-header"><span class="card-title">Complainant Summary</span></div>
+        <div class="card-body" style="font-size:.85rem;color:var(--ink2);line-height:1.7">
+          "User has sent 14 messages over 6 days despite no response. Initially professional inquiry, escalated to personal remarks about my schedule and location. Also viewed my profile 14 times in 30 days with declined purpose."
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:16px">
+        <div class="card-header"><span class="card-title">Evidence Vault</span><span style="font-size:.68rem;color:var(--gold);cursor:pointer">+ Add Evidence</span></div>
+        <div class="card-body">
+          <div class="evidence-grid">
+            <div class="evidence-item"><span class="ic">💬</span>14 Message Screenshots<br><span style="color:var(--muted)">PDF · 2.4 MB</span></div>
+            <div class="evidence-item"><span class="ic">👁</span>Profile View Log<br><span style="color:var(--muted)">CSV · 12 KB</span></div>
+            <div class="evidence-item"><span class="ic">📍</span>Location Mentions<br><span style="color:var(--muted)">3 redacted</span></div>
+            <div class="evidence-item"><span class="ic">⏱</span>Message Frequency<br><span style="color:var(--muted)">Chart · 84 KB</span></div>
+            <div class="evidence-item"><span class="ic">🔍</span>Reported User History<br><span style="color:var(--muted)">2 prior reports</span></div>
+            <div class="evidence-item"><span class="ic">📊</span>Behavior Analysis<br><span style="color:var(--muted)">AI-generated</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:16px">
+        <div class="card-header"><span class="card-title">Behavior Analysis</span><span class="tag tag-warn">AI-Generated</span></div>
+        <div class="card-body">
+          <div class="grid-3" style="gap:16px">
+            <div><div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:4px">Message Frequency</div><div style="font-family:var(--serif);font-weight:bold;font-size:1.1rem;color:var(--danger)">High</div><div style="font-size:.7rem;color:var(--ink2)">14 msgs / 6 days</div></div>
+            <div><div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:4px">Profile View Pattern</div><div style="font-family:var(--serif);font-weight:bold;font-size:1.1rem;color:var(--danger)">Anomalous</div><div style="font-size:.7rem;color:var(--ink2)">Daily, consistent times</div></div>
+            <div><div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:4px">Escalation Risk</div><div style="font-family:var(--serif);font-weight:bold;font-size:1.1rem;color:var(--danger)">Elevated</div><div style="font-size:.7rem;color:var(--ink2)">Pattern suggests persistence</div></div>
+          </div>
+          <div class="divider"></div>
+          <div style="font-size:.82rem;color:var(--ink2);line-height:1.7">
+            <strong style="color:var(--ink)">Recommendation:</strong> Evidence supports a pattern of unwanted persistent contact and monitoring behavior. Recommended action: <strong>immediate messaging suspension</strong> and <strong>profile access restriction</strong> for reported user, with 30-day observation period.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><span class="card-title">Full Case Timeline</span></div>
+        <div class="card-body">
+          <div class="timeline-strip">
+            <div class="tl-item"><div class="tl-time">3d ago · 14:22</div><div class="tl-text">Report submitted by User #42</div></div>
+            <div class="tl-item"><div class="tl-time">3d ago · 14:25</div><div class="tl-text">Case assigned to @safety-team-03 (you)</div></div>
+            <div class="tl-item"><div class="tl-time">2d ago · 09:14</div><div class="tl-text">Evidence reviewed — pattern analysis confirmed</div></div>
+            <div class="tl-item"><div class="tl-time">1d ago · 16:40</div><div class="tl-text">Interim action: Messaging privileges suspended for reported user</div></div>
+            <div class="tl-item"><div class="tl-time" style="color:var(--gold)">Pending</div><div class="tl-text" style="color:var(--gold)">Final determination · Awaiting your decision</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Actions -->
+    <div class="inv-actions">
+      <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:12px">Investigator Actions</div>
+
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px">
+        <button class="btn btn-gold btn-block btn-sm">◆ Confirm & Take Action</button>
+        <button class="btn btn-outline btn-block btn-sm">Request More Evidence</button>
+        <button class="btn btn-outline btn-block btn-sm">Schedule Interview</button>
+        <button class="btn btn-outline btn-block btn-sm">Refer to Legal</button>
+        <button class="btn btn-ghost btn-block btn-sm" style="color:var(--danger)">Dismiss Report</button>
+      </div>
+
+      <div class="divider"></div>
+
+      <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:12px">Action Toolkit</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px">
+        <label style="display:flex;align-items:center;gap:8px;font-size:.8rem"><input type="checkbox"> Restrict messaging</label>
+        <label style="display:flex;align-items:center;gap:8px;font-size:.8rem"><input type="checkbox"> Restrict profile access</label>
+        <label style="display:flex;align-items:center;gap:8px;font-size:.8rem"><input type="checkbox"> Restrict search visibility</label>
+        <label style="display:flex;align-items:center;gap:8px;font-size:.8rem"><input type="checkbox"> Issue formal warning</label>
+        <label style="display:flex;align-items:center;gap:8px;font-size:.8rem"><input type="checkbox" checked> 30-day observation period</label>
+        <label style="display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--danger)"><input type="checkbox"> Suspend account</label>
+        <label style="display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--danger)"><input type="checkbox"> Permanent ban</label>
+      </div>
+
+      <div class="divider"></div>
+
+      <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:12px">Notes (visible to team)</div>
+      <textarea style="width:100%;min-height:100px;padding:10px;border:1px solid var(--line-strong);border-radius:2px;font-family:var(--sans);font-size:.78rem;outline:none;resize:vertical" placeholder="Add investigation notes..."></textarea>
+
+      <button class="btn btn-primary btn-block btn-sm" style="margin-top:10px">💾 Save Notes</button>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Investigation Console · Confidential · Audited.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Case</h4><ul><li>Evidence</li><li>Timeline</li><li>Actions</li><li>Notes</li></ul></div>
+  <div class="footer-col"><h4>Tools</h4><ul><li>Behavior Analysis</li><li>Pattern Detection</li><li>User History</li><li>Legal Referral</li></ul></div>
+  <div class="footer-col"><h4>Support</h4><ul><li>Team Chat</li><li>Escalation</li><li>Training</li><li>Playbook</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Investigation Console v3.2.1</span><span>Case #847 · You are @safety-team-03</span></div></footer>
+</body></html>

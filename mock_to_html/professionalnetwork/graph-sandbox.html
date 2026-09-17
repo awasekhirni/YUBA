@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Graph Algorithm Sandbox · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search algorithms, queries..."><div class="hub-search-filter"><span>⚙</span><span>Cypher</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Pro Dev</button><button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#0E1E35,#C5A059);color:#fff">DV</div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span><a href="dev-console.html">Dev Console</a><span class="breadcrumb-sep">/</span>Graph Algorithm Sandbox</div>
+  <h1 class="page-title">Graph Algorithm Sandbox</h1>
+  <p class="page-sub">Run PageRank, community detection, centrality, and custom Cypher queries on the live network graph. Explore influence, clusters, and hidden bridges.</p>
+</div></div>
+
+<div class="layout-full">
+  <div class="graph-layout">
+
+    <div class="algo-palette">
+      <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin-bottom:10px">Centrality</div>
+      <div class="algo-card active"><div class="name">PageRank</div><div class="desc">Global influence ranking</div></div>
+      <div class="algo-card"><div class="name">Betweenness</div><div class="desc">Bridge detection</div></div>
+      <div class="algo-card"><div class="name">Closeness</div><div class="desc">Shortest-path proximity</div></div>
+      <div class="algo-card"><div class="name">Eigenvector</div><div class="desc">Connected to influencers</div></div>
+      <div class="algo-card"><div class="name">Degree Centrality</div><div class="desc">Direct connection count</div></div>
+
+      <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin:18px 0 10px">Community Detection</div>
+      <div class="algo-card"><div class="name">Louvain</div><div class="desc">Optimal modularity clusters</div></div>
+      <div class="algo-card"><div class="name">Label Propagation</div><div class="desc">Fast community labels</div></div>
+      <div class="algo-card"><div class="name">Weakly Connected</div><div class="desc">Component isolation</div></div>
+
+      <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin:18px 0 10px">Structural</div>
+      <div class="algo-card"><div class="name">Triangle Counting</div><div class="desc">Cluster tightness</div></div>
+      <div class="algo-card"><div class="name">Jaccard Similarity</div><div class="desc">Node similarity pairs</div></div>
+      <div class="algo-card"><div class="name">Shortest Path</div><div class="desc">Degree of separation</div></div>
+
+      <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin:18px 0 10px">Advanced</div>
+      <div class="algo-card"><div class="name">Node2Vec Embedding</div><div class="desc">Vectorize network structure</div></div>
+      <div class="algo-card"><div class="name">GraphSAGE</div><div class="desc">Neural graph learning</div></div>
+      <div class="algo-card"><div class="name">Influence Max</div><div class="desc">Optimal seed selection</div></div>
+    </div>
+
+    <div class="graph-canvas">
+      <svg class="graph-svg" viewBox="0 0 800 660" preserveAspectRatio="xMidYMid meet">
+        <g stroke="#C5A059" stroke-opacity="0.3" stroke-width="1.2" fill="none">
+          <line x1="400" y1="330" x2="230" y2="200"/>
+          <line x1="400" y1="330" x2="580" y2="200"/>
+          <line x1="400" y1="330" x2="230" y2="460"/>
+          <line x1="400" y1="330" x2="580" y2="460"/>
+          <line x1="230" y1="200" x2="120" y2="120"/>
+          <line x1="230" y1="200" x2="160" y2="280"/>
+          <line x1="230" y1="200" x2="380" y2="120"/>
+          <line x1="580" y1="200" x2="700" y2="120"/>
+          <line x1="580" y1="200" x2="640" y2="300"/>
+          <line x1="580" y1="200" x2="470" y2="110"/>
+          <line x1="230" y1="460" x2="120" y2="540"/>
+          <line x1="230" y1="460" x2="160" y2="420"/>
+          <line x1="580" y1="460" x2="700" y2="540"/>
+          <line x1="580" y1="460" x2="640" y2="420"/>
+          <line x1="400" y1="330" x2="400" y2="150"/>
+          <line x1="400" y1="330" x2="400" y2="510"/>
+          <line x1="120" y1="120" x2="60" y2="60"/>
+          <line x1="700" y1="120" x2="760" y2="60"/>
+        </g>
+        <!-- Primary hub -->
+        <circle cx="400" cy="330" r="46" fill="#C5A059" stroke="#F8F7F2" stroke-width="3"/>
+        <text x="400" y="326" text-anchor="middle" fill="#122A4D" font-family="Georgia" font-weight="bold" font-size="13">YOU</text>
+        <text x="400" y="342" text-anchor="middle" fill="#122A4D" font-family="Georgia" font-size="9">PR: 0.94</text>
+        <!-- Tier 1 -->
+        <circle cx="230" cy="200" r="34" fill="#122A4D" stroke="#C5A059" stroke-width="2"/>
+        <text x="230" y="200" text-anchor="middle" fill="#C5A059" font-family="Georgia" font-weight="bold" font-size="11">NK</text>
+        <text x="230" y="214" text-anchor="middle" fill="#7FD4A8" font-family="Courier" font-size="8">0.88</text>
+        <circle cx="580" cy="200" r="34" fill="#122A4D" stroke="#C5A059" stroke-width="2"/>
+        <text x="580" y="200" text-anchor="middle" fill="#C5A059" font-family="Georgia" font-weight="bold" font-size="11">KA</text>
+        <text x="580" y="214" text-anchor="middle" fill="#7FD4A8" font-family="Courier" font-size="8">0.82</text>
+        <circle cx="230" cy="460" r="34" fill="#122A4D" stroke="#C5A059" stroke-width="2"/>
+        <text x="230" y="460" text-anchor="middle" fill="#C5A059" font-family="Georgia" font-weight="bold" font-size="11">JM</text>
+        <text x="230" y="474" text-anchor="middle" fill="#7FD4A8" font-family="Courier" font-size="8">0.76</text>
+        <circle cx="580" cy="460" r="34" fill="#122A4D" stroke="#C5A059" stroke-width="2"/>
+        <text x="580" y="460" text-anchor="middle" fill="#C5A059" font-family="Georgia" font-weight="bold" font-size="11">RS</text>
+        <text x="580" y="474" text-anchor="middle" fill="#7FD4A8" font-family="Courier" font-size="8">0.71</text>
+        <!-- Tier 2 -->
+        <circle cx="120" cy="120" r="22" fill="#244368" stroke="#C5A059" stroke-width="1.5"/>
+        <text x="120" y="124" text-anchor="middle" fill="#C8D4E2" font-size="10">AB</text>
+        <circle cx="160" cy="280" r="22" fill="#244368" stroke="#C5A059" stroke-width="1.5"/>
+        <text x="160" y="284" text-anchor="middle" fill="#C8D4E2" font-size="10">LM</text>
+        <circle cx="380" cy="120" r="22" fill="#244368" stroke="#C5A059" stroke-width="1.5"/>
+        <text x="380" y="124" text-anchor="middle" fill="#C8D4E2" font-size="10">PO</text>
+        <circle cx="700" cy="120" r="22" fill="#244368" stroke="#C5A059" stroke-width="1.5"/>
+        <text x="700" y="124" text-anchor="middle" fill="#C8D4E2" font-size="10">FN</text>
+        <circle cx="640" cy="300" r="22" fill="#244368" stroke="#C5A059" stroke-width="1.5"/>
+        <text x="640" y="304" text-anchor="middle" fill="#C8D4E2" font-size="10">DO</text>
+        <circle cx="470" cy="110" r="22" fill="#244368" stroke="#C5A059" stroke-width="1.5"/>
+        <text x="470" y="114" text-anchor="middle" fill="#C8D4E2" font-size="10">SJ</text>
+        <circle cx="120" cy="540" r="22" fill="#244368" stroke="#C5A059" stroke-width="1.5"/>
+        <text x="120" y="544" text-anchor="middle" fill="#C8D4E2" font-size="10">TC</text>
+        <circle cx="160" cy="420" r="22" fill="#244368" stroke="#C5A059" stroke-width="1.5"/>
+        <text x="160" y="424" text-anchor="middle" fill="#C8D4E2" font-size="10">WG</text>
+        <circle cx="700" cy="540" r="22" fill="#244368" stroke="#C5A059" stroke-width="1.5"/>
+        <text x="700" y="544" text-anchor="middle" fill="#C8D4E2" font-size="10">MH</text>
+        <circle cx="640" cy="420" r="22" fill="#244368" stroke="#C5A059" stroke-width="1.5"/>
+        <text x="640" y="424" text-anchor="middle" fill="#C8D4E2" font-size="10">AI</text>
+        <circle cx="400" cy="150" r="26" fill="#C5A059" stroke="#F8F7F2" stroke-width="2"/>
+        <text x="400" y="154" text-anchor="middle" fill="#122A4D" font-weight="bold" font-size="10">GRP</text>
+        <circle cx="400" cy="510" r="26" fill="#C5A059" stroke="#F8F7F2" stroke-width="2"/>
+        <text x="400" y="514" text-anchor="middle" fill="#122A4D" font-weight="bold" font-size="10">CO</text>
+        <circle cx="60" cy="60" r="16" fill="#3A1F1F" stroke="#A83232" stroke-width="1.5"/>
+        <text x="60" y="64" text-anchor="middle" fill="#E8A0A0" font-size="8">X1</text>
+        <circle cx="760" cy="60" r="16" fill="#3A1F1F" stroke="#A83232" stroke-width="1.5"/>
+        <text x="760" y="64" text-anchor="middle" fill="#E8A0A0" font-size="8">X2</text>
+      </svg>
+
+      <div class="legend-overlay">
+        <div class="t">◆ PageRank Active</div>
+        <div class="item"><span class="dot" style="background:#C5A059"></span>High influence</div>
+        <div class="item"><span class="dot" style="background:#122A4D;border:1px solid #C5A059"></span>Tier 1 network</div>
+        <div class="item"><span class="dot" style="background:#244368"></span>Tier 2 network</div>
+        <div class="item"><span class="dot" style="background:#3A1F1F;border:1px solid #A83232"></span>Anomaly nodes</div>
+        <div style="margin-top:10px;font-size:.68rem;color:#8A96A3;font-family:'Courier New',monospace">Nodes: 14 · Edges: 18<br>Iterations: 32 · Converged</div>
+      </div>
+    </div>
+
+    <div class="algo-results">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+        <div style="font-family:var(--serif);font-weight:bold;font-size:.9rem">Top Influencers · PageRank</div>
+        <span class="tag tag-ok">● Ran in 142ms</span>
+      </div>
+
+      <div class="result-row"><span class="rank">1</span><span class="name">YOU</span><span class="score">0.94</span></div>
+      <div class="result-row"><span class="rank">2</span><span class="name">Naledi Khumalo</span><span class="score">0.88</span></div>
+      <div class="result-row"><span class="rank">3</span><span class="name">Kwame Asante</span><span class="score">0.82</span></div>
+      <div class="result-row"><span class="rank">4</span><span class="name">James Mwangi</span><span class="score">0.76</span></div>
+      <div class="result-row"><span class="rank">5</span><span class="name">Rachel Sithole</span><span class="score">0.71</span></div>
+      <div class="result-row"><span class="rank">6</span><span class="name">Amara Bekele</span><span class="score">0.68</span></div>
+      <div class="result-row"><span class="rank">7</span><span class="name">Peter Okafor</span><span class="score">0.62</span></div>
+      <div class="result-row"><span class="rank">8</span><span class="name">Fatima Ndlovu</span><span class="score">0.58</span></div>
+
+      <div class="divider" style="margin:16px 0"></div>
+
+      <div style="font-family:var(--serif);font-weight:bold;font-size:.9rem;margin-bottom:10px">◆ Community Detection</div>
+      <div style="font-size:.78rem;color:var(--ink2);line-height:1.9">
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span>Community 1 (Legal)</span><strong>6 members</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span>Community 2 (HR Analytics)</span><strong>4 members</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span>Community 3 (Mediation)</span><strong>3 members</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span>Modularity Score</span><strong style="color:var(--ok)">0.68 (strong)</strong></div>
+      </div>
+
+      <div class="divider" style="margin:16px 0"></div>
+
+      <div style="font-family:var(--serif);font-weight:bold;font-size:.9rem;margin-bottom:10px">◆ Bridge Nodes</div>
+      <div style="font-size:.78rem;color:var(--ink2);line-height:1.9">
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span>YOU</span><strong style="color:var(--ok)">3 bridges</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span>Naledi K.</span><strong>2 bridges</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span>Kwame A.</span><strong>2 bridges</strong></div>
+      </div>
+
+      <div class="divider" style="margin:16px 0"></div>
+
+      <div style="font-family:var(--serif);font-weight:bold;font-size:.9rem;margin-bottom:10px">◆ Anomaly Nodes Detected</div>
+      <div style="padding:10px;background:rgba(168,50,50,.05);border-left:3px solid var(--danger);border-radius:2px;font-size:.75rem;color:var(--ink2);line-height:1.6">
+        <strong style="color:var(--danger)">⚠ X1, X2</strong> — low PageRank but high connect frequency. Pattern indicates possible sock-puppet behavior. Flagged for review.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="card card-accent-gold" style="margin-top:20px">
+    <div class="card-header"><span class="card-title">Custom Cypher Query Editor</span><span style="font-size:.68rem;color:var(--gold);cursor:pointer">▶ Run · ⌘↵</span></div>
+    <div class="card-body" style="padding:0">
+      <div class="cypher-editor" style="border-radius:0 0 2px 2px">
+        <span class="c">// Find users with strongest mutual connections to you</span><br>
+        <span class="k">MATCH</span> (me:User {id: <span class="s">42</span>})-[c1:CONNECTED]-(peer:User)-[c2:CONNECTED]-(me)<br>
+        <span class="k">WHERE</span> peer.trust_score >= <span class="s">85</span><br>
+        <span class="k">RETURN</span> peer.name,<br>
+        &nbsp;&nbsp;count(c1) + count(c2) <span class="k">AS</span> mutual_strength,<br>
+        &nbsp;&nbsp;peer.industry, peer.location<br>
+        <span class="k">ORDER BY</span> mutual_strength <span class="k">DESC</span><br>
+        <span class="k">LIMIT</span> <span class="s">25</span>;<br><br>
+        <span class="c">// Executed in 84ms · 24 rows returned · Index: idx_user_connections</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Graph Sandbox · Network algorithms at your fingertips.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Algorithms</h4><ul><li>Centrality</li><li>Communities</li><li>Structural</li><li>Advanced</li></ul></div>
+  <div class="footer-col"><h4>Analysis</h4><ul><li>Influencers</li><li>Bridges</li><li>Anomalies</li><li>Paths</li></ul></div>
+  <div class="footer-col"><h4>Support</h4><ul><li>Cypher Docs</li><li>Templates</li><li>Help</li><li>Contact</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Graph Sandbox v3.2.1</span><span>PageRank · 142ms</span></div></footer>
+</body></html>

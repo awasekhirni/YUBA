@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tenant Management · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+</head><body>
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search tenants..."><div class="hub-search-filter"><span>⚙</span><span>Platform</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#3A1F1F,#A83232)">AD</div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span>Tenant Management</div>
+  <h1 class="page-title">Multi-Tenant Management</h1>
+  <p class="page-sub">Configure tenants, isolated data boundaries, branding, feature access, and billing. Everything multi-tenant in one console.</p>
+</div></div>
+
+<div class="layout-2col">
+  <aside class="sidebar">
+    <div class="card card-accent-top">
+      <nav class="side-nav">
+        <a class="side-nav-item active"><span class="side-nav-icon">◆</span><span>All Tenants</span><span class="side-nav-badge">24</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">🏢</span><span>Enterprise</span><span class="side-nav-badge">8</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">⭐</span><span>Pro</span><span class="side-nav-badge">12</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">⚪</span><span>Free</span><span class="side-nav-badge">4</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">🎨</span><span>Branding</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">🔑</span><span>SSO Config</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">📊</span><span>Usage</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">🚩</span><span>Feature Access</span></a>
+      </nav>
+    </div>
+  </aside>
+
+  <main>
+    <div class="grid-4" style="margin-bottom:24px">
+      <div class="stat-card"><div class="label">Total Tenants</div><div class="value">24</div><div class="delta">+3 this quarter</div></div>
+      <div class="stat-card"><div class="label">Enterprise MRR</div><div class="value">$42k</div><div class="delta">+8%</div></div>
+      <div class="stat-card"><div class="label">Active Users</div><div class="value">8.2k</div><div class="delta">Across all tenants</div></div>
+      <div class="stat-card"><div class="label">Isolated DBs</div><div class="value">8</div><div class="delta">Enterprise only</div></div>
+    </div>
+
+    <div class="card" style="margin-bottom:20px">
+      <div class="card-header"><span class="card-title">Tenants</span><span style="font-size:.7rem;color:var(--gold);cursor:pointer">+ New Tenant</span></div>
+      <div class="card-body" style="padding:0">
+        <table class="table">
+          <thead><tr><th>Tenant</th><th>Tier</th><th>Users</th><th>Isolation</th><th>Branding</th><th>SSO</th><th>MRR</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Sasol Ltd</strong><br><span style="font-size:.7rem;color:var(--muted)">sasol.yuba.io</span></td><td><span class="tag tag-gold">Enterprise</span></td><td>2,412</td><td><span class="tag tag-ok">Isolated DB</span></td><td>Custom</td><td><span class="tag tag-ok">SAML</span></td><td>$8,400</td></tr>
+            <tr><td><strong>MTN Group</strong><br><span style="font-size:.7rem;color:var(--muted)">mtn.yuba.io</span></td><td><span class="tag tag-gold">Enterprise</span></td><td>1,847</td><td><span class="tag tag-ok">Isolated DB</span></td><td>Custom</td><td><span class="tag tag-ok">OIDC</span></td><td>$6,200</td></tr>
+            <tr><td><strong>Deloitte Africa</strong><br><span style="font-size:.7rem;color:var(--muted)">deloitte.yuba.io</span></td><td><span class="tag tag-gold">Enterprise</span></td><td>3,120</td><td><span class="tag tag-ok">Isolated DB</span></td><td>Custom</td><td><span class="tag tag-ok">SAML</span></td><td>$11,200</td></tr>
+            <tr><td><strong>Standard Bank</strong><br><span style="font-size:.7rem;color:var(--muted)">stdbank.yuba.io</span></td><td><span class="tag tag-gold">Enterprise</span></td><td>4,203</td><td><span class="tag tag-ok">Isolated DB</span></td><td>Custom</td><td><span class="tag tag-ok">SAML</span></td><td>$14,800</td></tr>
+            <tr><td><strong>Flutterwave</strong></td><td><span class="tag tag-gold">Pro</span></td><td>342</td><td><span class="tag">Shared</span></td><td>Custom</td><td>—</td><td>$1,200</td></tr>
+            <tr><td><strong>Andela</strong></td><td><span class="tag tag-gold">Pro</span></td><td>218</td><td><span class="tag">Shared</span></td><td>Custom</td><td>—</td><td>$890</td></tr>
+            <tr><td><strong>Twiga Foods</strong></td><td><span class="tag">Free</span></td><td>47</td><td><span class="tag">Shared</span></td><td>—</td><td>—</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="grid-2" style="align-items:start">
+      <div class="card card-accent-gold">
+        <div class="card-header"><span class="card-title">Selected Tenant · Sasol Ltd</span></div>
+        <div class="card-body">
+          <div class="form-row"><div class="form-group"><label>Tenant Name</label><input value="Sasol Ltd"></div><div class="form-group"><label>Subdomain</label><input value="sasol"></div></div>
+          <div class="form-row"><div class="form-group"><label>Admin Contact</label><input value="admin@sasol.com"></div><div class="form-group"><label>Tier</label><select><option>Enterprise</option><option>Pro</option><option>Free</option></select></div></div>
+          <div class="form-row"><div class="form-group"><label>Data Isolation</label><select><option>Isolated DB</option><option>Schema Isolation</option><option>Row-level (RLS)</option></select></div><div class="form-group"><label>Region</label><select><option>Africa (Johannesburg)</option><option>Europe (Frankfurt)</option><option>US (Virginia)</option></select></div></div>
+          <div style="display:flex;gap:10px;justify-content:flex-end"><button class="btn btn-ghost">Cancel</button><button class="btn btn-primary">Save</button></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><span class="card-title">Tenant Feature Access</span></div>
+        <div class="card-body" style="padding:0">
+          <div class="opp-item" style="padding:12px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">AI Career Coach</div><div style="font-size:.72rem;color:var(--muted)">ai_career_coach_v2</div></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+          <div class="opp-item" style="padding:12px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Blockchain Credentials</div><div style="font-size:.72rem;color:var(--muted)">blockchain_creds</div></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+          <div class="opp-item" style="padding:12px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Custom Front-end Designer</div><div style="font-size:.72rem;color:var(--muted)">frontend_designer</div></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+          <div class="opp-item" style="padding:12px 16px;border-bottom:none"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Network Visualization</div><div style="font-size:.72rem;color:var(--muted)">viz_engine_v2</div></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Multi-Tenant Console · 24 tenants across 3 regions.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Tenancy</h4><ul><li>Isolation</li><li>Regions</li><li>Branding</li><li>SSO</li></ul></div>
+  <div class="footer-col"><h4>Billing</h4><ul><li>Subscriptions</li><li>Usage</li><li>Invoices</li><li>Pricing</li></ul></div>
+  <div class="footer-col"><h4>Resources</h4><ul><li>Docs</li><li>Onboarding</li><li>SLA</li><li>Support</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Tenant Console v3.2.1</span><span>24 tenants · 8.2k users</span></div></footer>
+</body></html>
