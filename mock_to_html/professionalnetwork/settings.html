@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Settings · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+</head><body>
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search..."><div class="hub-search-filter"><span>⚙</span><span>Filters</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">♛</span>Upgrade</button><button class="profile-trigger"><div class="avatar">MT<span class="avatar-online"></span></div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span>Settings</div>
+  <h1 class="page-title">Settings</h1>
+  <p class="page-sub">Manage your account, preferences, notifications, and security.</p>
+</div></div>
+
+<div class="layout-2col">
+  <aside class="sidebar">
+    <div class="card card-accent-top">
+      <nav class="side-nav">
+        <a class="side-nav-item active"><span class="side-nav-icon">👤</span><span>Account</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">🔔</span><span>Notifications</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">🔒</span><span>Privacy</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">🎨</span><span>Appearance</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">🌐</span><span>Language & Region</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">🔑</span><span>Security</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">📱</span><span>Devices</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">🗑</span><span>Delete Account</span></a>
+      </nav>
+    </div>
+  </aside>
+
+  <main>
+    <div class="card card-accent-gold" style="margin-bottom:20px">
+      <div class="card-header"><span class="card-title">Account Information</span></div>
+      <div class="card-body">
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input value="Mokoena"></div>
+          <div class="form-group"><label>Last Name</label><input value="Thabo"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Email Address</label><input value="mokoena.thabo@example.com" type="email"></div>
+          <div class="form-group"><label>Phone</label><input value="+27 82 555 0123"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Headline</label><input value="Labor Relations Strategist"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Bio</label><textarea>Labor Relations Strategist with 12+ years of experience advising multinationals on industrial relations, collective bargaining, and employment compliance across SADC.</textarea></div>
+        </div>
+        <div style="display:flex;gap:10px;justify-content:flex-end"><button class="btn btn-ghost">Cancel</button><button class="btn btn-primary">Save Changes</button></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:20px">
+      <div class="card-header"><span class="card-title">Notification Preferences</span></div>
+      <div class="card-body">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)"><div><div style="font-weight:700;font-size:.88rem">Email Notifications</div><div style="font-size:.75rem;color:var(--muted)">Receive activity summaries and alerts via email</div></div><label style="position:relative;display:inline-block;width:44px;height:24px"><input type="checkbox" checked style="opacity:0;width:0;height:0"><span style="position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background:var(--ink);border-radius:24px;transition:.3s"></span><span style="position:absolute;content:'';height:18px;width:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.3s;transform:translateX(20px)"></span></label></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)"><div><div style="font-weight:700;font-size:.88rem">Push Notifications</div><div style="font-size:.75rem;color:var(--muted)">Real-time alerts on your mobile device</div></div><label style="position:relative;display:inline-block;width:44px;height:24px"><input type="checkbox" checked style="opacity:0;width:0;height:0"><span style="position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background:var(--ink);border-radius:24px"></span><span style="position:absolute;height:18px;width:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transform:translateX(20px)"></span></label></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)"><div><div style="font-weight:700;font-size:.88rem">Opportunity Alerts</div><div style="font-size:.75rem;color:var(--muted)">Get notified when matching roles are posted</div></div><label style="position:relative;display:inline-block;width:44px;height:24px"><input type="checkbox" checked style="opacity:0;width:0;height:0"><span style="position:absolute;top:0;left:0;right:0;bottom:0;background:var(--ink);border-radius:24px"></span><span style="position:absolute;height:18px;width:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transform:translateX(20px)"></span></label></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0"><div><div style="font-weight:700;font-size:.88rem">Weekly Digest</div><div style="font-size:.75rem;color:var(--muted)">Summary of network activity and opportunities</div></div><label style="position:relative;display:inline-block;width:44px;height:24px"><input type="checkbox" style="opacity:0;width:0;height:0"><span style="position:absolute;top:0;left:0;right:0;bottom:0;background:var(--line-strong);border-radius:24px"></span><span style="position:absolute;height:18px;width:18px;left:3px;bottom:3px;background:#fff;border-radius:50%"></span></label></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-title">Security</span></div>
+      <div class="card-body">
+        <div class="form-row"><div class="form-group"><label>Current Password</label><input type="password" value="••••••••••"></div></div>
+        <div class="form-row"><div class="form-group"><label>New Password</label><input type="password" placeholder="Enter new password"></div><div class="form-group"><label>Confirm New Password</label><input type="password" placeholder="Confirm new password"></div></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-top:1px solid var(--line);margin-top:14px"><div><div style="font-weight:700;font-size:.88rem">Two-Factor Authentication</div><div style="font-size:.75rem;color:var(--muted)">Add an extra layer of security</div></div><button class="btn btn-gold btn-sm">Enable 2FA</button></div>
+        <div style="display:flex;justify-content:flex-end;margin-top:14px"><button class="btn btn-primary">Update Password</button></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Labor Relations & Employment Strategy.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Platform</h4><ul><li>Directory</li><li>Networks</li><li>Opportunities</li></ul></div>
+  <div class="footer-col"><h4>Legal</h4><ul><li>Privacy</li><li>Terms</li><li>GDPR</li></ul></div>
+  <div class="footer-col"><h4>Support</h4><ul><li>Help</li><li>Tickets</li><li>Status</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA</span><span>v3.2.1</span></div></footer>
+</body></html>

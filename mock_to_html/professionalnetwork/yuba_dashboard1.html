@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YUBA - Your Ultimate Business Ally | Dashboard</title>
+    <link rel="stylesheet" href="./css/yuba-theme.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         ADMIN STRIP (Conditional for Admins/Moderators)
+    ========================================== -->
+    <div class="admin-strip">
+        <span class="admin-strip-label">◆ Admin Console</span>
+        <div class="admin-strip-item">🛡️ Moderation Queue <span class="count">12</span></div>
+        <div class="admin-strip-item">⚠️ SLA Breaches <span class="count">3</span></div>
+        <div class="admin-strip-item">📥 DSAR Requests <span class="count">5</span></div>
+        <div class="admin-strip-item">🔔 System Alerts <span class="count">2</span></div>
+        <div class="admin-strip-item">📊 DLQ <span class="count">7</span></div>
+    </div>
+
+    <!-- ==========================================
+         TOP BAR
+    ========================================== -->
+    <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand-logo">
+            <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+          </div>
+
+            <!-- Unified Discovery Hub -->
+            <div class="hub-search">
+                <span class="hub-search-icon">⌕</span>
+                <input type="text" placeholder="Search across Business, Networks, Opportunities, Learnings & Groups...">
+                <div class="hub-search-filter" onclick="alert('Advanced filter panel opening...')">
+                    <span>⚙</span>
+                    <span>Filters</span>
+                </div>
+            </div>
+
+            <div class="topbar-actions">
+                <button class="icon-btn" title="Messages">
+                    ✉
+                    <span class="badge-dot">3</span>
+                </button>
+                <button class="icon-btn" title="Notifications">
+                    🔔
+                    <span class="badge-dot gold">8</span>
+                </button>
+                <button class="upgrade-cta">
+                    <span class="crown">♛</span>
+                    <span>Upgrade</span>
+                </button>
+                <button class="profile-trigger">
+                    <div class="avatar">
+                        MT
+                        <span class="avatar-online"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         MAIN LAYOUT
+    ========================================== -->
+    <div class="layout">
+
+        <!-- ==========================================
+             LEFT SIDEBAR
+        ========================================== -->
+        <aside class="sidebar-left">
+
+            <!-- Profile Card -->
+            <div class="card card-accent-top">
+                <div class="profile-header">
+                    <div class="profile-avatar-lg">AKS</div>
+                    <div class="profile-name">Awase Khirni Syed</div>
+                    <div class="profile-headline">CEO/CTO</div>
+                    <span class="trust-badge">★ Trust Score 99</span>
+                </div>
+                <div class="completion-block">
+                    <div class="completion-row">
+                        <span class="completion-label">Profile Completion</span>
+                        <span class="completion-value">78%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 78%;"></div>
+                    </div>
+                </div>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-value">142</div>
+                        <div class="stat-label">Views</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">89</div>
+                        <div class="stat-label">Connects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">24</div>
+                        <div class="stat-label">Endorse</div>
+                    </div>
+                </div>
+
+                <!-- Domain Navigation -->
+                <nav class="side-nav">
+                    <a class="side-nav-item active">
+                        <span class="side-nav-num">01</span>
+                        <span class="side-nav-icon">🏢</span>
+                        <span>Business</span>
+                    </a>
+                    <a class="side-nav-item">
+                        <span class="side-nav-num">02</span>
+                        <span class="side-nav-icon">🔗</span>
+                        <span>Networks</span>
+                        <span class="side-nav-badge">5</span>
+                    </a>
+                    <a class="side-nav-item">
+                        <span class="side-nav-num">03</span>
+                        <span class="side-nav-icon">🚀</span>
+                        <span>Opportunities</span>
+                        <span class="side-nav-badge">12</span>
+                    </a>
+                    <a class="side-nav-item">
+                        <span class="side-nav-num">04</span>
+                        <span class="side-nav-icon">📖</span>
+                        <span>Learnings</span>
+                    </a>
+                    <a class="side-nav-item">
+                        <span class="side-nav-num">05</span>
+                        <span class="side-nav-icon">👥</span>
+                        <span>Groups</span>
+                        <span class="side-nav-badge">3</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Skills Module -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Top Skills</span>
+                    <span style="font-size:0.7rem; color:var(--accent-gold); cursor:pointer;">+ Add</span>
+                </div>
+                <div class="card-body">
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-top">
+                                <span class="skill-name">GIS</span>
+                                <span class="skill-endorse">24</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 92%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-top">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-endorse">18</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-top">
+                                <span class="skill-name">Strategic Mediation</span>
+                                <span class="skill-endorse">12</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 70%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Credentials Module -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Verified Credentials</span>
+                </div>
+                <div class="card-body" style="padding-top: 8px; padding-bottom: 8px;">
+                    <div class="credential-item">
+                        <div class="credential-icon">🎓</div>
+                        <div class="credential-info">
+                            <div class="credential-name">Ph.D. (Dr.Sc.Nat)</div>
+                            <div class="credential-issuer">University of Zurich</div>
+                        </div>
+                        <span class="verified-check">✓</span>
+                    </div>
+                    <div class="credential-item">
+                        <div class="credential-icon">📜</div>
+                        <div class="credential-info">
+                            <div class="credential-name">M.Engg</div>
+                            <div class="credential-issuer">BITS,Pilani</div>
+                        </div>
+                        <span class="verified-check">✓</span>
+                    </div>
+                    <div class="credential-item">
+                        <div class="credential-icon">⛓</div>
+                        <div class="credential-info">
+                            <div class="credential-name">Blockchain Verified</div>
+                            <div class="credential-issuer">Ledger Anchored</div>
+                        </div>
+                        <span class="verified-check">✓</span>
+                    </div>
+                </div>
+                <a class="view-all">View All Credentials →</a>
+            </div>
+
+        </aside>
+
+        <!-- ==========================================
+             MAIN CONTENT
+        ========================================== -->
+        <main class="main-content">
+
+            <!-- AI Career Coach -->
+            <div class="ai-coach">
+                <div class="ai-coach-header">
+                    <span class="ai-coach-badge">AI Insight</span>
+                    <span class="ai-coach-title">Geo-AI</span>
+                </div>
+                <p class="ai-coach-insight">
+                    You are <strong>2 skills away</strong> from qualifying for <strong>Chief Risk Officer</strong> roles. Adding "Risk Intelligence" and "Arbitration" could increase your match score by <strong>34%</strong>.
+                </p>
+                <div class="ai-coach-actions">
+                    <button class="ai-btn">View Skill Gap Analysis</button>
+                    <button class="ai-btn ghost">Simulate Career Path</button>
+                </div>
+            </div>
+
+            <!-- Feed Tabs -->
+            <div class="feed-tabs">
+                <button class="feed-tab active">For You</button>
+                <button class="feed-tab">Network</button>
+                <button class="feed-tab">Opportunities</button>
+                <button class="feed-tab">Learnings</button>
+                <button class="feed-tab">Groups</button>
+            </div>
+
+            <!-- Feed Post 1 -->
+            <article class="feed-card">
+                <div class="feed-card-header">
+                    <div class="feed-avatar">NK</div>
+                    <div class="feed-meta">
+                        <div class="feed-author">Naledi Khumalo</div>
+                        <div class="feed-submeta">Director of HR · 2h ago</div>
+                        <span class="feed-tag">Networks</span>
+                    </div>
+                </div>
+                <p class="feed-content">
+                    Just published a new <strong>labor compliance framework</strong> for multinationals operating across SADC. The framework addresses cross-border employment contracts and dispute resolution. Happy to share insights with anyone in the network working on similar challenges.
+                </p>
+                <div class="feed-actions">
+                    <button class="feed-action liked">◆ 24 Likes</button>
+                    <button class="feed-action">💬 8 Comments</button>
+                    <button class="feed-action">↗ Share</button>
+                    <button class="feed-action" style="margin-left:auto;">🔖 Save</button>
+                </div>
+            </article>
+
+            <!-- Feed Post 2 -->
+            <article class="feed-card">
+                <div class="feed-card-header">
+                    <div class="feed-avatar">JM</div>
+                    <div class="feed-meta">
+                        <div class="feed-author">James Mwangi</div>
+                        <div class="feed-submeta">Labor Economist · 5h ago</div>
+                        <span class="feed-tag">Learnings</span>
+                    </div>
+                </div>
+                <p class="feed-content">
+                    Completed the <strong>Advanced Mediation & Arbitration</strong> course on YUBA. The module on interest-based bargaining was particularly transformative. Highly recommend for anyone in labor relations.
+                </p>
+                <div class="feed-actions">
+                    <button class="feed-action">◆ 16 Likes</button>
+                    <button class="feed-action">💬 3 Comments</button>
+                    <button class="feed-action">↗ Share</button>
+                    <button class="feed-action" style="margin-left:auto;">🔖 Save</button>
+                </div>
+            </article>
+
+            <!-- Recommended Opportunities -->
+            <div class="card card-accent-gold">
+                <div class="card-header">
+                    <span class="card-title">Recommended Opportunities</span>
+                    <span style="font-size:0.7rem; color:var(--accent-gold); cursor:pointer;">See All</span>
+                </div>
+                <div class="opp-list">
+                    <div class="opp-item">
+                        <div class="opp-logo">SAP</div>
+                        <div class="opp-body">
+                            <div class="opp-title">Senior Labor Relations Manager</div>
+                            <div class="opp-company">Sasol · Johannesburg, SA</div>
+                            <div class="opp-tags">
+                                <span class="opp-tag match">94% Match</span>
+                                <span class="opp-tag">Full-time</span>
+                                <span class="opp-tag">Hybrid</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opp-item">
+                        <div class="opp-logo">MTN</div>
+                        <div class="opp-body">
+                            <div class="opp-title">Employee Relations Consultant</div>
+                            <div class="opp-company">MTN Group · Lagos, NG</div>
+                            <div class="opp-tags">
+                                <span class="opp-tag match">87% Match</span>
+                                <span class="opp-tag">Contract</span>
+                                <span class="opp-tag">Remote</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opp-item">
+                        <div class="opp-logo">ILO</div>
+                        <div class="opp-body">
+                            <div class="opp-title">Policy Advisor — Labor Standards</div>
+                            <div class="opp-company">ILO · Geneva, CH</div>
+                            <div class="opp-tags">
+                                <span class="opp-tag match">82% Match</span>
+                                <span class="opp-tag">Full-time</span>
+                                <span class="opp-tag">On-site</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="view-all">Browse All Opportunities →</a>
+            </div>
+
+        </main>
+
+        <!-- ==========================================
+             RIGHT SIDEBAR
+        ========================================== -->
+        <aside class="sidebar-right">
+
+            <!-- People You May Know -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">People You May Know</span>
+                </div>
+                <div class="card-body" style="padding-top: 8px; padding-bottom: 8px;">
+                    <div class="person-item">
+                        <div class="person-avatar">AB</div>
+                        <div class="person-info">
+                            <div class="person-name">Amara Bekele</div>
+                            <div class="person-role">HR Director · Addis Ababa</div>
+                        </div>
+                        <button class="person-connect">+</button>
+                    </div>
+                    <div class="person-item">
+                        <div class="person-avatar">DO</div>
+                        <div class="person-info">
+                            <div class="person-name">David Ochieng</div>
+                            <div class="person-role">Labor Lawyer · Nairobi</div>
+                        </div>
+                        <button class="person-connect">+</button>
+                    </div>
+                    <div class="person-item">
+                        <div class="person-avatar">FN</div>
+                        <div class="person-info">
+                            <div class="person-name">Fatima Ndlovu</div>
+                            <div class="person-role">Mediator · Cape Town</div>
+                        </div>
+                        <button class="person-connect">+</button>
+                    </div>
+                </div>
+                <a class="view-all">Discover More →</a>
+            </div>
+
+            <!-- Continue Learning -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Continue Learning</span>
+                </div>
+                <div class="card-body">
+                    <div class="learning-item">
+                        <div class="learning-title">Advanced Collective Bargaining</div>
+                        <div class="learning-meta">
+                            <span>Module 4 of 6</span>
+                            <span>62%</span>
+                        </div>
+                        <div class="learning-progress-mini">
+                            <div class="learning-fill" style="width: 62%;"></div>
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <div class="learning-title">Employment Law in the Digital Age</div>
+                        <div class="learning-meta">
+                            <span>Module 2 of 5</span>
+                            <span>34%</span>
+                        </div>
+                        <div class="learning-progress-mini">
+                            <div class="learning-fill" style="width: 34%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <a class="view-all">View All Learnings →</a>
+            </div>
+
+            <!-- Upcoming Events -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Upcoming Events</span>
+                </div>
+                <div class="card-body" style="padding-top: 8px; padding-bottom: 8px;">
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">18</span>
+                            <span class="event-month">Sep</span>
+                        </div>
+                        <div class="event-info">
+                            <div class="event-title">SADC Labor Law Summit</div>
+                            <div class="event-type">Webinar · 2h</div>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">25</span>
+                            <span class="event-month">Sep</span>
+                        </div>
+                        <div class="event-info">
+                            <div class="event-title">Mediation Masterclass</div>
+                            <div class="event-type">Workshop · 4h</div>
+                        </div>
+                    </div>
+                </div>
+                <a class="view-all">Browse Events →</a>
+            </div>
+
+            <!-- Suggested Groups -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Suggested Groups</span>
+                </div>
+                <div class="card-body" style="padding-top: 4px; padding-bottom: 4px;">
+                    <div class="group-item">
+                        <div class="group-icon">⚖</div>
+                        <div class="group-info">
+                            <div class="group-name">Labor Law Practitioners</div>
+                            <div class="group-members">2.4k members</div>
+                        </div>
+                        <button class="group-join">Join</button>
+                    </div>
+                    <div class="group-item">
+                        <div class="group-icon">🌍</div>
+                        <div class="group-info">
+                            <div class="group-name">Pan-African HR Network</div>
+                            <div class="group-members">1.8k members</div>
+                        </div>
+                        <button class="group-join">Join</button>
+                    </div>
+                    <div class="group-item">
+                        <div class="group-icon">📊</div>
+                        <div class="group-info">
+                            <div class="group-name">Employment Analytics</div>
+                            <div class="group-members">920 members</div>
+                        </div>
+                        <button class="group-join">Join</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Saved Items -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Saved Items</span>
+                </div>
+                <div class="card-body" style="padding-top: 8px; padding-bottom: 8px;">
+                    <div class="saved-item">
+                        <span class="saved-icon">🔖</span>
+                        <span>Saved Jobs</span>
+                        <span class="saved-count">14</span>
+                    </div>
+                    <div class="saved-item">
+                        <span class="saved-icon">📄</span>
+                        <span>Saved Articles</span>
+                        <span class="saved-count">28</span>
+                    </div>
+                    <div class="saved-item">
+                        <span class="saved-icon">📚</span>
+                        <span>Saved Courses</span>
+                        <span class="saved-count">6</span>
+                    </div>
+                    <div class="saved-item">
+                        <span class="saved-icon">🔍</span>
+                        <span>Saved Searches</span>
+                        <span class="saved-count">9</span>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+    <!-- ==========================================
+         FOOTER
+    ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <div class="footer-brand">YUBA</div>
+                <p class="footer-desc">
+                    Labor Relations & Employment Strategy. Empowering professionals across Africa with unified discovery, intelligence, and opportunity.
+                </p>
+                <div class="footer-status">
+                    <span class="status-dot"></span>
+                    <span>All Systems Operational</span>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <ul>
+                    <li>Business Directory</li>
+                    <li>Networks</li>
+                    <li>Opportunities</li>
+                    <li>Learnings</li>
+                    <li>Groups</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal & Privacy</h4>
+                <ul>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Service</li>
+                    <li>GDPR Compliance</li>
+                    <li>Data Subject Requests</li>
+                    <li>Cookie Settings</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li>Help Center</li>
+                    <li>Submit a Ticket</li>
+                    <li>System Status</li>
+                    <li>API Documentation</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2024 YUBA · Your Ultimate Business Ally. All rights reserved.</span>
+            <span>Crafted with precision · v3.2.1</span>
+        </div>
+    </footer>
+
+</body>
+</html>

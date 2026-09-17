@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Custom Report Builder · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search tables, reports..."><div class="hub-search-filter"><span>⚙</span><span>Analytics</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Pro Dev</button><button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#0E1E35,#C5A059);color:#fff">DV</div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span><a href="dev-console.html">Dev Console</a><span class="breadcrumb-sep">/</span>Custom Report Builder</div>
+  <h1 class="page-title">Custom Report Builder</h1>
+  <p class="page-sub">Drag fields from any of 312 tables. Group, aggregate, filter, and schedule. Export to CSV, PDF, or deliver to Slack. No SQL required.</p>
+</div></div>
+
+<div class="layout-full">
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;align-items:center">
+    <button class="btn btn-primary btn-sm">💾 Save Report</button>
+    <button class="btn btn-outline btn-sm">📋 Duplicate</button>
+    <button class="btn btn-outline btn-sm">▶ Run Preview</button>
+    <button class="btn btn-outline btn-sm">🔔 Schedule</button>
+    <div style="flex:1"></div>
+    <span class="tag tag-ok">● Last run: 12s ago</span>
+    <button class="btn btn-gold btn-sm">⬇ Export CSV</button>
+  </div>
+
+  <div class="report-layout">
+
+    <div class="data-dict">
+      <input type="text" placeholder="Search tables..." style="width:100%;padding:9px 12px;border:1px solid var(--line-strong);border-radius:2px;font-size:.78rem;outline:none;margin-bottom:12px">
+
+      <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin-bottom:8px">Recently Used</div>
+      <div class="dict-table"><div class="name">job_listings</div><div class="meta">Job board · 42 columns</div></div>
+      <div class="dict-table"><div class="name">companies</div><div class="meta">Business · 84 columns</div></div>
+      <div class="dict-table"><div class="name">user_profiles</div><div class="meta">User · 62 columns</div></div>
+
+      <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin:18px 0 8px">Analytics</div>
+      <div class="dict-table"><div class="name">search_query_logs</div><div class="meta">30 columns</div></div>
+      <div class="dict-table"><div class="name">user_behavior_events</div><div class="meta">28 columns</div></div>
+      <div class="dict-table"><div class="name">content_analytics</div><div class="meta">34 columns</div></div>
+
+      <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin:18px 0 8px">Learning</div>
+      <div class="dict-table"><div class="name">course_enrollments</div><div class="meta">18 columns</div></div>
+      <div class="dict-table"><div class="name">course_completions</div><div class="meta">22 columns</div></div>
+
+      <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin:18px 0 8px">Billing</div>
+      <div class="dict-table"><div class="name">invoices</div><div class="meta">26 columns</div></div>
+      <div class="dict-table"><div class="name">subscriptions</div><div class="meta">24 columns</div></div>
+
+      <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin:18px 0 8px">Trust & Safety</div>
+      <div class="dict-table"><div class="name">moderation_actions</div><div class="meta">20 columns</div></div>
+      <div class="dict-table"><div class="name">abuse_reports_aggregate</div><div class="meta">18 columns</div></div>
+    </div>
+
+    <div class="report-canvas">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px">
+        <div>
+          <div style="font-family:var(--serif);font-size:1.15rem;font-weight:bold;color:var(--ink)">Q4 Hiring Performance by Department</div>
+          <div style="font-size:.72rem;color:var(--muted)">Source: job_listings ⨝ job_applications ⨝ companies</div>
+        </div>
+        <span class="tag tag-ok">● Valid SQL</span>
+      </div>
+
+      <div class="drop-zone">
+        <div class="lbl">◆ Columns (Group By)</div>
+        <div>
+          <span class="field-chip">company_department<span class="rm">✕</span></span>
+          <span class="field-chip">job_category<span class="rm">✕</span></span>
+          <span class="field-chip">fiscal_quarter<span class="rm">✕</span></span>
+        </div>
+      </div>
+
+      <div class="drop-zone">
+        <div class="lbl">◆ Metrics (Aggregate)</div>
+        <div>
+          <span class="field-chip metric">COUNT(applications)<span class="rm">✕</span></span>
+          <span class="field-chip metric">AVG(time_to_hire_days)<span class="rm">✕</span></span>
+          <span class="field-chip metric">COUNT(offers_accepted)<span class="rm">✕</span></span>
+          <span class="field-chip metric">AVG(offer_acceptance_rate)<span class="rm">✕</span></span>
+        </div>
+      </div>
+
+      <div class="drop-zone">
+        <div class="lbl">◆ Filters (WHERE)</div>
+        <div>
+          <span class="field-chip filter">posted_at >= '2024-10-01'<span class="rm">✕</span></span>
+          <span class="field-chip filter">fiscal_quarter = 'Q4 2024'<span class="rm">✕</span></span>
+          <span class="field-chip filter">region IN ('ZA','KE','NG')<span class="rm">✕</span></span>
+        </div>
+      </div>
+
+      <div style="background:var(--white);border:1px solid var(--line);border-radius:2px;padding:14px;margin-bottom:14px">
+        <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin-bottom:10px">Sort & Limit</div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <select style="flex:1;padding:8px 10px;border:1px solid var(--line-strong);border-radius:2px;font-size:.78rem"><option>Sort by: COUNT(applications) DESC</option><option>Sort by: AVG(time_to_hire_days) ASC</option></select>
+          <select style="flex:0 0 100px;padding:8px 10px;border:1px solid var(--line-strong);border-radius:2px;font-size:.78rem"><option>Limit: 50</option><option>Limit: 100</option><option>Limit: 500</option></select>
+        </div>
+      </div>
+
+      <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin-bottom:10px">Generated SQL</div>
+      <div style="background:#0A1622;color:#C8D4E2;padding:14px;border-radius:2px;font-family:'Courier New',monospace;font-size:.72rem;line-height:1.8;border-left:3px solid var(--gold);overflow-x:auto">
+<span style="color:#C5A059">SELECT</span><br>
+&nbsp;&nbsp;c.company_department,<br>
+&nbsp;&nbsp;j.job_category,<br>
+&nbsp;&nbsp;j.fiscal_quarter,<br>
+&nbsp;&nbsp;<span style="color:#7FD4A8">COUNT</span>(a.id) <span style="color:#C5A059">AS</span> total_applications,<br>
+&nbsp;&nbsp;<span style="color:#7FD4A8">AVG</span>(a.time_to_hire_days) <span style="color:#C5A059">AS</span> avg_time_to_hire,<br>
+&nbsp;&nbsp;<span style="color:#7FD4A8">COUNT</span>(a.accepted) <span style="color:#C5A059">AS</span> offers_accepted<br>
+<span style="color:#C5A059">FROM</span> job_listings j<br>
+<span style="color:#C5A059">JOIN</span> job_applications a <span style="color:#C5A059">ON</span> a.job_id = j.id<br>
+<span style="color:#C5A059">JOIN</span> companies c <span style="color:#C5A059">ON</span> c.id = j.company_id<br>
+<span style="color:#C5A059">WHERE</span> j.posted_at >= <span style="color:#7FD4A8">'2024-10-01'</span><br>
+&nbsp;&nbsp;<span style="color:#C5A059">AND</span> j.fiscal_quarter = <span style="color:#7FD4A8">'Q4 2024'</span><br>
+&nbsp;&nbsp;<span style="color:#C5A059">AND</span> j.region <span style="color:#C5A059">IN</span> (<span style="color:#7FD4A8">'ZA'</span>,<span style="color:#7FD4A8">'KE'</span>,<span style="color:#7FD4A8">'NG'</span>)<br>
+<span style="color:#C5A059">GROUP BY</span> 1, 2, 3<br>
+<span style="color:#C5A059">ORDER BY</span> 4 <span style="color:#C5A059">DESC LIMIT</span> 50;
+      </div>
+    </div>
+
+    <div class="report-preview">
+      <div style="font-family:var(--serif);font-weight:bold;font-size:.9rem;margin-bottom:10px">◆ Live Preview</div>
+      <div style="font-size:.72rem;color:var(--muted);margin-bottom:14px">Rendered in 142ms · 32 rows</div>
+
+      <table class="preview-table">
+        <thead><tr><th>Dept</th><th>Apps</th><th>Avg Days</th></tr></thead>
+        <tbody>
+          <tr><td>Engineering</td><td class="num">1,842</td><td class="num">38</td></tr>
+          <tr><td>Operations</td><td class="num">1,412</td><td class="num">42</td></tr>
+          <tr><td>HR & People</td><td class="num">984</td><td class="num">34</td></tr>
+          <tr><td>Finance</td><td class="num">742</td><td class="num">48</td></tr>
+          <tr><td>Legal</td><td class="num">412</td><td class="num">52</td></tr>
+          <tr><td>Marketing</td><td class="num">318</td><td class="num">40</td></tr>
+        </tbody>
+      </table>
+
+      <div class="divider" style="margin:16px 0"></div>
+
+      <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin-bottom:10px">Visualizations</div>
+      <div style="background:var(--white);border:1px solid var(--line);border-radius:2px;padding:14px;margin-bottom:12px">
+        <div style="font-size:.72rem;color:var(--muted);margin-bottom:10px">Applications by Department</div>
+        <div style="height:120px;display:flex;align-items:flex-end;gap:6px">
+          <div style="flex:1;background:linear-gradient(180deg,var(--gold),var(--gold-dark));height:90%;border-radius:2px 2px 0 0"></div>
+          <div style="flex:1;background:linear-gradient(180deg,var(--gold),var(--gold-dark));height:70%;border-radius:2px 2px 0 0"></div>
+          <div style="flex:1;background:linear-gradient(180deg,var(--gold),var(--gold-dark));height:48%;border-radius:2px 2px 0 0"></div>
+          <div style="flex:1;background:linear-gradient(180deg,var(--gold),var(--gold-dark));height:36%;border-radius:2px 2px 0 0"></div>
+          <div style="flex:1;background:linear-gradient(180deg,var(--gold),var(--gold-dark));height:20%;border-radius:2px 2px 0 0"></div>
+          <div style="flex:1;background:linear-gradient(180deg,var(--gold),var(--gold-dark));height:16%;border-radius:2px 2px 0 0"></div>
+        </div>
+      </div>
+
+      <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin-bottom:10px">Delivery Schedule</div>
+      <div style="background:var(--white);border:1px solid var(--line);border-radius:2px;padding:14px;margin-bottom:12px">
+        <div style="font-size:.75rem;color:var(--ink2);line-height:1.8">
+          <div><strong style="color:var(--ink)">Cadence:</strong> Weekly Monday 9am SAST</div>
+          <div><strong style="color:var(--ink)">Recipients:</strong> HR Team (12 people)</div>
+          <div><strong style="color:var(--ink)">Format:</strong> CSV + PDF</div>
+          <div><strong style="color:var(--ink)">Slack:</strong> #hr-analytics</div>
+        </div>
+      </div>
+
+      <button class="btn btn-gold btn-block btn-sm" style="margin-bottom:8px">📤 Save & Schedule</button>
+      <button class="btn btn-outline btn-block btn-sm">🔗 Share Dashboard Link</button>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Report Builder · 312 tables, zero SQL.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Reports</h4><ul><li>My Reports</li><li>Shared</li><li>Scheduled</li><li>Archive</li></ul></div>
+  <div class="footer-col"><h4>Data</h4><ul><li>Dictionary</li><li>Lineage</li><li>Quality</li><li>Warehouse</li></ul></div>
+  <div class="footer-col"><h4>Support</h4><ul><li>Docs</li><li>Templates</li><li>Help</li><li>Contact</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Report Builder v3.2.1</span><span>312 tables available</span></div></footer>
+</body></html>

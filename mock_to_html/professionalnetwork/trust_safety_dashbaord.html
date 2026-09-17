@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trust & Safety Dashboard · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+
+<div class="admin-strip">
+  <span class="admin-strip-label">◆ Trust & Safety Admin</span>
+  <div class="admin-strip-item">🛡️ Queue <span class="count">12</span></div>
+  <div class="admin-strip-item">⚠️ SLA Breach <span class="count">2</span></div>
+  <div class="admin-strip-item">🔔 Escalations <span class="count">5</span></div>
+  <div class="admin-strip-item">🚨 Critical <span class="count">1</span></div>
+</div>
+
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search cases, users, reports..."><div class="hub-search-filter"><span>⚙</span><span>Admin</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#3A1F1F,#A83232)">TS</div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span>Trust & Safety Dashboard</div>
+  <h1 class="page-title">Trust & Safety Dashboard</h1>
+  <p class="page-sub">Platform-wide safety metrics, active investigations, SLA compliance, and emerging threat patterns.</p>
+</div></div>
+
+<div class="layout-full">
+  <div class="grid-4" style="margin-bottom:24px">
+    <div class="kpi-tile"><div class="l">Open Cases</div><div class="v">47</div><div class="d">+8 this week</div></div>
+    <div class="kpi-tile"><div class="l">Avg Resolution Time</div><div class="v">14h</div><div class="d">↓ 3h vs last month</div></div>
+    <div class="kpi-tile"><div class="l">SLA Compliance</div><div class="v">96.2%</div><div class="d down">↓ 1.4% (2 breaches)</div></div>
+    <div class="kpi-tile"><div class="l">Content Removed</div><div class="v">342</div><div class="d">+42 this month</div></div>
+  </div>
+
+  <div class="grid-4" style="margin-bottom:24px">
+    <div class="kpi-tile"><div class="l">Abuse Reports (30d)</div><div class="v">1,847</div><div class="d down">+12%</div></div>
+    <div class="kpi-tile"><div class="l">Appeals Filed</div><div class="v">84</div><div class="d">Win rate: 22%</div></div>
+    <div class="kpi-tile"><div class="l">Impersonation Cases</div><div class="v">18</div><div class="d">4h SLA · 100% met</div></div>
+    <div class="kpi-tile"><div class="l">High-Risk Flags</div><div class="v" style="color:var(--danger)">3</div><div class="d down">Requires immediate action</div></div>
+  </div>
+
+  <div class="grid-2" style="align-items:start;margin-bottom:24px">
+    <div class="card card-accent-gold">
+      <div class="card-header"><span class="card-title">Case Queue by Category</span></div>
+      <div class="card-body" style="padding:0">
+        <div class="opp-item" style="padding:14px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Harassment & Stalking</div><div style="font-size:.72rem;color:var(--muted)">7 open · 3 near SLA</div></div><span class="severity-badge sev-high">High</span></div>
+        <div class="opp-item" style="padding:14px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Impersonation & Identity</div><div style="font-size:.72rem;color:var(--muted)">4 open · 0 near SLA</div></div><span class="severity-badge sev-high">High</span></div>
+        <div class="opp-item" style="padding:14px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Content Reports</div><div style="font-size:.72rem;color:var(--muted)">18 open · 8 near SLA</div></div><span class="severity-badge sev-med">Med</span></div>
+        <div class="opp-item" style="padding:14px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Spam & Solicitation</div><div style="font-size:.72rem;color:var(--muted)">12 open · 6 near SLA</div></div><span class="severity-badge sev-low">Low</span></div>
+        <div class="opp-item" style="padding:14px 16px;border-bottom:none"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Credential Fraud</div><div style="font-size:.72rem;color:var(--muted)">6 open · 1 near SLA</div></div><span class="severity-badge sev-high">High</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-title">SLA Breaches · Recent</span></div>
+      <div class="card-body" style="padding:0">
+        <div class="opp-item" style="padding:14px 16px;background:rgba(168,50,50,.04)"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">CASE-48291 · Harassment Report</div><div style="font-size:.72rem;color:var(--muted)">Breach: 6h over 24h SLA · Assigned: @mod-14</div></div><span class="tag tag-danger">+6h</span></div>
+        <div class="opp-item" style="padding:14px 16px;background:rgba(197,138,46,.04)"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">CASE-48288 · DSAR Request</div><div style="font-size:.72rem;color:var(--muted)">Breach: 2d over 30d SLA · Assigned: @privacy-01</div></div><span class="tag tag-warn">+2d</span></div>
+        <div class="opp-item" style="padding:14px 16px;border-bottom:none"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">CASE-48272 · Content Takedown</div><div style="font-size:.72rem;color:var(--muted)">Breach: 12h over 48h SLA · Assigned: @legal-02</div></div><span class="tag tag-warn">+12h</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-accent-gold">
+    <div class="card-header"><span class="card-title">Emerging Threat Patterns · Last 7 Days</span></div>
+    <div class="card-body">
+      <div class="grid-3" style="gap:16px">
+        <div style="padding:16px;background:rgba(168,50,50,.05);border-left:3px solid var(--danger);border-radius:2px">
+          <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--danger);font-weight:700;margin-bottom:6px">🚨 Critical</div>
+          <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">Coordinated Stalking Ring</div>
+          <div style="font-size:.75rem;color:var(--ink2)">7 accounts targeting 3 users with synchronized profile views. Referred to law enforcement.</div>
+        </div>
+        <div style="padding:16px;background:rgba(197,138,46,.05);border-left:3px solid var(--warn);border-radius:2px">
+          <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--warn);font-weight:700;margin-bottom:6px">⚠ Rising</div>
+          <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">Fake Recruiter Accounts</div>
+          <div style="font-size:.75rem;color:var(--ink2)">14 new accounts in 48h posing as recruiters from real companies. Verified via employer DB.</div>
+        </div>
+        <div style="padding:16px;background:rgba(46,125,91,.05);border-left:3px solid var(--ok);border-radius:2px">
+          <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--ok);font-weight:700;margin-bottom:6px">✓ Mitigated</div>
+          <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">Credential Forgery Attempt</div>
+          <div style="font-size:.75rem;color:var(--ink2)">User attempted to forge LLM certificate. On-chain verification caught it. Account suspended.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Trust & Safety Admin · Internal only.</p><div class="footer-status"><span class="status-dot"></span>Team online</div></div>
+  <div class="footer-col"><h4>Cases</h4><ul><li>Queue</li><li>Escalations</li><li>SLA</li><li>Archive</li></ul></div>
+  <div class="footer-col"><h4>Analytics</h4><ul><li>Threats</li><li>Patterns</li><li>Trends</li><li>Reports</li></ul></div>
+  <div class="footer-col"><h4>Team</h4><ul><li>On-Call</li><li>Roster</li><li>Escalation</li><li>Training</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Trust & Safety v3.2.1</span><span>47 open cases</span></div></footer>
+</body></html>

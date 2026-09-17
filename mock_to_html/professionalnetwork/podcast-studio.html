@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Podcast Studio · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+</head><body>
+
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search episodes, transcripts..."><div class="hub-search-filter"><span>⚙</span><span>Creator</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Studio</button><button class="profile-trigger"><div class="avatar">MT<span class="avatar-online"></span></div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span>Podcast Studio</div>
+  <h1 class="page-title">Podcast Studio</h1>
+  <p class="page-sub">Record, edit, and publish professional podcasts — all in your browser. No equipment needed. Distribution to every platform, automatic.</p>
+</div></div>
+
+<div class="layout-full">
+
+  <div class="studio-hero">
+    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;position:relative">
+      <div style="flex:1;min-width:280px">
+        <span class="tag tag-gold" style="margin-bottom:12px;display:inline-block">◆ STUDIO · RECORDING SESSION</span>
+        <h2 style="font-family:var(--serif);font-size:1.5rem;margin-bottom:8px">Episode 85 · Collective Bargaining in 2025</h2>
+        <p style="opacity:.88;font-size:.88rem">Guest: Aisha Bello · Recording live · Draft save in progress</p>
+      </div>
+      <button class="btn btn-gold">🎙 New Episode</button>
+    </div>
+  </div>
+
+  <!-- Recording Panel -->
+  <div class="record-panel">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;position:relative">
+      <div style="display:flex;gap:14px;align-items:center">
+        <div style="width:44px;height:44px;background:var(--danger);border-radius:50%;display:flex;align-items:center;justify-content:center;position:relative">
+          <div style="width:12px;height:12px;background:#fff;border-radius:2px"></div>
+          <div style="position:absolute;inset:-6px;border:2px solid var(--danger);border-radius:50%;animation:pulse-ring 2s ease-out infinite"></div>
+        </div>
+        <div>
+          <div style="color:#fff;font-family:var(--serif);font-weight:bold;font-size:.95rem">● Recording Live</div>
+          <div style="color:rgba(255,255,255,.6);font-size:.72rem">Started 24 minutes ago</div>
+        </div>
+      </div>
+      <div>
+        <div class="timer">24:18.42</div>
+        <div class="timer-lbl">Duration</div>
+      </div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap">
+        <div style="text-align:center">
+          <div style="font-family:var(--serif);font-size:1.1rem;font-weight:bold;color:var(--gold)">-6 dB</div>
+          <div style="font-size:.62rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.6);font-weight:700;margin-top:2px">Level</div>
+        </div>
+        <div style="text-align:center">
+          <div style="font-family:var(--serif);font-size:1.1rem;font-weight:bold;color:var(--ok)">Good</div>
+          <div style="font-size:.62rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.6);font-weight:700;margin-top:2px">Quality</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="waveform">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="rec-controls">
+      <button class="rec-btn" title="Mute Mic">🎙</button>
+      <button class="rec-btn" title="Add Sound Effect">🎵</button>
+      <button class="rec-btn main" title="Stop Recording">■</button>
+      <button class="rec-btn" title="Mark Chapter">🔖</button>
+      <button class="rec-btn" title="Take Note">📝</button>
+    </div>
+
+    <div style="text-align:center;margin-top:16px;color:rgba(255,255,255,.6);font-size:.72rem">
+      Pro tip: Press <strong style="color:var(--gold)">Space</strong> to pause · <strong style="color:var(--gold)">M</strong> to mute · <strong style="color:var(--gold)">C</strong> to mark a chapter
+    </div>
+  </div>
+
+  <div class="grid-2" style="align-items:start;margin-bottom:24px">
+
+    <!-- Left: Tracks & Editing -->
+    <div>
+      <div style="font-family:var(--serif);font-size:1.1rem;font-weight:bold;margin-bottom:14px">◆ Audio Tracks</div>
+
+      <div class="track-item">
+        <div class="icon">🎙</div>
+        <div class="info">
+          <div class="t">Host · Mokoena Thabo</div>
+          <div class="m">Primary vocal · Recorded live</div>
+        </div>
+        <div class="dur">24:18</div>
+        <button class="btn btn-ghost btn-sm">⚙</button>
+      </div>
+
+      <div class="track-item">
+        <div class="icon">🎙</div>
+        <div class="info">
+          <div class="t">Guest · Aisha Bello</div>
+          <div class="m">Remote vocal · High quality · Noise reduced</div>
+        </div>
+        <div class="dur">22:42</div>
+        <button class="btn btn-ghost btn-sm">⚙</button>
+      </div>
+
+      <div class="track-item">
+        <div class="icon">🎵</div>
+        <div class="info">
+          <div class="t">Intro Music</div>
+          <div class="m">Brand theme · 0:22</div>
+        </div>
+        <div class="dur">0:22</div>
+        <button class="btn btn-ghost btn-sm">⚙</button>
+      </div>
+
+      <div class="track-item">
+        <div class="icon">🎵</div>
+        <div class="info">
+          <div class="t">Outro Music</div>
+          <div class="m">Brand theme · 0:18</div>
+        </div>
+        <div class="dur">0:18</div>
+        <button class="btn btn-ghost btn-sm">⚙</button>
+      </div>
+
+      <div style="font-family:var(--serif);font-size:1.1rem;font-weight:bold;margin:24px 0 14px">◆ AI Features</div>
+
+      <div class="card" style="padding:16px">
+        <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;padding-bottom:12px;border-bottom:1px dashed var(--line)">
+          <div style="font-size:1.4rem">📝</div>
+          <div style="flex:1">
+            <div style="font-weight:700;font-size:.88rem;color:var(--ink);margin-bottom:2px">Auto-transcription</div>
+            <div style="font-size:.72rem;color:var(--muted);line-height:1.5">Whisper V3 · 42 languages · Speaker diarization</div>
+          </div>
+          <span class="tag tag-ok">✓ Running</span>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;padding-bottom:12px;border-bottom:1px dashed var(--line)">
+          <div style="font-size:1.4rem">📋</div>
+          <div style="flex:1">
+            <div style="font-weight:700;font-size:.88rem;color:var(--ink);margin-bottom:2px">Show notes generation</div>
+            <div style="font-size:.72rem;color:var(--muted);line-height:1.5">AI writes summary, chapters, key quotes, and SEO description</div>
+          </div>
+          <span class="tag tag-warn">Pending</span>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;padding-bottom:12px;border-bottom:1px dashed var(--line)">
+          <div style="font-size:1.4rem">🎬</div>
+          <div style="flex:1">
+            <div style="font-weight:700;font-size:.88rem;color:var(--ink);margin-bottom:2px">Video shorts generation</div>
+            <div style="font-size:.72rem;color:var(--muted);line-height:1.5">Auto-extract 3 short clips for social media distribution</div>
+          </div>
+          <span class="tag tag-warn">Pending</span>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <div style="font-size:1.4rem">🌐</div>
+          <div style="flex:1">
+            <div style="font-weight:700;font-size:.88rem;color:var(--ink);margin-bottom:2px">Multi-language audio dub</div>
+            <div style="font-size:.72rem;color:var(--muted);line-height:1.5">Dub to isiZulu, Kiswahili, French using AI voice</div>
+          </div>
+          <span class="tag">Optional</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Chapters & Distribution -->
+    <div>
+      <div style="font-family:var(--serif);font-size:1.1rem;font-weight:bold;margin-bottom:14px">◆ Chapters</div>
+      <div class="card" style="padding:16px;margin-bottom:24px">
+        <div class="chapter-row">
+          <span class="time">00:00</span>
+          <span style="flex:1;font-weight:600">Introduction</span>
+          <button class="btn btn-ghost btn-sm">✎</button>
+        </div>
+        <div class="chapter-row">
+          <span class="time">02:18</span>
+          <span style="flex:1;font-weight:600">Aisha's journey to CHRO</span>
+          <button class="btn btn-ghost btn-sm">✎</button>
+        </div>
+        <div class="chapter-row">
+          <span class="time">08:42</span>
+          <span style="flex:1;font-weight:600">The state of collective bargaining</span>
+          <button class="btn btn-ghost btn-sm">✎</button>
+        </div>
+        <div class="chapter-row">
+          <span class="time">14:20</span>
+          <span style="flex:1;font-weight:600">Cross-border IR strategies</span>
+          <button class="btn btn-ghost btn-sm">✎</button>
+        </div>
+        <div class="chapter-row">
+          <span class="time">19:08</span>
+          <span style="flex:1;font-weight:600">Advice for aspiring CHROs</span>
+          <button class="btn btn-ghost btn-sm">✎</button>
+        </div>
+        <div class="chapter-row">
+          <span class="time">23:42</span>
+          <span style="flex:1;font-weight:600">Outro</span>
+          <button class="btn btn-ghost btn-sm">✎</button>
+        </div>
+        <button class="btn btn-outline btn-block btn-sm" style="margin-top:10px">+ Add Chapter</button>
+      </div>
+
+      <div style="font-family:var(--serif);font-size:1.1rem;font-weight:bold;margin-bottom:14px">◆ Distribution</div>
+      <div class="card" style="padding:16px;margin-bottom:24px">
+        <div class="distribution-item">
+          <div class="logo">YT</div>
+          <div style="flex:1"><strong>YouTube</strong><br><span style="font-size:.7rem;color:var(--muted)">Auto-upload with thumbnail</span></div>
+          <span class="tag tag-ok">Connected</span>
+        </div>
+        <div class="distribution-item">
+          <div class="logo">SP</div>
+          <div style="flex:1"><strong>Spotify</strong><br><span style="font-size:.7rem;color:var(--muted)">Podcast distribution</span></div>
+          <span class="tag tag-ok">Connected</span>
+        </div>
+        <div class="distribution-item">
+          <div class="logo">AP</div>
+          <div style="flex:1"><strong>Apple Podcasts</strong><br><span style="font-size:.7rem;color:var(--muted)">Podcast distribution</span></div>
+          <span class="tag tag-ok">Connected</span>
+        </div>
+        <div class="distribution-item">
+          <div class="logo">YU</div>
+          <div style="flex:1"><strong>YUBA Podcast Hub</strong><br><span style="font-size:.7rem;color:var(--muted)">Native YUBA distribution</span></div>
+          <span class="tag tag-ok">Connected</span>
+        </div>
+        <div class="distribution-item" style="border-bottom:none">
+          <div class="logo">+</div>
+          <div style="flex:1"><strong>Add Platform</strong><br><span style="font-size:.7rem;color:var(--muted)">Google Podcasts, Pocket Casts, Overcast</span></div>
+          <button class="btn btn-outline btn-sm">Connect</button>
+        </div>
+      </div>
+
+      <div class="card card-accent-gold" style="padding:16px">
+        <div style="font-weight:700;font-size:.88rem;color:var(--ink);margin-bottom:8px">◆ Publish Episode</div>
+        <div style="font-size:.78rem;color:var(--ink2);line-height:1.6;margin-bottom:14px">Ready to publish? Episode will go live across all connected platforms simultaneously.</div>
+        <button class="btn btn-gold btn-block">🚀 Publish Episode 85</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Episodes -->
+  <div style="font-family:var(--serif);font-size:1.1rem;font-weight:bold;margin-bottom:14px">◆ Recent Episodes</div>
+  <div class="card">
+    <div class="card-body" style="padding:0">
+      <table class="table">
+        <thead><tr><th>Episode</th><th>Guest</th><th>Duration</th><th>Plays</th><th>Rating</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Ep. 84</strong> · The Future of Collective Bargaining</td><td>Aisha Bello</td><td>42:18</td><td>1,842</td><td style="color:var(--ok);font-weight:700">4.9</td><td><span class="tag tag-ok">Live</span></td></tr>
+          <tr><td><strong>Ep. 83</strong> · Mediation Across Borders</td><td>Rachel Sithole</td><td>38:24</td><td>1,204</td><td style="color:var(--ok);font-weight:700">4.8</td><td><span class="tag tag-ok">Live</span></td></tr>
+          <tr><td><strong>Ep. 82</strong> · IR Strategy in Fintech</td><td>Peter Okafor</td><td>34:08</td><td>968</td><td>4.6</td><td><span class="tag tag-ok">Live</span></td></tr>
+          <tr><td><strong>Ep. 81</strong> · Data Storytelling for HR</td><td>Kwame Asante</td><td>46:52</td><td>1,412</td><td style="color:var(--ok);font-weight:700">4.9</td><td><span class="tag tag-ok">Live</span></td></tr>
+          <tr><td><strong>Ep. 85</strong> · Collective Bargaining in 2025</td><td>Aisha Bello</td><td>24:18</td><td>—</td><td>—</td><td><span class="tag tag-warn">Recording</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Analytics -->
+  <div class="card card-accent-gold" style="margin-top:24px">
+    <div class="card-header"><span class="card-title">◆ Podcast Analytics</span></div>
+    <div class="card-body">
+      <div class="grid-4" style="gap:16px">
+        <div style="padding:16px;background:var(--bg);border-radius:2px">
+          <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:6px">Total Plays</div>
+          <div style="font-family:var(--serif);font-size:1.6rem;font-weight:bold;color:var(--ink)">42.8k</div>
+          <div style="font-size:.72rem;color:var(--ok);margin-top:4px;font-weight:700">↑ +18% MoM</div>
+        </div>
+        <div style="padding:16px;background:var(--bg);border-radius:2px">
+          <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:6px">Avg Completion</div>
+          <div style="font-family:var(--serif);font-size:1.6rem;font-weight:bold;color:var(--ok)">78%</div>
+          <div style="font-size:.72rem;color:var(--ink2);margin-top:4px">Top 5% globally</div>
+        </div>
+        <div style="padding:16px;background:var(--bg);border-radius:2px">
+          <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:6px">Subscribers</div>
+          <div style="font-family:var(--serif);font-size:1.6rem;font-weight:bold;color:var(--ink)">8.4k</div>
+          <div style="font-size:.72rem;color:var(--ok);margin-top:4px;font-weight:700">+284 this month</div>
+        </div>
+        <div style="padding:16px;background:var(--bg);border-radius:2px">
+          <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:6px">Monthly Revenue</div>
+          <div style="font-family:var(--serif);font-size:1.6rem;font-weight:bold;color:var(--gold-dark)">R3.8k</div>
+          <div style="font-size:.72rem;color:var(--ink2);margin-top:4px">From sponsors + tips</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Podcast Studio · Broadcast from your browser.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Studio</h4><ul><li>Record</li><li>Edit</li><li>Publish</li><li>Distribute</li></ul></div>
+  <div class="footer-col"><h4>Analytics</h4><ul><li>Plays</li><li>Subscribers</li><li>Revenue</li><li>Retention</li></ul></div>
+  <div class="footer-col"><h4>Support</h4><ul><li>Recording Tips</li><li>Equipment</li><li>Help</li><li>Contact</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Podcast Studio v3.2.1</span><span>Ep. 85 · Recording live</span></div></footer>
+</body></html>

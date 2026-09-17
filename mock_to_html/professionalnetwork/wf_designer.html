@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Workflow Designer · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search workflows..."><div class="hub-search-filter"><span>⚙</span><span>v2 draft</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Pro Dev</button><button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#0E1E35,#C5A059);color:#fff">DV</div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span><a href="dev-console.html">Dev Console</a><span class="breadcrumb-sep">/</span>Workflow Designer</div>
+  <h1 class="page-title">Workflow Designer</h1>
+  <p class="page-sub">Visual automation builder for approvals, hiring pipelines, moderation, and event-driven business processes.</p>
+</div></div>
+
+<div class="layout-full">
+  <div class="toolbar-flow">
+    <button class="btn btn-primary btn-sm">+ Add Node</button>
+    <button class="btn btn-outline btn-sm">◇ Decision</button>
+    <button class="btn btn-outline btn-sm">⏱ Delay</button>
+    <button class="btn btn-outline btn-sm">⚡ Trigger</button>
+    <button class="btn btn-outline btn-sm">🔔 Notify</button>
+    <button class="btn btn-outline btn-sm">🔗 Webhook</button>
+    <div style="flex:1"></div>
+    <button class="btn btn-outline btn-sm">↶ Undo</button>
+    <button class="btn btn-outline btn-sm">▶ Test</button>
+    <button class="btn btn-gold btn-sm">💾 Save</button>
+  </div>
+
+  <div class="card card-accent-gold" style="margin-bottom:20px">
+    <div class="card-header"><span class="card-title">Job Application Workflow</span><span style="font-size:.68rem;color:var(--ok);font-weight:700">● Active · 342 runs</span></div>
+    <div class="card-body" style="padding:0">
+      <div class="flow-canvas">
+        <div class="flow-row">
+          <div class="flow-node start">
+            <div class="node-label">Trigger</div>
+            <div class="node-title">Application Submitted</div>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <div class="node-label">Action</div>
+            <div class="node-title">AI Resume Screen</div>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node decision">
+            <div class="node-label">Decision</div>
+            <div class="node-title">Match ≥ 75%?</div>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-branch">
+            <span class="branch-label">YES</span>
+            <div class="flow-node">
+              <div class="node-label">Action</div>
+              <div class="node-title">Schedule Interview</div>
+            </div>
+            <span class="branch-label">NO</span>
+            <div class="flow-node">
+              <div class="node-label">Action</div>
+              <div class="node-title">Auto-Reject + Notify</div>
+            </div>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node end">
+            <div class="node-label">End</div>
+            <div class="node-title">Update Candidate Stage</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="align-items:start">
+    <div class="card">
+      <div class="card-header"><span class="card-title">Workflow Instances · Recent</span></div>
+      <div class="card-body" style="padding:0">
+        <table class="table">
+          <thead><tr><th>Instance</th><th>Candidate</th><th>Stage</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>WF-48291</td><td>Naledi K.</td><td>Schedule Interview</td><td><span class="tag tag-ok">Running</span></td></tr>
+            <tr><td>WF-48290</td><td>James M.</td><td>Complete</td><td><span class="tag tag-ok">Complete</span></td></tr>
+            <tr><td>WF-48289</td><td>Peter O.</td><td>Auto-Reject</td><td><span class="tag tag-danger">Rejected</span></td></tr>
+            <tr><td>WF-48288</td><td>Amara B.</td><td>Update Stage</td><td><span class="tag tag-ok">Complete</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-title">Available Triggers</span></div>
+      <div class="card-body">
+        <div class="pipe-node"><span class="num">1</span> application.submitted</div>
+        <div class="pipe-node"><span class="num">2</span> job.posted</div>
+        <div class="pipe-node"><span class="num">3</span> credential.verified</div>
+        <div class="pipe-node"><span class="num">4</span> content.flagged</div>
+        <div class="pipe-node"><span class="num">5</span> subscription.upgraded</div>
+        <div class="pipe-node"><span class="num">6</span> dsar.received</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Workflow Designer · Event-driven automation.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Workflows</h4><ul><li>Hiring Pipeline</li><li>Moderation</li><li>Approvals</li><li>DSAR</li></ul></div>
+  <div class="footer-col"><h4>Triggers</h4><ul><li>Webhooks</li><li>Scheduled</li><li>Events</li><li>Manual</li></ul></div>
+  <div class="footer-col"><h4>Resources</h4><ul><li>Docs</li><li>Patterns</li><li>Templates</li><li>Support</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Workflow Designer v3.2.1</span><span>342 active runs</span></div></footer>
+</body></html>

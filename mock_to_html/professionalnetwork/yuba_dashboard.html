@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YUBA - Your Ultimate Business Ally | Dashboard</title>
+    <style>
+        /* ==========================================
+           THEME VARIABLES
+        ========================================== */
+        :root {
+            --bg-color: #F8F7F2;
+            --bg-alt: #F0EEE7;
+            --text-primary: #122A4D;
+            --text-secondary: #4A5A6A;
+            --text-muted: #8A96A3;
+            --accent-gold: #C5A059;
+            --accent-gold-dark: #A8853F;
+            --white: #FFFFFF;
+            --border-color: #E2E0D8;
+            --border-strong: #C9C5B8;
+            --font-serif: 'Georgia', 'Times New Roman', serif;
+            --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            --shadow-sm: 0 1px 3px rgba(18, 42, 77, 0.06);
+            --shadow-md: 0 4px 12px rgba(18, 42, 77, 0.08);
+            --shadow-lg: 0 12px 32px rgba(18, 42, 77, 0.12);
+            --success: #2E7D5B;
+            --warning: #C58A2E;
+            --danger: #A83232;
+        }
+
+        /* ==========================================
+           RESET & BASE
+        ========================================== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.55;
+            font-size: 14px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        ul { list-style: none; }
+        button { font-family: inherit; cursor: pointer; }
+
+        /* ==========================================
+           TOP BAR (PERSISTENT HEADER)
+        ========================================== */
+        .topbar {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .topbar-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            height: 68px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            font-weight: bold;
+            color: var(--text-primary);
+            flex-shrink: 0;
+        }
+
+        .brand-icon {
+            color: var(--accent-gold);
+            font-size: 1.8rem;
+            line-height: 1;
+        }
+        /* Brand Logo */
+.brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    height: 60px;
+}
+
+.brand-logo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+        .brand-sub {
+            display: block;
+            font-family: var(--font-sans);
+            font-size: 0.62rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-top: -2px;
+        }
+
+        /* Unified Discovery Hub (Search) */
+        .hub-search {
+            flex: 1;
+            max-width: 620px;
+            display: flex;
+            align-items: center;
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-strong);
+            border-radius: 2px;
+            height: 42px;
+            transition: all 0.25s ease;
+            position: relative;
+        }
+
+        .hub-search:focus-within {
+            border-color: var(--accent-gold);
+            background-color: var(--white);
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.12);
+        }
+
+        .hub-search-icon {
+            color: var(--accent-gold);
+            font-size: 1.25rem;
+            padding: 0 12px;
+        }
+
+        .hub-search input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            padding: 10px 0;
+            font-size: 0.88rem;
+            color: var(--text-primary);
+            outline: none;
+        }
+
+        .hub-search input::placeholder {
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .hub-search-divider {
+            width: 1px;
+            height: 22px;
+            background-color: var(--border-color);
+            margin: 0 4px;
+        }
+
+        .hub-search-filter {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 0 12px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            height: 100%;
+            border-left: 1px solid var(--border-color);
+        }
+
+        .hub-search-filter:hover { color: var(--accent-gold); }
+
+        /* Topbar Actions */
+        .topbar-actions {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+
+        .icon-btn {
+            position: relative;
+            background: transparent;
+            border: 1px solid transparent;
+            width: 40px;
+            height: 40px;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            font-size: 1.15rem;
+            transition: all 0.2s ease;
+        }
+
+        .icon-btn:hover {
+            background-color: var(--bg-color);
+            border-color: var(--border-color);
+            color: var(--accent-gold);
+        }
+
+        .badge-dot {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            min-width: 16px;
+            height: 16px;
+            padding: 0 4px;
+            background-color: var(--danger);
+            color: var(--white);
+            border-radius: 8px;
+            font-size: 0.6rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--white);
+        }
+
+        .badge-dot.gold { background-color: var(--accent-gold); }
+
+        /* Subscription CTA */
+        .upgrade-cta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background-color: var(--text-primary);
+            color: var(--white);
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 2px;
+            transition: all 0.25s ease;
+        }
+
+        .upgrade-cta:hover {
+            background-color: var(--accent-gold);
+            transform: translateY(-1px);
+        }
+
+        .upgrade-cta .crown { color: var(--accent-gold); font-size: 0.9rem; }
+        .upgrade-cta:hover .crown { color: var(--white); }
+
+        /* Profile Dropdown Trigger */
+        .profile-trigger {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            background: transparent;
+            transition: all 0.2s ease;
+        }
+
+        .profile-trigger:hover { border-color: var(--border-color); background-color: var(--bg-color); }
+
+        .avatar {
+            width: 34px;
+            height: 34px;
+            border-radius: 2px;
+            background: linear-gradient(135deg, var(--text-primary), #244368);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-weight: bold;
+            font-size: 0.85rem;
+            position: relative;
+        }
+
+        .avatar-online {
+            position: absolute;
+            bottom: -2px;
+            right: -2px;
+            width: 10px;
+            height: 10px;
+            background-color: var(--success);
+            border: 2px solid var(--white);
+            border-radius: 50%;
+        }
+
+        /* ==========================================
+           MAIN LAYOUT GRID
+        ========================================== */
+        .layout {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px;
+            display: grid;
+            grid-template-columns: 260px 1fr 320px;
+            gap: 24px;
+            align-items: start;
+        }
+
+        /* ==========================================
+           LEFT SIDEBAR
+        ========================================== */
+        .sidebar-left {
+            position: sticky;
+            top: 92px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-height: calc(100vh - 116px);
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+
+        .sidebar-left::-webkit-scrollbar { width: 4px; }
+        .sidebar-left::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 4px; }
+
+        /* Profile Card */
+        .card {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .card-accent-top { border-top: 3px solid var(--text-primary); }
+        .card-accent-gold { border-top: 3px solid var(--accent-gold); }
+
+        .card-header {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card-title {
+            font-family: var(--font-serif);
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-title::before {
+            content: '';
+            display: inline-block;
+            width: 3px;
+            height: 14px;
+            background-color: var(--accent-gold);
+        }
+
+        .card-body { padding: 16px; }
+
+        /* Profile Header */
+        .profile-header {
+            text-align: center;
+            padding: 20px 16px 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .profile-avatar-lg {
+            width: 76px;
+            height: 76px;
+            border-radius: 2px;
+            background: linear-gradient(135deg, var(--text-primary), #244368);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin: 0 auto 12px;
+            position: relative;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .profile-name {
+            font-family: var(--font-serif);
+            font-size: 1.05rem;
+            font-weight: bold;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+        }
+
+        .profile-headline {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 10px;
+            background-color: rgba(197, 160, 89, 0.12);
+            border: 1px solid var(--accent-gold);
+            border-radius: 2px;
+            font-size: 0.65rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--accent-gold-dark);
+        }
+
+        /* Profile Completion */
+        .completion-block {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .completion-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        .completion-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-secondary);
+        }
+
+        .completion-value {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--text-primary);
+        }
+
+        .progress-bar {
+            height: 6px;
+            background-color: var(--bg-alt);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-dark));
+            border-radius: 3px;
+            transition: width 0.6s ease;
+        }
+
+        /* Stats Row */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .stat-item {
+            padding: 12px 8px;
+            text-align: center;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .stat-item:last-child { border-right: none; }
+
+        .stat-value {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--text-primary);
+        }
+
+        .stat-label {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
+            margin-top: 2px;
+            font-weight: 600;
+        }
+
+        /* Sidebar Nav */
+        .side-nav { padding: 8px 0; }
+
+        .side-nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 16px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            border-left: 3px solid transparent;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .side-nav-item:hover {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+        }
+
+        .side-nav-item.active {
+            border-left-color: var(--accent-gold);
+            background-color: rgba(197, 160, 89, 0.06);
+            color: var(--text-primary);
+        }
+
+        .side-nav-num {
+            font-family: var(--font-serif);
+            font-size: 0.7rem;
+            color: var(--accent-gold);
+            font-weight: bold;
+            width: 16px;
+        }
+
+        .side-nav-icon {
+            width: 18px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .side-nav-badge {
+            margin-left: auto;
+            background-color: var(--accent-gold);
+            color: var(--white);
+            font-size: 0.6rem;
+            font-weight: bold;
+            padding: 1px 6px;
+            border-radius: 8px;
+            min-width: 18px;
+            text-align: center;
+        }
+
+        /* Skills Module */
+        .skill-list { display: flex; flex-direction: column; gap: 10px; }
+
+        .skill-item { }
+
+        .skill-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .skill-name {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .skill-endorse {
+            font-size: 0.65rem;
+            color: var(--accent-gold-dark);
+            font-weight: bold;
+            background-color: rgba(197, 160, 89, 0.1);
+            padding: 1px 6px;
+            border-radius: 2px;
+        }
+
+        .skill-bar {
+            height: 4px;
+            background-color: var(--bg-alt);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .skill-fill {
+            height: 100%;
+            background-color: var(--text-primary);
+            border-radius: 2px;
+        }
+
+        /* Credential List */
+        .credential-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .credential-item:last-child { border-bottom: none; }
+
+        .credential-icon {
+            width: 32px;
+            height: 32px;
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-gold);
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .credential-info { flex: 1; min-width: 0; }
+
+        .credential-name {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .credential-issuer {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+        }
+
+        .verified-check {
+            color: var(--success);
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+
+        /* ==========================================
+           MAIN CONTENT
+        ========================================== */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            min-width: 0;
+        }
+
+        /* AI Career Coach Widget */
+        .ai-coach {
+            background: linear-gradient(135deg, var(--text-primary) 0%, #1E3A5F 100%);
+            border: 1px solid var(--text-primary);
+            border-radius: 2px;
+            padding: 20px;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .ai-coach::before {
+            content: '◆';
+            position: absolute;
+            right: -20px;
+            top: -20px;
+            font-size: 8rem;
+            color: rgba(197, 160, 89, 0.08);
+            line-height: 1;
+        }
+
+        .ai-coach-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+            position: relative;
+        }
+
+        .ai-coach-badge {
+            font-size: 0.6rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+            padding: 3px 8px;
+            border-radius: 2px;
+        }
+
+        .ai-coach-title {
+            font-family: var(--font-serif);
+            font-size: 1.05rem;
+            font-weight: bold;
+        }
+
+        .ai-coach-insight {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 16px;
+            position: relative;
+            padding-left: 14px;
+            border-left: 2px solid var(--accent-gold);
+        }
+
+        .ai-coach-actions {
+            display: flex;
+            gap: 10px;
+            position: relative;
+            flex-wrap: wrap;
+        }
+
+        .ai-btn {
+            padding: 8px 16px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            border: 1px solid var(--accent-gold);
+            background-color: var(--accent-gold);
+            color: var(--text-primary);
+            transition: all 0.2s ease;
+        }
+
+        .ai-btn:hover { background-color: var(--accent-gold-dark); border-color: var(--accent-gold-dark); color: var(--white); }
+
+        .ai-btn.ghost {
+            background-color: transparent;
+            color: var(--accent-gold);
+        }
+
+        .ai-btn.ghost:hover { background-color: rgba(197, 160, 89, 0.15); color: var(--accent-gold); }
+
+        /* Feed Tabs */
+        .feed-tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 1px solid var(--border-color);
+            background-color: var(--white);
+            border-radius: 2px 2px 0 0;
+            overflow-x: auto;
+        }
+
+        .feed-tab {
+            padding: 14px 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .feed-tab:hover { color: var(--text-primary); }
+
+        .feed-tab.active {
+            color: var(--text-primary);
+            border-bottom-color: var(--accent-gold);
+        }
+
+        /* Feed Card (Post) */
+        .feed-card {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+            box-shadow: var(--shadow-sm);
+            padding: 18px;
+        }
+
+        .feed-card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .feed-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 2px;
+            background: linear-gradient(135deg, var(--text-primary), #244368);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-weight: bold;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+
+        .feed-meta { flex: 1; min-width: 0; }
+
+        .feed-author {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .feed-submeta {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .feed-tag {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--accent-gold-dark);
+            background-color: rgba(197, 160, 89, 0.1);
+            padding: 2px 8px;
+            border-radius: 2px;
+            margin-top: 4px;
+        }
+
+        .feed-content {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            margin-bottom: 16px;
+        }
+
+        .feed-content strong { color: var(--text-primary); }
+
+        .feed-actions {
+            display: flex;
+            gap: 4px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 12px;
+        }
+
+        .feed-action {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            background: transparent;
+            border: none;
+            border-radius: 2px;
+            transition: all 0.2s ease;
+        }
+
+        .feed-action:hover { background-color: var(--bg-color); color: var(--text-primary); }
+        .feed-action.liked { color: var(--accent-gold); }
+
+        /* Recommended Opportunities */
+        .opp-list { display: flex; flex-direction: column; }
+
+        .opp-item {
+            display: flex;
+            gap: 14px;
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.2s ease;
+        }
+
+        .opp-item:last-child { border-bottom: none; }
+        .opp-item:hover { background-color: var(--bg-color); }
+
+        .opp-logo {
+            width: 48px;
+            height: 48px;
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-weight: bold;
+            color: var(--text-primary);
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .opp-body { flex: 1; min-width: 0; }
+
+        .opp-title {
+            font-family: var(--font-serif);
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: var(--text-primary);
+            margin-bottom: 3px;
+        }
+
+        .opp-company {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .opp-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+
+        .opp-tag {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            padding: 3px 8px;
+            border-radius: 2px;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            background-color: var(--white);
+        }
+
+        .opp-tag.match {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold-dark);
+            background-color: rgba(197, 160, 89, 0.08);
+        }
+
+        /* ==========================================
+           RIGHT SIDEBAR
+        ========================================== */
+        .sidebar-right {
+            position: sticky;
+            top: 92px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-height: calc(100vh - 116px);
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+
+        .sidebar-right::-webkit-scrollbar { width: 4px; }
+        .sidebar-right::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 4px; }
+
+        /* People You May Know */
+        .person-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .person-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .person-item:first-child { padding-top: 0; }
+
+        .person-avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 2px;
+            background: linear-gradient(135deg, #244368, var(--text-primary));
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-weight: bold;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+
+        .person-info { flex: 1; min-width: 0; }
+
+        .person-name {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .person-role {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .person-connect {
+            width: 28px;
+            height: 28px;
+            border: 1px solid var(--border-color);
+            background-color: var(--white);
+            border-radius: 2px;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .person-connect:hover {
+            background-color: var(--text-primary);
+            color: var(--accent-gold);
+            border-color: var(--text-primary);
+        }
+
+        /* Learning Item */
+        .learning-item {
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+            margin-bottom: 10px;
+            background-color: var(--bg-color);
+            transition: all 0.2s ease;
+        }
+
+        .learning-item:last-child { margin-bottom: 0; }
+
+        .learning-item:hover {
+            border-color: var(--accent-gold);
+            background-color: var(--white);
+        }
+
+        .learning-title {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .learning-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .learning-progress-mini {
+            height: 4px;
+            background-color: var(--bg-alt);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .learning-fill {
+            height: 100%;
+            background-color: var(--accent-gold);
+            border-radius: 2px;
+        }
+
+        /* Event Item */
+        .event-item {
+            display: flex;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .event-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .event-item:first-child { padding-top: 0; }
+
+        .event-date {
+            width: 44px;
+            height: 48px;
+            background-color: var(--text-primary);
+            border-radius: 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .event-day {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .event-month {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        .event-info { flex: 1; min-width: 0; }
+
+        .event-title {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 3px;
+            line-height: 1.3;
+        }
+
+        .event-type {
+            font-size: 0.65rem;
+            color: var(--accent-gold-dark);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        /* Group Item */
+        .group-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 9px 0;
+        }
+
+        .group-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 2px;
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: var(--accent-gold);
+            flex-shrink: 0;
+        }
+
+        .group-info { flex: 1; min-width: 0; }
+
+        .group-name {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .group-members {
+            font-size: 0.66rem;
+            color: var(--text-muted);
+        }
+
+        .group-join {
+            font-size: 0.62rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-primary);
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            border-radius: 2px;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .group-join:hover { background-color: var(--text-primary); color: var(--white); border-color: var(--text-primary); }
+
+        /* Saved Items */
+        .saved-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .saved-item:last-child { border-bottom: none; }
+
+        .saved-icon {
+            color: var(--accent-gold);
+            font-size: 0.85rem;
+            width: 16px;
+            text-align: center;
+        }
+
+        .saved-count {
+            margin-left: auto;
+            font-weight: bold;
+            color: var(--text-primary);
+            font-family: var(--font-serif);
+        }
+
+        /* View All Link */
+        .view-all {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-gold-dark);
+            border-top: 1px solid var(--border-color);
+            transition: background-color 0.2s ease;
+        }
+
+        .view-all:hover { background-color: var(--bg-color); }
+
+        /* ==========================================
+           ADMIN OVERLAY (Conditional)
+        ========================================== */
+        .admin-strip {
+            background-color: #3A1F1F;
+            color: #F5D7D7;
+            padding: 8px 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.72rem;
+            flex-wrap: wrap;
+        }
+
+        .admin-strip-label {
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #E8A0A0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .admin-strip-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 3px 10px;
+            background-color: rgba(255,255,255,0.08);
+            border-radius: 2px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .admin-strip-item:hover { background-color: rgba(255,255,255,0.15); }
+
+        .admin-strip-item .count {
+            font-weight: bold;
+            color: var(--accent-gold);
+        }
+
+        /* ==========================================
+           FOOTER
+        ========================================== */
+        .site-footer {
+            background-color: var(--text-primary);
+            color: rgba(255, 255, 255, 0.75);
+            margin-top: 40px;
+            border-top: 4px solid var(--accent-gold);
+        }
+
+        .footer-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 24px 24px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-brand {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+        }
+
+        .footer-desc {
+            font-size: 0.8rem;
+            line-height: 1.7;
+            max-width: 320px;
+        }
+
+        .footer-col h4 {
+            font-size: 0.72rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-gold);
+            margin-bottom: 14px;
+        }
+
+        .footer-col ul li {
+            font-size: 0.78rem;
+            padding: 4px 0;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .footer-col ul li:hover { color: var(--accent-gold); }
+
+        .footer-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.72rem;
+            color: #7FD4A8;
+            margin-top: 14px;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            background-color: #2E7D5B;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 16px 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.72rem;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        /* ==========================================
+           RESPONSIVE
+        ========================================== */
+        @media (max-width: 1200px) {
+            .layout {
+                grid-template-columns: 240px 1fr;
+            }
+            .sidebar-right {
+                display: none;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+            .sidebar-left {
+                position: static;
+                max-height: none;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+            .sidebar-left > .card:first-child { grid-column: span 2; }
+            .hub-search { max-width: none; }
+            .topbar-inner { flex-wrap: wrap; height: auto; padding: 12px 16px; gap: 12px; }
+            .hub-search { order: 3; width: 100%; flex-basis: 100%; }
+            .footer-inner { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .sidebar-left { grid-template-columns: 1fr; }
+            .sidebar-left > .card:first-child { grid-column: span 1; }
+            .footer-inner { grid-template-columns: 1fr; }
+            .topbar-actions .upgrade-cta { display: none; }
+            .feed-actions { flex-wrap: wrap; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================
+         ADMIN STRIP (Conditional for Admins/Moderators)
+    ========================================== -->
+    <div class="admin-strip">
+        <span class="admin-strip-label">◆ Admin Console</span>
+        <div class="admin-strip-item">🛡️ Moderation Queue <span class="count">12</span></div>
+        <div class="admin-strip-item">⚠️ SLA Breaches <span class="count">3</span></div>
+        <div class="admin-strip-item">📥 DSAR Requests <span class="count">5</span></div>
+        <div class="admin-strip-item">🔔 System Alerts <span class="count">2</span></div>
+        <div class="admin-strip-item">📊 DLQ <span class="count">7</span></div>
+    </div>
+
+    <!-- ==========================================
+         TOP BAR
+    ========================================== -->
+    <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand-logo">
+            <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+          </div>
+
+            <!-- Unified Discovery Hub -->
+            <div class="hub-search">
+                <span class="hub-search-icon">⌕</span>
+                <input type="text" placeholder="Search across Business, Networks, Opportunities, Learnings & Groups...">
+                <div class="hub-search-filter" onclick="alert('Advanced filter panel opening...')">
+                    <span>⚙</span>
+                    <span>Filters</span>
+                </div>
+            </div>
+
+            <div class="topbar-actions">
+                <button class="icon-btn" title="Messages">
+                    ✉
+                    <span class="badge-dot">3</span>
+                </button>
+                <button class="icon-btn" title="Notifications">
+                    🔔
+                    <span class="badge-dot gold">8</span>
+                </button>
+                <button class="upgrade-cta">
+                    <span class="crown">♛</span>
+                    <span>Upgrade</span>
+                </button>
+                <button class="profile-trigger">
+                    <div class="avatar">
+                        MT
+                        <span class="avatar-online"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         MAIN LAYOUT
+    ========================================== -->
+    <div class="layout">
+
+        <!-- ==========================================
+             LEFT SIDEBAR
+        ========================================== -->
+        <aside class="sidebar-left">
+
+            <!-- Profile Card -->
+            <div class="card card-accent-top">
+                <div class="profile-header">
+                    <div class="profile-avatar-lg">MT</div>
+                    <div class="profile-name">Mokoena Thabo</div>
+                    <div class="profile-headline">Labor Relations Strategist</div>
+                    <span class="trust-badge">★ Trust Score 92</span>
+                </div>
+                <div class="completion-block">
+                    <div class="completion-row">
+                        <span class="completion-label">Profile Completion</span>
+                        <span class="completion-value">78%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 78%;"></div>
+                    </div>
+                </div>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-value">142</div>
+                        <div class="stat-label">Views</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">89</div>
+                        <div class="stat-label">Connects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">24</div>
+                        <div class="stat-label">Endorse</div>
+                    </div>
+                </div>
+
+                <!-- Domain Navigation -->
+                <nav class="side-nav">
+                    <a class="side-nav-item active">
+                        <span class="side-nav-num">01</span>
+                        <span class="side-nav-icon">🏢</span>
+                        <span>Business</span>
+                    </a>
+                    <a class="side-nav-item">
+                        <span class="side-nav-num">02</span>
+                        <span class="side-nav-icon">🔗</span>
+                        <span>Networks</span>
+                        <span class="side-nav-badge">5</span>
+                    </a>
+                    <a class="side-nav-item">
+                        <span class="side-nav-num">03</span>
+                        <span class="side-nav-icon">🚀</span>
+                        <span>Opportunities</span>
+                        <span class="side-nav-badge">12</span>
+                    </a>
+                    <a class="side-nav-item">
+                        <span class="side-nav-num">04</span>
+                        <span class="side-nav-icon">📖</span>
+                        <span>Learnings</span>
+                    </a>
+                    <a class="side-nav-item">
+                        <span class="side-nav-num">05</span>
+                        <span class="side-nav-icon">👥</span>
+                        <span>Groups</span>
+                        <span class="side-nav-badge">3</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Skills Module -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Top Skills</span>
+                    <span style="font-size:0.7rem; color:var(--accent-gold); cursor:pointer;">+ Add</span>
+                </div>
+                <div class="card-body">
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-top">
+                                <span class="skill-name">Labor Relations</span>
+                                <span class="skill-endorse">24</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 92%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-top">
+                                <span class="skill-name">Employment Law</span>
+                                <span class="skill-endorse">18</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-top">
+                                <span class="skill-name">Strategic Mediation</span>
+                                <span class="skill-endorse">12</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 70%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Credentials Module -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Verified Credentials</span>
+                </div>
+                <div class="card-body" style="padding-top: 8px; padding-bottom: 8px;">
+                    <div class="credential-item">
+                        <div class="credential-icon">🎓</div>
+                        <div class="credential-info">
+                            <div class="credential-name">LLM Labor Law</div>
+                            <div class="credential-issuer">University of Pretoria</div>
+                        </div>
+                        <span class="verified-check">✓</span>
+                    </div>
+                    <div class="credential-item">
+                        <div class="credential-icon">📜</div>
+                        <div class="credential-info">
+                            <div class="credential-name">Certified Mediator</div>
+                            <div class="credential-issuer">CIArb</div>
+                        </div>
+                        <span class="verified-check">✓</span>
+                    </div>
+                    <div class="credential-item">
+                        <div class="credential-icon">⛓</div>
+                        <div class="credential-info">
+                            <div class="credential-name">Blockchain Verified</div>
+                            <div class="credential-issuer">Ledger Anchored</div>
+                        </div>
+                        <span class="verified-check">✓</span>
+                    </div>
+                </div>
+                <a class="view-all">View All Credentials →</a>
+            </div>
+
+        </aside>
+
+        <!-- ==========================================
+             MAIN CONTENT
+        ========================================== -->
+        <main class="main-content">
+
+            <!-- AI Career Coach -->
+            <div class="ai-coach">
+                <div class="ai-coach-header">
+                    <span class="ai-coach-badge">AI Insight</span>
+                    <span class="ai-coach-title">Career Intelligence</span>
+                </div>
+                <p class="ai-coach-insight">
+                    You are <strong>2 skills away</strong> from qualifying for <strong>Senior Labor Relations Manager</strong> roles. Adding "Collective Bargaining" and "Arbitration" could increase your match score by <strong>34%</strong>.
+                </p>
+                <div class="ai-coach-actions">
+                    <button class="ai-btn">View Skill Gap Analysis</button>
+                    <button class="ai-btn ghost">Simulate Career Path</button>
+                </div>
+            </div>
+
+            <!-- Feed Tabs -->
+            <div class="feed-tabs">
+                <button class="feed-tab active">For You</button>
+                <button class="feed-tab">Network</button>
+                <button class="feed-tab">Opportunities</button>
+                <button class="feed-tab">Learnings</button>
+                <button class="feed-tab">Groups</button>
+            </div>
+
+            <!-- Feed Post 1 -->
+            <article class="feed-card">
+                <div class="feed-card-header">
+                    <div class="feed-avatar">NK</div>
+                    <div class="feed-meta">
+                        <div class="feed-author">Naledi Khumalo</div>
+                        <div class="feed-submeta">Director of HR · 2h ago</div>
+                        <span class="feed-tag">Networks</span>
+                    </div>
+                </div>
+                <p class="feed-content">
+                    Just published a new <strong>labor compliance framework</strong> for multinationals operating across SADC. The framework addresses cross-border employment contracts and dispute resolution. Happy to share insights with anyone in the network working on similar challenges.
+                </p>
+                <div class="feed-actions">
+                    <button class="feed-action liked">◆ 24 Likes</button>
+                    <button class="feed-action">💬 8 Comments</button>
+                    <button class="feed-action">↗ Share</button>
+                    <button class="feed-action" style="margin-left:auto;">🔖 Save</button>
+                </div>
+            </article>
+
+            <!-- Feed Post 2 -->
+            <article class="feed-card">
+                <div class="feed-card-header">
+                    <div class="feed-avatar">JM</div>
+                    <div class="feed-meta">
+                        <div class="feed-author">James Mwangi</div>
+                        <div class="feed-submeta">Labor Economist · 5h ago</div>
+                        <span class="feed-tag">Learnings</span>
+                    </div>
+                </div>
+                <p class="feed-content">
+                    Completed the <strong>Advanced Mediation & Arbitration</strong> course on YUBA. The module on interest-based bargaining was particularly transformative. Highly recommend for anyone in labor relations.
+                </p>
+                <div class="feed-actions">
+                    <button class="feed-action">◆ 16 Likes</button>
+                    <button class="feed-action">💬 3 Comments</button>
+                    <button class="feed-action">↗ Share</button>
+                    <button class="feed-action" style="margin-left:auto;">🔖 Save</button>
+                </div>
+            </article>
+
+            <!-- Recommended Opportunities -->
+            <div class="card card-accent-gold">
+                <div class="card-header">
+                    <span class="card-title">Recommended Opportunities</span>
+                    <span style="font-size:0.7rem; color:var(--accent-gold); cursor:pointer;">See All</span>
+                </div>
+                <div class="opp-list">
+                    <div class="opp-item">
+                        <div class="opp-logo">SAP</div>
+                        <div class="opp-body">
+                            <div class="opp-title">Senior Labor Relations Manager</div>
+                            <div class="opp-company">Sasol · Johannesburg, SA</div>
+                            <div class="opp-tags">
+                                <span class="opp-tag match">94% Match</span>
+                                <span class="opp-tag">Full-time</span>
+                                <span class="opp-tag">Hybrid</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opp-item">
+                        <div class="opp-logo">MTN</div>
+                        <div class="opp-body">
+                            <div class="opp-title">Employee Relations Consultant</div>
+                            <div class="opp-company">MTN Group · Lagos, NG</div>
+                            <div class="opp-tags">
+                                <span class="opp-tag match">87% Match</span>
+                                <span class="opp-tag">Contract</span>
+                                <span class="opp-tag">Remote</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opp-item">
+                        <div class="opp-logo">ILO</div>
+                        <div class="opp-body">
+                            <div class="opp-title">Policy Advisor — Labor Standards</div>
+                            <div class="opp-company">ILO · Geneva, CH</div>
+                            <div class="opp-tags">
+                                <span class="opp-tag match">82% Match</span>
+                                <span class="opp-tag">Full-time</span>
+                                <span class="opp-tag">On-site</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="view-all">Browse All Opportunities →</a>
+            </div>
+
+        </main>
+
+        <!-- ==========================================
+             RIGHT SIDEBAR
+        ========================================== -->
+        <aside class="sidebar-right">
+
+            <!-- People You May Know -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">People You May Know</span>
+                </div>
+                <div class="card-body" style="padding-top: 8px; padding-bottom: 8px;">
+                    <div class="person-item">
+                        <div class="person-avatar">AB</div>
+                        <div class="person-info">
+                            <div class="person-name">Amara Bekele</div>
+                            <div class="person-role">HR Director · Addis Ababa</div>
+                        </div>
+                        <button class="person-connect">+</button>
+                    </div>
+                    <div class="person-item">
+                        <div class="person-avatar">DO</div>
+                        <div class="person-info">
+                            <div class="person-name">David Ochieng</div>
+                            <div class="person-role">Labor Lawyer · Nairobi</div>
+                        </div>
+                        <button class="person-connect">+</button>
+                    </div>
+                    <div class="person-item">
+                        <div class="person-avatar">FN</div>
+                        <div class="person-info">
+                            <div class="person-name">Fatima Ndlovu</div>
+                            <div class="person-role">Mediator · Cape Town</div>
+                        </div>
+                        <button class="person-connect">+</button>
+                    </div>
+                </div>
+                <a class="view-all">Discover More →</a>
+            </div>
+
+            <!-- Continue Learning -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Continue Learning</span>
+                </div>
+                <div class="card-body">
+                    <div class="learning-item">
+                        <div class="learning-title">Advanced Collective Bargaining</div>
+                        <div class="learning-meta">
+                            <span>Module 4 of 6</span>
+                            <span>62%</span>
+                        </div>
+                        <div class="learning-progress-mini">
+                            <div class="learning-fill" style="width: 62%;"></div>
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <div class="learning-title">Employment Law in the Digital Age</div>
+                        <div class="learning-meta">
+                            <span>Module 2 of 5</span>
+                            <span>34%</span>
+                        </div>
+                        <div class="learning-progress-mini">
+                            <div class="learning-fill" style="width: 34%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <a class="view-all">View All Learnings →</a>
+            </div>
+
+            <!-- Upcoming Events -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Upcoming Events</span>
+                </div>
+                <div class="card-body" style="padding-top: 8px; padding-bottom: 8px;">
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">18</span>
+                            <span class="event-month">Sep</span>
+                        </div>
+                        <div class="event-info">
+                            <div class="event-title">SADC Labor Law Summit</div>
+                            <div class="event-type">Webinar · 2h</div>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">25</span>
+                            <span class="event-month">Sep</span>
+                        </div>
+                        <div class="event-info">
+                            <div class="event-title">Mediation Masterclass</div>
+                            <div class="event-type">Workshop · 4h</div>
+                        </div>
+                    </div>
+                </div>
+                <a class="view-all">Browse Events →</a>
+            </div>
+
+            <!-- Suggested Groups -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Suggested Groups</span>
+                </div>
+                <div class="card-body" style="padding-top: 4px; padding-bottom: 4px;">
+                    <div class="group-item">
+                        <div class="group-icon">⚖</div>
+                        <div class="group-info">
+                            <div class="group-name">Labor Law Practitioners</div>
+                            <div class="group-members">2.4k members</div>
+                        </div>
+                        <button class="group-join">Join</button>
+                    </div>
+                    <div class="group-item">
+                        <div class="group-icon">🌍</div>
+                        <div class="group-info">
+                            <div class="group-name">Pan-African HR Network</div>
+                            <div class="group-members">1.8k members</div>
+                        </div>
+                        <button class="group-join">Join</button>
+                    </div>
+                    <div class="group-item">
+                        <div class="group-icon">📊</div>
+                        <div class="group-info">
+                            <div class="group-name">Employment Analytics</div>
+                            <div class="group-members">920 members</div>
+                        </div>
+                        <button class="group-join">Join</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Saved Items -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Saved Items</span>
+                </div>
+                <div class="card-body" style="padding-top: 8px; padding-bottom: 8px;">
+                    <div class="saved-item">
+                        <span class="saved-icon">🔖</span>
+                        <span>Saved Jobs</span>
+                        <span class="saved-count">14</span>
+                    </div>
+                    <div class="saved-item">
+                        <span class="saved-icon">📄</span>
+                        <span>Saved Articles</span>
+                        <span class="saved-count">28</span>
+                    </div>
+                    <div class="saved-item">
+                        <span class="saved-icon">📚</span>
+                        <span>Saved Courses</span>
+                        <span class="saved-count">6</span>
+                    </div>
+                    <div class="saved-item">
+                        <span class="saved-icon">🔍</span>
+                        <span>Saved Searches</span>
+                        <span class="saved-count">9</span>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+    <!-- ==========================================
+         FOOTER
+    ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <div class="footer-brand">MOKOENA JUSTICE HUB</div>
+                <p class="footer-desc">
+                    Labor Relations & Employment Strategy. Empowering professionals across Africa with unified discovery, intelligence, and opportunity.
+                </p>
+                <div class="footer-status">
+                    <span class="status-dot"></span>
+                    <span>All Systems Operational</span>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <ul>
+                    <li>Business Directory</li>
+                    <li>Networks</li>
+                    <li>Opportunities</li>
+                    <li>Learnings</li>
+                    <li>Groups</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal & Privacy</h4>
+                <ul>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Service</li>
+                    <li>GDPR Compliance</li>
+                    <li>Data Subject Requests</li>
+                    <li>Cookie Settings</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li>Help Center</li>
+                    <li>Submit a Ticket</li>
+                    <li>System Status</li>
+                    <li>API Documentation</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2024 YUBA · Your Ultimate Business Ally. All rights reserved.</span>
+            <span>Crafted with precision · v3.2.1</span>
+        </div>
+    </footer>
+
+</body>
+</html>

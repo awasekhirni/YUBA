@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Recommendation Algorithm Builder · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search models..."><div class="hub-search-filter"><span>⚙</span><span>career-path-v4.draft</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Pro Dev</button><button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#0E1E35,#C5A059);color:#fff">DV</div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span><a href="dev-console.html">Dev Console</a><span class="breadcrumb-sep">/</span>Recommendation Algorithm Builder</div>
+  <h1 class="page-title">Recommendation Algorithm Builder</h1>
+  <p class="page-sub">Compose production-grade recommendation engines visually. Drag data sources, filters, ML models, and rankers into a working pipeline — deploy without writing code.</p>
+</div></div>
+
+<div class="layout-full">
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;align-items:center">
+    <button class="btn btn-primary btn-sm">📁 Save Draft</button>
+    <button class="btn btn-outline btn-sm">↶ Undo</button>
+    <button class="btn btn-outline btn-sm">↷ Redo</button>
+    <button class="btn btn-outline btn-sm">▶ Validate Pipeline</button>
+    <button class="btn btn-outline btn-sm">⚡ Test with Sample User</button>
+    <div style="flex:1"></div>
+    <span class="tag tag-warn">● Unsaved changes</span>
+    <button class="btn btn-gold btn-sm">🚀 Deploy to Staging</button>
+  </div>
+
+  <div class="builder-layout">
+
+    <div class="builder-palette">
+      <div class="palette-title">Data Sources</div>
+      <div class="palette-block">👤 User Skills</div>
+      <div class="palette-block">💼 Job Market</div>
+      <div class="palette-block">📈 Career Paths</div>
+      <div class="palette-block">⭐ Endorsements</div>
+      <div class="palette-block">📚 Course Catalog</div>
+      <div class="palette-block">🏢 Company Intel</div>
+      <div class="palette-block">🕸 Network Graph</div>
+
+      <div class="palette-title">Filters</div>
+      <div class="palette-block">🔍 Salary Floor</div>
+      <div class="palette-block">📍 Geographic</div>
+      <div class="palette-block">⏱ Recency</div>
+      <div class="palette-block">🚫 Blocked Entities</div>
+      <div class="palette-block">✓ Verified Only</div>
+
+      <div class="palette-title">ML Models</div>
+      <div class="palette-block">🧠 GBM Ranker</div>
+      <div class="palette-block">🎯 Neural Embedder</div>
+      <div class="palette-block">🔮 Matrix Factorization</div>
+      <div class="palette-block">🌳 Random Forest</div>
+      <div class="palette-block">📊 Logistic Regression</div>
+
+      <div class="palette-title">Post-Processors</div>
+      <div class="palette-block">📊 Diversity Filter</div>
+      <div class="palette-block">🎲 Exploration Bonus</div>
+      <div class="palette-block">⚖ Fairness Adjuster</div>
+      <div class="palette-block">💬 Explainability Layer</div>
+      <div class="palette-block">🔒 Privacy Noise</div>
+
+      <div class="palette-title">Outputs</div>
+      <div class="palette-block">📋 Ranked List</div>
+      <div class="palette-block">🎯 Top-K</div>
+      <div class="palette-block">📊 Explain Bundle</div>
+    </div>
+
+    <div class="builder-canvas">
+      <div class="canvas-node data">
+        <div class="type">Data Source</div>
+        <div class="title">User Skills & Experience</div>
+        <div class="meta">Source: user_skills, user_education, user_certifications</div>
+        <div class="config">embedding: skill_vector_v3</div>
+      </div>
+      <div class="arrow-down">↓</div>
+
+      <div class="canvas-node data">
+        <div class="type">Data Source</div>
+        <div class="title">Job Market Analytics</div>
+        <div class="meta">Source: job_listings, mv_market_skill_demand</div>
+        <div class="config">window: last_90_days</div>
+      </div>
+      <div class="arrow-down">↓</div>
+
+      <div class="canvas-node filter">
+        <div class="type">Filter</div>
+        <div class="title">Salary Floor + Geography</div>
+        <div class="meta">Two-stage filter applied to candidates</div>
+        <div class="config">min_salary: 80000 · countries: [ZA, KE, NG, GH]</div>
+      </div>
+      <div class="arrow-down">↓</div>
+
+      <div class="canvas-node ml">
+        <div class="type">ML Model</div>
+        <div class="title">GBM Ranker (Gradient Boosted Trees)</div>
+        <div class="meta">Weights: skill_match=0.35, demand=0.25, gap=0.20, time=0.20</div>
+        <div class="config">n_estimators: 250 · max_depth: 6 · lr: 0.08</div>
+      </div>
+      <div class="arrow-down">↓</div>
+
+      <div class="canvas-node rank">
+        <div class="type">Post-Processor</div>
+        <div class="title">Diversity + Fairness Adjuster</div>
+        <div class="meta">MMR diversity (λ=0.7) + demographic parity constraint</div>
+        <div class="config">fairness_metric: demographic_parity · tolerance: 0.05</div>
+      </div>
+      <div class="arrow-down">↓</div>
+
+      <div class="canvas-node rank">
+        <div class="type">Post-Processor</div>
+        <div class="title">Explainability Layer (SHAP)</div>
+        <div class="meta">Generates per-recommendation reason strings</div>
+        <div class="config">top_k_factors: 5 · template: natural_language_v2</div>
+      </div>
+      <div class="arrow-down">↓</div>
+
+      <div class="canvas-node ml" style="border-color:var(--accent)">
+        <div class="type">Output</div>
+        <div class="title">Ranked Recommendations Bundle</div>
+        <div class="meta">Returns top 50 with explanations, confidence intervals, and counterfactuals</div>
+        <div class="config">format: json_v3 · cache_ttl: 300s</div>
+      </div>
+    </div>
+
+    <div class="builder-props">
+      <div class="palette-title">Selected: GBM Ranker</div>
+
+      <div class="prop-group">
+        <div class="prop-label">Model Type</div>
+        <select class="prop-input">
+          <option>Gradient Boosted Trees</option>
+          <option>Neural Network</option>
+          <option>Random Forest</option>
+          <option>Logistic Regression</option>
+        </select>
+      </div>
+
+      <div class="prop-group">
+        <div class="prop-label">Feature Weights</div>
+        <div style="font-size:.75rem;margin-bottom:6px">skill_match <input type="range" min="0" max="100" value="35" style="width:100%"></div>
+        <div style="font-size:.75rem;margin-bottom:6px">market_demand <input type="range" min="0" max="100" value="25" style="width:100%"></div>
+        <div style="font-size:.75rem;margin-bottom:6px">gap_severity <input type="range" min="0" max="100" value="20" style="width:100%"></div>
+        <div style="font-size:.75rem">time_to_ready <input type="range" min="0" max="100" value="20" style="width:100%"></div>
+      </div>
+
+      <div class="prop-group">
+        <div class="prop-label">Hyperparameters</div>
+        <input class="prop-input" style="margin-bottom:6px" value="n_estimators: 250">
+        <input class="prop-input" style="margin-bottom:6px" value="max_depth: 6">
+        <input class="prop-input" value="learning_rate: 0.08">
+      </div>
+
+      <div class="prop-group">
+        <div class="prop-label">Fairness Constraint</div>
+        <select class="prop-input">
+          <option>Demographic Parity</option>
+          <option>Equal Opportunity</option>
+          <option>None</option>
+        </select>
+      </div>
+
+      <div class="prop-group">
+        <div class="prop-label">Explainability</div>
+        <label style="display:flex;align-items:center;gap:8px;font-size:.78rem;margin-bottom:4px"><input type="checkbox" checked> SHAP values per recommendation</label>
+        <label style="display:flex;align-items:center;gap:8px;font-size:.78rem;margin-bottom:4px"><input type="checkbox" checked> Counterfactual generation</label>
+        <label style="display:flex;align-items:center;gap:8px;font-size:.78rem"><input type="checkbox" checked> Confidence intervals</label>
+      </div>
+
+      <button class="btn btn-gold btn-block btn-sm">💾 Save Node Config</button>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Recommendation Builder · Visual algorithm composition.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Builder</h4><ul><li>Palette</li><li>Canvas</li><li>Properties</li><li>Deploy</li></ul></div>
+  <div class="footer-col"><h4>Features</h4><ul><li>Data Sources</li><li>ML Models</li><li>Fairness</li><li>Explainability</li></ul></div>
+  <div class="footer-col"><h4>Support</h4><ul><li>Docs</li><li>Templates</li><li>Help</li><li>Contact</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Rec Algo Builder v3.2.1</span><span>Draft: career-path-v4</span></div></footer>
+</body></html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Workforce Planning Console · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search departments, roles, plans..."><div class="hub-search-filter"><span>⚙</span><span>Enterprise</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Enterprise</button><button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#1F5C40,#0A1622)">SA</div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span>Workforce Planning Console</div>
+  <h1 class="page-title">Workforce Planning Console</h1>
+  <p class="page-sub">Model tomorrow's workforce today. Scenario planning, attrition forecasting, and skill gap analysis — all in one strategic view.</p>
+</div></div>
+
+<div class="layout-full">
+
+  <div class="wf-hero">
+    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;position:relative">
+      <div style="flex:1;min-width:280px">
+        <span class="tag tag-gold" style="margin-bottom:12px;display:inline-block">◆ FY2025 PLANNING CYCLE</span>
+        <h2 style="font-family:var(--serif);font-size:1.5rem;margin-bottom:8px">Three scenarios on the table</h2>
+        <p style="opacity:.88;font-size:.9rem;max-width:640px">Grow (net +12%), Hold (net 0%), Restructure (net -8%). Each with different cost and skill implications.</p>
+      </div>
+      <button class="btn btn-gold">+ New Scenario</button>
+    </div>
+  </div>
+
+  <div class="grid-4" style="margin-bottom:24px">
+    <div class="stat-card"><div class="label">Current Headcount</div><div class="value">28,470</div><div class="delta">Q4 2024 actual</div></div>
+    <div class="stat-card"><div class="label">FY25 Planned</div><div class="value" style="color:var(--gold-dark)">30,142</div><div class="delta">+5.9% net</div></div>
+    <div class="stat-card"><div class="label">Attrition Forecast</div><div class="value">8.4%</div><div class="delta">Below industry (11.2%)</div></div>
+    <div class="stat-card"><div class="label">Skill Gap Priority</div><div class="value" style="color:var(--warn)">3 roles</div><div class="delta down">Critical skill gaps</div></div>
+  </div>
+
+  <!-- Scenarios -->
+  <div style="font-family:var(--serif);font-size:1.1rem;font-weight:bold;margin-bottom:14px">◆ FY2025 Scenarios</div>
+
+  <div class="scenario-card active">
+    <div class="scenario-head">
+      <div>
+        <span class="tag tag-ok" style="margin-bottom:8px;display:inline-block">★ RECOMMENDED</span>
+        <h4>Scenario A · Strategic Growth</h4>
+        <div style="font-size:.78rem;color:var(--muted);margin-top:4px">Balanced growth aligned with expansion strategy</div>
+      </div>
+      <span class="tag tag-ok">✓ Approved</span>
+    </div>
+    <div class="metric-row">
+      <div><div class="lbl">Net Headcount</div><div class="val" style="color:var(--ok)">+5.9%</div></div>
+      <div><div class="lbl">Cost Impact</div><div class="val">+R284M</div></div>
+      <div><div class="lbl">Hires</div><div class="val">+2,842</div></div>
+      <div><div class="lbl">Attrition Buffer</div><div class="val">-1,170</div></div>
+      <div><div class="lbl">Skill Gaps Closed</div><div class="val" style="color:var(--ok)">6 of 8</div></div>
+    </div>
+  </div>
+
+  <div class="scenario-card">
+    <div class="scenario-head">
+      <div>
+        <h4>Scenario B · Steady State</h4>
+        <div style="font-size:.78rem;color:var(--muted);margin-top:4px">Maintain headcount, focus on internal mobility</div>
+      </div>
+      <span class="tag">Under Review</span>
+    </div>
+    <div class="metric-row">
+      <div><div class="lbl">Net Headcount</div><div class="val">0%</div></div>
+      <div><div class="lbl">Cost Impact</div><div class="val">+R42M</div></div>
+      <div><div class="lbl">Hires</div><div class="val">+1,170</div></div>
+      <div><div class="lbl">Attrition Buffer</div><div class="val">-1,170</div></div>
+      <div><div class="lbl">Skill Gaps Closed</div><div class="val" style="color:var(--warn)">3 of 8</div></div>
+    </div>
+  </div>
+
+  <div class="scenario-card">
+    <div class="scenario-head">
+      <div>
+        <h4>Scenario C · Restructure</h4>
+        <div style="font-size:.78rem;color:var(--muted);margin-top:4px">Optimize cost, invest in automation</div>
+      </div>
+      <span class="tag">Draft</span>
+    </div>
+    <div class="metric-row">
+      <div><div class="lbl">Net Headcount</div><div class="val" style="color:var(--danger)">-8.0%</div></div>
+      <div><div class="lbl">Cost Impact</div><div class="val" style="color:var(--ok)">-R184M</div></div>
+      <div><div class="lbl">Hires</div><div class="val">+842</div></div>
+      <div><div class="lbl">Redundancies</div><div class="val" style="color:var(--danger)">-3,120</div></div>
+      <div><div class="lbl">Skill Gaps</div><div class="val" style="color:var(--danger)">+2 new</div></div>
+    </div>
+  </div>
+
+  <!-- Department breakdown -->
+  <div class="grid-2" style="align-items:start;margin:24px 0">
+
+    <div class="card card-accent-gold">
+      <div class="card-header"><span class="card-title">◆ Department Headcount · FY25 Plan</span></div>
+      <div class="card-body">
+        <div class="department-bar"><span class="name">Operations</span><div class="track"><div class="fill" style="width:92%"></div></div><span class="val">12,420</span></div>
+        <div class="department-bar"><span class="name">Engineering</span><div class="track"><div class="fill" style="width:62%"></div></div><span class="val">8,340</span></div>
+        <div class="department-bar"><span class="name">Sales & Marketing</span><div class="track"><div class="fill" style="width:38%"></div></div><span class="val">5,120</span></div>
+        <div class="department-bar"><span class="name">Finance</span><div class="track"><div class="fill" style="width:18%"></div></div><span class="val">2,420</span></div>
+        <div class="department-bar"><span class="name">HR & People</span><div class="track"><div class="fill" style="width:14%"></div></div><span class="val">1,842</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-title">◆ Critical Skill Gaps · FY25</span></div>
+      <div class="card-body" style="padding:0">
+        <div class="opp-item" style="padding:12px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">AI & Machine Learning Ops</div><div style="font-size:.72rem;color:var(--muted)">Need: 42 specialists · Have: 12 · Gap: 30</div></div><span class="tag tag-danger">Critical</span></div>
+        <div class="opp-item" style="padding:12px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Data Engineering</div><div style="font-size:.72rem;color:var(--muted)">Need: 84 engineers · Have: 62 · Gap: 22</div></div><span class="tag tag-warn">High</span></div>
+        <div class="opp-item" style="padding:12px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">ESG Compliance</div><div style="font-size:.72rem;color:var(--muted)">Need: 28 specialists · Have: 18 · Gap: 10</div></div><span class="tag tag-warn">High</span></div>
+        <div class="opp-item" style="padding:12px 16px;border-bottom:none"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Cybersecurity</div><div style="font-size:.72rem;color:var(--muted)">Need: 42 specialists · Have: 38 · Gap: 4</div></div><span class="tag">Medium</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Attrition Forecast -->
+  <div class="card card-accent-top">
+    <div class="card-header"><span class="card-title">◆ Attrition Forecast · Next 12 Months</span><span style="font-size:.68rem;color:var(--muted)">ML-based prediction</span></div>
+    <div class="card-body">
+      <svg viewBox="0 0 800 240" style="width:100%;height:240px">
+        <line x1="40" y1="200" x2="780" y2="200" stroke="#E2E0D8"/>
+        <line x1="40" y1="150" x2="780" y2="150" stroke="#E2E0D8" stroke-dasharray="2,4"/>
+        <line x1="40" y1="100" x2="780" y2="100" stroke="#E2E0D8" stroke-dasharray="2,4"/>
+        <line x1="40" y1="50" x2="780" y2="50" stroke="#E2E0D8" stroke-dasharray="2,4"/>
+        <polyline points="60,160 120,155 180,148 240,140 300,132 360,120 420,110 480,100 540,92 600,85 660,78 720,72" fill="none" stroke="#C5A059" stroke-width="2.5"/>
+        <polyline points="60,175 120,172 180,168 240,162 300,158 360,152 420,146 480,142 540,138 600,132 660,128 720,124" fill="none" stroke="#2E7D5B" stroke-width="2" stroke-dasharray="6,4"/>
+        <g fill="#C5A059"><circle cx="60" cy="160" r="3"/><circle cx="420" cy="110" r="3"/><circle cx="720" cy="72" r="3"/></g>
+        <g font-family="Helvetica" font-size="10" fill="#8A96A3">
+          <text x="40" y="225">Jan '25</text><text x="280" y="225">May</text><text x="500" y="225">Sep</text><text x="700" y="225">Dec '25</text>
+        </g>
+        <g font-family="Helvetica" font-size="11" font-weight="bold">
+          <text x="580" y="60" fill="#C5A059">Projected attrition</text>
+          <text x="580" y="115" fill="#2E7D5B">Industry baseline</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Workforce Planning · Plan the future of work.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Planning</h4><ul><li>Scenarios</li><li>Headcount</li><li>Skills</li><li>Attrition</li></ul></div>
+  <div class="footer-col"><h4>Forecasting</h4><ul><li>Attrition</li><li>Hiring</li><li>Cost</li><li>Skills</li></ul></div>
+  <div class="footer-col"><h4>Support</h4><ul><li>Methodology</li><li>Templates</li><li>Help</li><li>Contact</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Workforce Planning v3.2.1</span><span>3 scenarios · 8 skill gaps</span></div></footer>
+</body></html>

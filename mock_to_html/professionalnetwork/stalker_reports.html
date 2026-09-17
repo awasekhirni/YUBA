@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stalker Reports · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search reports..."><div class="hub-search-filter"><span>⚙</span><span>Help</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Pro</button><button class="profile-trigger"><div class="avatar">MT<span class="avatar-online"></span></div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span><a href="safety-center.html">Safety Center</a><span class="breadcrumb-sep">/</span>Stalker Reports</div>
+  <h1 class="page-title">Stalker Reports</h1>
+  <p class="page-sub">Report suspicious following, repeated unwanted contact, or monitoring behavior. All reports are confidential.</p>
+</div></div>
+
+<div class="layout-2col">
+  <aside class="sidebar">
+    <div class="card card-accent-top">
+      <nav class="side-nav">
+        <a class="side-nav-item active"><span class="side-nav-icon">📋</span><span>My Reports</span><span class="side-nav-badge">1</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">➕</span><span>File New Report</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">📊</span><span>Report Status</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">🔍</span><span>Evidence Vault</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">⚖</span><span>Legal Options</span></a>
+      </nav>
+    </div>
+    <div class="card card-accent-gold">
+      <div class="card-header"><span class="card-title">Your Safety</span></div>
+      <div class="card-body" style="font-size:.78rem;line-height:1.9">
+        <div>✓ 3 accounts blocked</div>
+        <div>✓ Message requests ON</div>
+        <div>✓ Profile visibility: Connections</div>
+        <div>✓ 2FA enabled</div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <div class="card card-accent-gold" style="margin-bottom:20px">
+      <div class="card-header"><span class="card-title">File a New Report</span><span style="font-size:.68rem;color:var(--muted)">All reports are confidential</span></div>
+      <div class="card-body">
+        <div class="form-row">
+          <div class="form-group"><label>Report Category</label>
+            <select>
+              <option>Repeated Unwanted Contact</option>
+              <option>Suspicious Following / Monitoring</option>
+              <option>Harassing Messages</option>
+              <option>Off-Platform Tracking</option>
+              <option>Physical Safety Concern</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Severity</label>
+            <select>
+              <option>Medium — Uncomfortable but not threatened</option>
+              <option>High — Feeling threatened or unsafe</option>
+              <option>Low — Mild concern</option>
+              <option>Critical — Immediate physical danger</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Account(s) Involved</label><input placeholder="Search by name or username..."></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Description</label><textarea placeholder="Describe what happened. Include dates, times, and any details that help our safety team investigate."></textarea></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Evidence Upload</label><input type="file" multiple style="padding:8px;border:1px dashed var(--line-strong);background:var(--bg)"></div>
+        </div>
+        <div style="background:rgba(197,160,89,.06);border-left:3px solid var(--gold);padding:14px;border-radius:2px;margin-bottom:16px">
+          <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gold-dark);margin-bottom:4px">🔒 Your safety is protected</div>
+          <div style="font-size:.8rem;color:var(--ink2)">The reported user will not be notified that you filed this report. Reports are reviewed by trained safety specialists within 24 hours.</div>
+        </div>
+        <div style="display:flex;gap:10px;justify-content:flex-end"><button class="btn btn-ghost">Save Draft</button><button class="btn btn-primary">Submit Report</button></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-title">My Reports</span></div>
+      <div class="card-body" style="padding:0">
+        <div style="padding:20px;border-bottom:1px solid var(--line)">
+          <div style="display:flex;justify-content:space-between;align-items:start;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+            <div><div style="font-family:var(--serif);font-weight:bold;font-size:1rem">REP-2024-0847</div><div style="font-size:.72rem;color:var(--muted)">Filed 3 days ago · Repeated Unwanted Contact</div></div>
+            <span class="severity-badge sev-med">◆ Medium</span>
+          </div>
+          <div style="font-size:.85rem;color:var(--ink2);margin-bottom:16px;padding:12px;background:var(--bg);border-radius:2px">User has sent 14 messages over 6 days despite no response. Initially professional inquiry, escalated to personal remarks about my schedule and location.</div>
+
+          <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:12px">Investigation Timeline</div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-time">3 days ago · 14:22</div>
+              <div class="timeline-title">Report submitted</div>
+              <div class="timeline-desc">Attached 14 message screenshots</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">3 days ago · 14:25</div>
+              <div class="timeline-title">Assigned to Safety Specialist</div>
+              <div class="timeline-desc">Case #847 assigned to @safety-team-03</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">2 days ago · 09:14</div>
+              <div class="timeline-title">Evidence reviewed</div>
+              <div class="timeline-desc">Pattern analysis confirmed — repeated contact within 24h threshold exceeded</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">1 day ago · 16:40</div>
+              <div class="timeline-title">Account restrictions applied</div>
+              <div class="timeline-desc">Messaging privileges suspended for reported user pending further review</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time" style="color:var(--gold-dark)">In Progress</div>
+              <div class="timeline-title" style="color:var(--gold-dark)">Awaiting final determination</div>
+              <div class="timeline-desc">Expected resolution within 24 hours</div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:8px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line)">
+            <button class="btn btn-outline btn-sm">Add Evidence</button>
+            <button class="btn btn-outline btn-sm">Contact Specialist</button>
+            <button class="btn btn-ghost btn-sm">Close Report</button>
+          </div>
+        </div>
+
+        <div style="padding:20px;text-align:center;color:var(--muted);font-size:.78rem">
+          No other reports on file. You have filed 1 report in the last 12 months.
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-accent-top" style="margin-top:20px">
+      <div class="card-header"><span class="card-title">What Happens After You Report</span></div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:16px">
+          <div style="text-align:center;padding:16px">
+            <div style="width:36px;height:36px;background:var(--gold);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:bold;margin:0 auto 10px">1</div>
+            <div style="font-weight:700;font-size:.82rem;margin-bottom:4px">Triage</div>
+            <div style="font-size:.72rem;color:var(--muted)">Within 2 hours</div>
+          </div>
+          <div style="text-align:center;padding:16px">
+            <div style="width:36px;height:36px;background:var(--gold);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:bold;margin:0 auto 10px">2</div>
+            <div style="font-weight:700;font-size:.82rem;margin-bottom:4px">Investigation</div>
+            <div style="font-size:.72rem;color:var(--muted)">Within 24 hours</div>
+          </div>
+          <div style="text-align:center;padding:16px">
+            <div style="width:36px;height:36px;background:var(--gold);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:bold;margin:0 auto 10px">3</div>
+            <div style="font-weight:700;font-size:.82rem;margin-bottom:4px">Action</div>
+            <div style="font-size:.72rem;color:var(--muted)">Restrictions/warnings</div>
+          </div>
+          <div style="text-align:center;padding:16px">
+            <div style="width:36px;height:36px;background:var(--gold);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:bold;margin:0 auto 10px">4</div>
+            <div style="font-weight:700;font-size:.82rem;margin-bottom:4px">Resolution</div>
+            <div style="font-size:.72rem;color:var(--muted)">Outcome shared with you</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Safety Center · Confidential reporting.</p><div class="footer-status"><span class="status-dot"></span>24/7 Specialist Coverage</div></div>
+  <div class="footer-col"><h4>Report</h4><ul><li>Stalking</li><li>Harassment</li><li>Impersonation</li><li>Content</li></ul></div>
+  <div class="footer-col"><h4>Protect</h4><ul><li>Block User</li><li>Restrict</li><li>Privacy Settings</li><li>2FA</li></ul></div>
+  <div class="footer-col"><h4>Support</h4><ul><li>Talk to Specialist</li><li>Resources</li><li>Legal Help</li><li>Emergency</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Stalker Reports v3.2.1</span><span>Case #847 · In Progress</span></div></footer>
+</body></html>

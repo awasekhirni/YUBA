@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Warm Intro Path Finder · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Find path to anyone..."><div class="hub-search-filter"><span>⚙</span><span>Graph</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Pro</button><button class="profile-trigger"><div class="avatar">MT<span class="avatar-online"></span></div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span>Warm Intro Path Finder</div>
+  <h1 class="page-title">Warm Intro Path Finder</h1>
+  <p class="page-sub">Find the shortest, warmest path to anyone in the network. Every connection is a door — here are your keys.</p>
+</div></div>
+
+<div class="layout-full">
+
+  <div class="card card-accent-gold" style="margin-bottom:20px">
+    <div class="card-header"><span class="card-title">Find a Path</span></div>
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group"><label>From (You)</label><input value="Mokoena Thabo" disabled></div>
+        <div class="form-group"><label>To (Target Person)</label><input value="Aisha Bello · CHRO · Dangote Group"></div>
+        <div class="form-group" style="flex:0 0 140px"><label>Max Degrees</label><select><option>3 degrees</option><option>4 degrees</option><option>6 degrees</option><option>Unlimited</option></select></div>
+      </div>
+      <div style="display:flex;gap:10px;justify-content:flex-end"><button class="btn btn-gold">🔍 Find Paths</button></div>
+    </div>
+  </div>
+
+  <div class="grid-4" style="margin-bottom:20px">
+    <div class="stat-card"><div class="label">Paths Found</div><div class="value">4</div><div class="delta">1 is warm</div></div>
+    <div class="stat-card"><div class="label">Shortest Path</div><div class="value">3</div><div class="delta">Degrees of separation</div></div>
+    <div class="stat-card"><div class="label">Best Introducer</div><div class="value" style="font-size:1.1rem">Naledi K.</div><div class="delta">Mutual trust 88</div></div>
+    <div class="stat-card"><div class="label">Response Likelihood</div><div class="value" style="color:var(--ok)">72%</div><div class="delta">Based on similar intros</div></div>
+  </div>
+
+  <div class="card card-accent-gold" style="margin-bottom:20px">
+    <div class="card-header"><span class="card-title">★ Recommended Path · Warm Introduction</span><span class="tag tag-ok">72% Success</span></div>
+    <div class="card-body">
+      <div class="path-chain">
+        <div class="path-node start">YOU</div>
+        <div class="path-arrow">→</div>
+        <div class="path-node" style="border-color:var(--gold)">NK<br>Naledi K.</div>
+        <div class="path-arrow">→</div>
+        <div class="path-node" style="border-color:var(--gold)">KA<br>Kwame A.</div>
+        <div class="path-arrow">→</div>
+        <div class="path-node end">AB<br>Aisha B.</div>
+      </div>
+
+      <div class="grid-3" style="gap:14px">
+        <div class="path-meta"><div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:4px">Step 1 · You ↔ Naledi</div><div style="font-size:.85rem;font-weight:700;margin-bottom:4px">Direct Connection</div><div style="font-size:.72rem;color:var(--muted)">Trust: 92 · Mutual: 47</div><div class="strength-bar"><div class="strength-fill" style="width:92%"></div></div></div>
+        <div class="path-meta"><div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:4px">Step 2 · Naledi ↔ Kwame</div><div style="font-size:.85rem;font-weight:700;margin-bottom:4px">Direct Connection</div><div style="font-size:.72rem;color:var(--muted)">Trust: 88 · Mutual: 24</div><div class="strength-bar"><div class="strength-fill" style="width:88%"></div></div></div>
+        <div class="path-meta"><div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:4px">Step 3 · Kwame ↔ Aisha</div><div style="font-size:.85rem;font-weight:700;margin-bottom:4px">Ex-Colleagues · Dangote</div><div style="font-size:.72rem;color:var(--muted)">Trust: 86 · Mutual: 18</div><div class="strength-bar"><div class="strength-fill" style="width:86%"></div></div></div>
+      </div>
+
+      <div style="margin-top:16px;padding:14px;background:rgba(197,160,89,.06);border-left:3px solid var(--gold);border-radius:2px">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gold-dark);margin-bottom:6px">◆ AI Suggested Message to Naledi</div>
+        <div style="font-size:.85rem;color:var(--ink2);line-height:1.6;font-style:italic">"Hi Naledi — I saw you know Kwame Asante at MTN. I'm exploring the CHRO track and would love an intro to Aisha Bello at Dangote. Would you feel comfortable making an introduction?"</div>
+      </div>
+
+      <div style="display:flex;gap:10px;margin-top:16px;justify-content:flex-end">
+        <button class="btn btn-ghost btn-sm">Request Another Path</button>
+        <button class="btn btn-gold btn-sm">Request Intro to Naledi</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><span class="card-title">Alternative Paths</span></div>
+    <div class="card-body" style="padding:0">
+      <div style="padding:16px;border-bottom:1px solid var(--line)">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px"><div><strong>Path 2 · Via Rachel Sithole</strong> · 3 degrees</div><span class="tag tag-ok">58% success</span></div>
+        <div class="path-chain" style="padding:14px">
+          <div class="path-node start" style="width:44px;height:44px;font-size:.55rem">YOU</div><div class="path-arrow">→</div>
+          <div class="path-node" style="width:44px;height:44px;font-size:.55rem">RS</div><div class="path-arrow">→</div>
+          <div class="path-node" style="width:44px;height:44px;font-size:.55rem">JM</div><div class="path-arrow">→</div>
+          <div class="path-node end" style="width:44px;height:44px;font-size:.55rem">AB</div>
+        </div>
+      </div>
+      <div style="padding:16px;border-bottom:1px solid var(--line)">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px"><div><strong>Path 3 · Via ILO Network</strong> · 4 degrees</div><span class="tag tag-warn">42% success</span></div>
+        <div class="path-chain" style="padding:14px">
+          <div class="path-node start" style="width:44px;height:44px;font-size:.55rem">YOU</div><div class="path-arrow">→</div>
+          <div class="path-node" style="width:44px;height:44px;font-size:.55rem">JM</div><div class="path-arrow">→</div>
+          <div class="path-node" style="width:44px;height:44px;font-size:.55rem">ILO</div><div class="path-arrow">→</div>
+          <div class="path-node" style="width:44px;height:44px;font-size:.55rem">WA</div><div class="path-arrow">→</div>
+          <div class="path-node end" style="width:44px;height:44px;font-size:.55rem">AB</div>
+        </div>
+      </div>
+      <div style="padding:16px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px"><div><strong>Path 4 · Cold Outreach</strong> · 1 degree</div><span class="tag tag-danger">18% success</span></div>
+        <div class="path-chain" style="padding:14px">
+          <div class="path-node start" style="width:44px;height:44px;font-size:.55rem">YOU</div><div class="path-arrow" style="opacity:.4">⇢</div>
+          <div class="path-node end" style="width:44px;height:44px;font-size:.55rem;background:var(--bg);color:var(--ink);border-color:var(--line)">AB</div>
+          <span style="margin-left:14px;font-size:.78rem;color:var(--muted)">No warm path · Direct message</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Warm Intro Path Finder · Graph-powered introductions.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Paths</h4><ul><li>Warm</li><li>Cold</li><li>Optimal</li><li>Network</li></ul></div>
+  <div class="footer-col"><h4>Actions</h4><ul><li>Request Intro</li><li>Draft Message</li><li>Track</li><li>Follow-up</li></ul></div>
+  <div class="footer-col"><h4>Support</h4><ul><li>Help</li><li>Tips</li><li>Etiquette</li><li>Contact</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Warm Intro v3.2.1</span><span>4 paths found</span></div></footer>
+</body></html>
