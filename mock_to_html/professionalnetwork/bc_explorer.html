@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blockchain Credential Explorer · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search blocks, hashes, DIDs..."><div class="hub-search-filter"><span>⚙</span><span>Mainnet</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Pro Dev</button><button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#0E1E35,#C5A059);color:#fff">DV</div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span>Blockchain Credential Explorer</div>
+  <h1 class="page-title">Blockchain Credential Explorer</h1>
+  <p class="page-sub">Verifiable credentials anchored to the YUBA ledger. Immutable, cryptographically-verifiable, audit-ready.</p>
+</div></div>
+
+<div class="layout-full">
+  <div class="grid-4" style="margin-bottom:24px">
+    <div class="stat-card"><div class="label">Total Blocks</div><div class="value">18.4M</div><div class="delta">+142 today</div></div>
+    <div class="stat-card"><div class="label">Credentials Anchored</div><div class="value">284k</div><div class="delta">+892 this month</div></div>
+    <div class="stat-card"><div class="label">Verified Verifiers</div><div class="value">1,204</div><div class="delta">Across 42 countries</div></div>
+    <div class="stat-card"><div class="label">Chain Health</div><div class="value" style="color:var(--ok)">100%</div><div class="delta">No forks in 180d</div></div>
+  </div>
+
+  <div class="grid-2" style="align-items:start">
+    <div>
+      <div class="card card-accent-gold">
+        <div class="card-header"><span class="card-title">Recent Blocks</span><span style="font-size:.7rem;color:var(--gold);cursor:pointer">View All</span></div>
+        <div class="card-body">
+          <div class="chain-block">
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px"><div class="block-num">Block #18,442,109</div><span class="tag tag-ok">Verified</span></div>
+            <div class="hash" style="margin-top:6px">0x4a7b8c9d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b</div>
+            <div style="font-size:.72rem;color:var(--muted);margin-top:8px">2 credentials · 84 kB · 12 seconds ago</div>
+          </div>
+          <div class="chain-connector">↓</div>
+          <div class="chain-block">
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px"><div class="block-num">Block #18,442,108</div><span class="tag tag-ok">Verified</span></div>
+            <div class="hash" style="margin-top:6px">0x2e91f4a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5</div>
+            <div style="font-size:.72rem;color:var(--muted);margin-top:8px">1 credential · 42 kB · 28 seconds ago</div>
+          </div>
+          <div class="chain-connector">↓</div>
+          <div class="chain-block">
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px"><div class="block-num">Block #18,442,107</div><span class="tag tag-ok">Verified</span></div>
+            <div class="hash" style="margin-top:6px">0x8c3f1b04d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2</div>
+            <div style="font-size:.72rem;color:var(--muted);margin-top:8px">3 credentials · 118 kB · 1 minute ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card card-accent-top">
+        <div class="card-header"><span class="card-title">Credential Lookup</span></div>
+        <div class="card-body">
+          <div class="form-group" style="margin-bottom:14px"><label>Search by</label><select><option>Credential ID</option><option>User DID</option><option>Issuer</option><option>Block Hash</option></select></div>
+          <div class="form-group" style="margin-bottom:14px"><label>Value</label><input value="cred:llm:up:2012:mokoena"></div>
+          <button class="btn btn-primary btn-block">🔍 Verify on Chain</button>
+        </div>
+      </div>
+
+      <div class="card card-accent-gold" style="margin-top:16px">
+        <div class="card-header"><span class="card-title">Verification Result</span></div>
+        <div class="card-body">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+            <div style="width:48px;height:48px;background:var(--ok);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem">✓</div>
+            <div>
+              <div style="font-family:var(--serif);font-weight:bold;font-size:1.05rem">Credential Verified</div>
+              <div style="font-size:.75rem;color:var(--muted)">Cryptographically valid · Anchored on-chain</div>
+            </div>
+          </div>
+          <div style="font-size:.82rem;line-height:2;color:var(--ink2)">
+            <div><strong>Holder:</strong> Mokoena Thabo</div>
+            <div><strong>DID:</strong> <span style="font-family:monospace;font-size:.78rem">did:yuba:0x4a7b...9c12</span></div>
+            <div><strong>Credential:</strong> LLM in Labor Law</div>
+            <div><strong>Issuer:</strong> University of Pretoria</div>
+            <div><strong>Issued:</strong> 15 November 2012</div>
+            <div><strong>Anchored Block:</strong> #18,442,109</div>
+            <div><strong>Signature:</strong> <span style="font-family:monospace;font-size:.72rem;color:var(--gold-dark)">0x8a2f...b4c7</span></div>
+          </div>
+          <div class="divider"></div>
+          <button class="btn btn-outline btn-block btn-sm">📜 View Full Certificate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Blockchain Credential Ledger · Immutable verification.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Ledger</h4><ul><li>Blocks</li><li>Transactions</li><li>Credentials</li><li>Issuers</li></ul></div>
+  <div class="footer-col"><h4>Verification</h4><ul><li>Verify Credential</li><li>Verify Issuer</li><li>Revocation</li><li>Audit Trail</li></ul></div>
+  <div class="footer-col"><h4>Resources</h4><ul><li>Standards</li><li>DIDs</li><li>SDK</li><li>Support</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Blockchain Explorer v3.2.1</span><span>18.4M blocks · 100% uptime</span></div></footer>
+</body></html>

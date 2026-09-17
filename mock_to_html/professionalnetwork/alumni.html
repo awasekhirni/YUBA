@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alumni Networks · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+<style>
+.alum-hero{background:linear-gradient(135deg,#122A4D,#0A1622);color:#fff;padding:28px;border-radius:2px;position:relative;overflow:hidden;margin-bottom:24px}
+.alum-hero::before{content:'◆';position:absolute;right:-30px;top:-40px;font-size:14rem;color:rgba(197,160,89,.08);line-height:1}
+.network-tile{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:2px;padding:20px;transition:all .2s}
+.network-tile:hover{transform:translateY(-3px);box-shadow:var(--sh-lg)}
+.network-tile .logo{width:56px;height:56px;background:linear-gradient(135deg,var(--ink),#244368);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:bold;font-size:1.1rem;border-radius:2px;margin-bottom:14px}
+.network-tile h4{font-family:var(--serif);font-size:1.05rem;font-weight:bold;color:var(--ink);margin-bottom:6px}
+.network-tile .meta{font-size:.75rem;color:var(--muted);margin-bottom:14px}
+.network-tile .stats{display:flex;gap:14px;font-size:.72rem;color:var(--ink2);margin-bottom:14px}
+.network-tile .stats strong{display:block;font-family:var(--serif);font-size:1.05rem;color:var(--ink)}
+.alum-card{background:var(--white);border:1px solid var(--line);border-radius:2px;padding:14px;margin-bottom:10px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.alum-card .avatar{width:44px;height:44px;border-radius:2px;background:linear-gradient(135deg,var(--ink),#244368);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:bold;font-size:.9rem;flex-shrink:0}
+.alum-card .info{flex:1;min-width:180px}
+.alum-card .info .name{font-weight:700;font-size:.88rem;color:var(--ink);margin-bottom:2px}
+.alum-card .info .role{font-size:.72rem;color:var(--muted)}
+</style>
+</head><body>
+
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search alumni, schools, companies..."><div class="hub-search-filter"><span>⚙</span><span>Networks</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Pro</button><button class="profile-trigger"><div class="avatar">MT<span class="avatar-online"></span></div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span>Alumni Networks</div>
+  <h1 class="page-title">Alumni Networks</h1>
+  <p class="page-sub">Every school you attended, every company you worked for — connected in one private graph. The strongest network is often the one you already have.</p>
+</div></div>
+
+<div class="layout-full">
+
+  <div class="alum-hero">
+    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;position:relative">
+      <div style="flex:1;min-width:280px">
+        <span class="tag tag-gold" style="margin-bottom:12px;display:inline-block">◆ YOUR ALUMNI GRAPH</span>
+        <h2 style="font-family:var(--serif);font-size:1.5rem;margin-bottom:8px">You belong to 6 alumni networks</h2>
+        <p style="opacity:.88;font-size:.88rem">342 alumni from your schools and past employers are on YUBA. 47 are one warm intro away.</p>
+      </div>
+      <div style="text-align:right">
+        <div style="font-size:.68rem;opacity:.7;text-transform:uppercase;letter-spacing:1px;font-weight:700">Reachable Alumni</div>
+        <div style="font-family:var(--serif);font-size:2rem;font-weight:bold;color:var(--gold)">342</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-4" style="margin-bottom:24px">
+    <div class="stat-card"><div class="label">Schools</div><div class="value">2</div><div class="delta">UP + Wits</div></div>
+    <div class="stat-card"><div class="label">Past Employers</div><div class="value">4</div><div class="delta">Sasol, MTN, ILO, Deloitte</div></div>
+    <div class="stat-card"><div class="label">Total Alumni Network</div><div class="value">342</div><div class="delta">Across all networks</div></div>
+    <div class="stat-card"><div class="label">Warm Intro Paths</div><div class="value" style="color:var(--ok)">47</div><div class="delta">2° or less</div></div>
+  </div>
+
+  <div style="font-family:var(--serif);font-size:1.1rem;font-weight:bold;margin-bottom:14px">◆ Your Networks</div>
+  <div class="grid-3" style="margin-bottom:24px">
+
+    <div class="network-tile">
+      <div class="logo">UP</div>
+      <h4>University of Pretoria</h4>
+      <div class="meta">LLM in Labor Law · Class of 2012</div>
+      <div class="stats">
+        <div><strong>142</strong>Alumni on YUBA</div>
+        <div><strong>18</strong>Warm intros</div>
+      </div>
+      <button class="btn btn-gold btn-block btn-sm">Enter Network</button>
+    </div>
+
+    <div class="network-tile">
+      <div class="logo">WT</div>
+      <h4>University of the Witwatersrand</h4>
+      <div class="meta">LLB · Class of 2009</div>
+      <div class="stats">
+        <div><strong>98</strong>Alumni on YUBA</div>
+        <div><strong>14</strong>Warm intros</div>
+      </div>
+      <button class="btn btn-gold btn-block btn-sm">Enter Network</button>
+    </div>
+
+    <div class="network-tile">
+      <div class="logo">SA</div>
+      <h4>Sasol Ltd Alumni</h4>
+      <div class="meta">Senior LR Specialist · 2019 – Present</div>
+      <div class="stats">
+        <div><strong>42</strong>Alumni on YUBA</div>
+        <div><strong>8</strong>Warm intros</div>
+      </div>
+      <button class="btn btn-gold btn-block btn-sm">Enter Network</button>
+    </div>
+
+    <div class="network-tile">
+      <div class="logo">MT</div>
+      <h4>MTN Group Alumni</h4>
+      <div class="meta">LR Officer · 2015 – 2019</div>
+      <div class="stats">
+        <div><strong>28</strong>Alumni on YUBA</div>
+        <div><strong>5</strong>Warm intros</div>
+      </div>
+      <button class="btn btn-gold btn-block btn-sm">Enter Network</button>
+    </div>
+
+    <div class="network-tile">
+      <div class="logo">IL</div>
+      <h4>ILO Alumni</h4>
+      <div class="meta">Labor Policy Analyst · 2012 – 2015</div>
+      <div class="stats">
+        <div><strong>24</strong>Alumni on YUBA</div>
+        <div><strong>2</strong>Warm intros</div>
+      </div>
+      <button class="btn btn-gold btn-block btn-sm">Enter Network</button>
+    </div>
+
+    <div class="network-tile">
+      <div class="logo">DE</div>
+      <h4>Deloitte Africa Alumni</h4>
+      <div class="meta">Consultant · 2010 – 2012</div>
+      <div class="stats">
+        <div><strong>8</strong>Alumni on YUBA</div>
+        <div><strong>0</strong>Warm intros</div>
+      </div>
+      <button class="btn btn-gold btn-block btn-sm">Enter Network</button>
+    </div>
+
+  </div>
+
+  <div class="grid-2" style="align-items:start">
+    <div>
+      <div style="font-family:var(--serif);font-size:1.1rem;font-weight:bold;margin-bottom:14px">◆ Recently Joined Your Networks</div>
+
+      <div class="alum-card">
+        <div class="avatar">KM</div>
+        <div class="info">
+          <div class="name">Kagiso Mokoena</div>
+          <div class="role">Fellow Wits LLB '09 · Labor Lawyer · Cape Town</div>
+        </div>
+        <span class="tag tag-gold">1° away</span>
+        <button class="btn btn-gold btn-sm">Connect</button>
+      </div>
+
+      <div class="alum-card">
+        <div class="avatar">PO</div>
+        <div class="info">
+          <div class="name">Peter Okafor</div>
+          <div class="role">Fellow MTN '18 · Compliance Officer · Lagos</div>
+        </div>
+        <span class="tag tag-gold">1° away</span>
+        <button class="btn btn-outline btn-sm">Connect</button>
+      </div>
+
+      <div class="alum-card">
+        <div class="avatar">WA</div>
+        <div class="info">
+          <div class="name">Wanjiku Amina</div>
+          <div class="role">Fellow UP LLM '12 · Employment Attorney · Nairobi</div>
+        </div>
+        <span class="tag">2° away</span>
+        <button class="btn btn-outline btn-sm">Connect</button>
+      </div>
+    </div>
+
+    <div class="card card-accent-gold">
+      <div class="card-header"><span class="card-title">◆ Alumni Intelligence</span></div>
+      <div class="card-body">
+        <div style="font-size:.82rem;color:var(--ink2);line-height:1.9">
+          <div style="padding:10px 0;border-bottom:1px dashed var(--line)"><strong style="color:var(--ink)">Top Employers of UP LLM alumni:</strong> Sasol (18), MTN (12), Standard Bank (9), Deloitte (7)</div>
+          <div style="padding:10px 0;border-bottom:1px dashed var(--line)"><strong style="color:var(--ink)">Common career path:</strong> Legal → Senior Legal → HR/LR Manager → Director (avg 12 years)</div>
+          <div style="padding:10px 0;border-bottom:1px dashed var(--line)"><strong style="color:var(--ink)">Network density:</strong> Your alumni network is 2.4x denser than average</div>
+          <div style="padding:10px 0"><strong style="color:var(--ink)">Best intro pathway:</strong> Wits alumni are 4.2x more likely to respond to warm intros</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Alumni Networks · Your past, your power.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Networks</h4><ul><li>Schools</li><li>Companies</li><li>Programs</li><li>Chapters</li></ul></div>
+  <div class="footer-col"><h4>Discover</h4><ul><li>New Members</li><li>Warm Intros</li><li>Events</li><li>Alumni News</li></ul></div>
+  <div class="footer-col"><h4>Support</h4><ul><li>Add Network</li><li>Verify</li><li>Help</li><li>Contact</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Alumni v3.2.1</span><span>342 alumni reachable</span></div></footer>
+</body></html>

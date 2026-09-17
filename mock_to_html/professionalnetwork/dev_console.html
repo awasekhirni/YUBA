@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Developer Console · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search APIs, schemas, logs..."><div class="hub-search-filter"><span>⚙</span><span>Env: Dev</span></div></div>
+  <div class="topbar-actions">
+    <button class="icon-btn">✉<span class="badge-dot">3</span></button>
+    <button class="icon-btn">🔔<span class="badge-dot gold">8</span></button>
+    <button class="upgrade-cta"><span class="crown">◆</span>Pro Dev</button>
+    <button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#0E1E35,#C5A059);color:#fff">DV</div></button>
+  </div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span>Developer Console</div>
+  <h1 class="page-title">Developer Console</h1>
+  <p class="page-sub">Unified workspace for APIs, algorithms, webhooks, feature flags, and infrastructure observability. All environments in one place.</p>
+</div></div>
+
+<div class="layout-2col">
+  <aside class="sidebar">
+    <div class="card card-accent-top">
+      <div class="card-header"><span class="card-title">Workspace</span></div>
+      <nav class="side-nav">
+        <a class="side-nav-item active" href="dev-console.html"><span class="side-nav-icon">◆</span><span>Overview</span></a>
+        <a class="side-nav-item" href="dev-algorithms.html"><span class="side-nav-icon">🧠</span><span>Algorithms</span><span class="side-nav-badge">6</span></a>
+        <a class="side-nav-item" href="dev-network-viz.html"><span class="side-nav-icon">🕸</span><span>Network Viz</span></a>
+        <a class="side-nav-item" href="dev-frontend-designer.html"><span class="side-nav-icon">🎨</span><span>Front-end Designer</span></a>
+        <a class="side-nav-item" href="dev-api-playground.html"><span class="side-nav-icon">⚡</span><span>API Playground</span></a>
+        <a class="side-nav-item" href="dev-webhooks.html"><span class="side-nav-icon">🔗</span><span>Webhooks</span><span class="side-nav-badge">12</span></a>
+        <a class="side-nav-item" href="dev-schema.html"><span class="side-nav-icon">🗄</span><span>Schema Explorer</span></a>
+        <a class="side-nav-item" href="dev-feature-flags.html"><span class="side-nav-icon">🚩</span><span>Feature Flags</span><span class="side-nav-badge">24</span></a>
+        <a class="side-nav-item" href="dev-experiments.html"><span class="side-nav-icon">🧪</span><span>Experiments</span><span class="side-nav-badge">4</span></a>
+        <a class="side-nav-item" href="dev-query-perf.html"><span class="side-nav-icon">📊</span><span>Query Performance</span></a>
+        <a class="side-nav-item" href="dev-health.html"><span class="side-nav-icon">💚</span><span>Health</span></a>
+        <a class="side-nav-item" href="dev-cache.html"><span class="side-nav-icon">⚙</span><span>Cache</span></a>
+        <a class="side-nav-item" href="dev-rate-limits.html"><span class="side-nav-icon">⏱</span><span>Rate Limits</span></a>
+        <a class="side-nav-item" href="dev-dlq.html"><span class="side-nav-icon">☠</span><span>Dead Letter Queue</span><span class="side-nav-badge" style="background:var(--danger)">7</span></a>
+        <a class="side-nav-item" href="dev-lineage.html"><span class="side-nav-icon">🔍</span><span>Data Lineage</span></a>
+        <a class="side-nav-item" href="dev-integrations.html"><span class="side-nav-icon">🔌</span><span>Integrations</span></a>
+        <a class="side-nav-item" href="dev-ml-registry.html"><span class="side-nav-icon">🤖</span><span>ML Registry</span></a>
+      </nav>
+    </div>
+    <div class="card card-accent-gold">
+      <div class="card-header"><span class="card-title">Environment</span></div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <label style="display:flex;align-items:center;gap:8px;font-size:.8rem;cursor:pointer"><input type="radio" name="env" checked> <span>Development</span> <span class="tag tag-ok" style="margin-left:auto">Live</span></label>
+          <label style="display:flex;align-items:center;gap:8px;font-size:.8rem;cursor:pointer"><input type="radio" name="env"> <span>Staging</span></label>
+          <label style="display:flex;align-items:center;gap:8px;font-size:.8rem;cursor:pointer"><input type="radio" name="env"> <span>Production</span> <span class="tag tag-warn" style="margin-left:auto">🔒</span></label>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <div class="kpi-mini">
+      <div><div style="font-size:.62rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700">API Requests (24h)</div><div style="font-family:var(--serif);font-size:1.4rem;font-weight:bold;color:var(--ink);margin-top:4px">2.4M</div><div style="font-size:.68rem;color:var(--ok);font-weight:600;margin-top:2px">↑ 12%</div></div>
+      <div><div style="font-size:.62rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700">Avg Latency</div><div style="font-family:var(--serif);font-size:1.4rem;font-weight:bold;color:var(--ink);margin-top:4px">86ms</div><div style="font-size:.68rem;color:var(--ok);font-weight:600;margin-top:2px">↓ 3%</div></div>
+      <div><div style="font-size:.62rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700">Error Rate</div><div style="font-family:var(--serif);font-size:1.4rem;font-weight:bold;color:var(--ink);margin-top:4px">0.02%</div><div style="font-size:.68rem;color:var(--ok);font-weight:600;margin-top:2px">Healthy</div></div>
+      <div><div style="font-size:.62rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700">DLQ Items</div><div style="font-family:var(--serif);font-size:1.4rem;font-weight:bold;color:var(--danger);margin-top:4px">7</div><div style="font-size:.68rem;color:var(--danger);font-weight:600;margin-top:2px">Needs review</div></div>
+    </div>
+
+    <div class="card card-accent-gold" style="margin-bottom:20px">
+      <div class="dev-tabs">
+        <button class="dev-tab active">Live Terminal</button>
+        <button class="dev-tab">Request Log</button>
+        <button class="dev-tab">Code Snippet</button>
+        <button class="dev-tab">Quick Actions</button>
+      </div>
+      <div class="card-body">
+        <div class="terminal">
+<span class="prompt">yuba@dev:~$</span> curl -X GET https://api.yuba.io/v3/networks/42/connections \\<br>
+&nbsp;&nbsp;-H <span class="s">"Authorization: Bearer sk_live_..."</span> \\<br>
+&nbsp;&nbsp;-H <span class="s">"X-Idempotency-Key: 9f2a-4d8c-a1b2"</span><br><br>
+<span class="warn">→ 200 OK</span> · 84ms · trace-id: <span class="prompt">a1b2c3d4e5f6</span><br>
+{<br>
+&nbsp;&nbsp;<span class="s">"total"</span>: 89,<br>
+&nbsp;&nbsp;<span class="s">"page"</span>: 1,<br>
+&nbsp;&nbsp;<span class="s">"connections"</span>: [<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="s">"id"</span>: 42, <span class="s">"name"</span>: <span class="s">"Naledi Khumalo"</span>, <span class="s">"trust"</span>: 94 },<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="s">"id"</span>: 108, <span class="s">"name"</span>: <span class="s">"James Mwangi"</span>, <span class="s">"trust"</span>: 91 }<br>
+&nbsp;&nbsp;]<br>
+}<br><br>
+<span class="prompt">yuba@dev:~$</span> <span class="c"># Try: yuba schema users | yuba deploy | yuba flag toggle ai_coach</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="align-items:start;margin-bottom:20px">
+      <div class="card">
+        <div class="card-header"><span class="card-title">Recent API Activity</span><span style="font-size:.7rem;color:var(--gold)">View All</span></div>
+        <div class="card-body" style="padding:0">
+          <div class="opp-item" style="padding:12px 16px"><div style="flex:1"><div style="font-family:'Courier New',monospace;font-size:.78rem;color:var(--ink)"><span class="tag tag-ok" style="margin-right:6px">GET</span>/v3/users/42</div><div style="font-size:.68rem;color:var(--muted);margin-top:3px">84ms · 200 OK · 2m ago</div></div></div>
+          <div class="opp-item" style="padding:12px 16px"><div style="flex:1"><div style="font-family:'Courier New',monospace;font-size:.78rem;color:var(--ink)"><span class="tag tag-gold" style="margin-right:6px">POST</span>/v3/jobs/apply</div><div style="font-size:.68rem;color:var(--muted);margin-top:3px">142ms · 201 Created · 5m ago</div></div></div>
+          <div class="opp-item" style="padding:12px 16px"><div style="flex:1"><div style="font-family:'Courier New',monospace;font-size:.78rem;color:var(--ink)"><span class="tag" style="margin-right:6px">PATCH</span>/v3/profiles/42</div><div style="font-size:.68rem;color:var(--muted);margin-top:3px">98ms · 200 OK · 12m ago</div></div></div>
+          <div class="opp-item" style="padding:12px 16px;border-bottom:none"><div style="flex:1"><div style="font-family:'Courier New',monospace;font-size:.78rem;color:var(--ink)"><span class="tag tag-danger" style="margin-right:6px">ERR</span>/v3/recommendations</div><div style="font-size:.68rem;color:var(--muted);margin-top:3px">2.1s · 503 · Retry queued · 18m ago</div></div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><span class="card-title">Quick Actions</span></div>
+        <div class="card-body">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <button class="btn btn-primary btn-block" style="justify-content:space-between">⚡ New API Key <span>+</span></button>
+            <button class="btn btn-outline btn-block" style="justify-content:space-between">🔗 Register Webhook <span>→</span></button>
+            <button class="btn btn-outline btn-block" style="justify-content:space-between">🚩 Create Feature Flag <span>→</span></button>
+            <button class="btn btn-outline btn-block" style="justify-content:space-between">🧪 Start Experiment <span>→</span></button>
+            <button class="btn btn-outline btn-block" style="justify-content:space-between">🧠 Deploy Algorithm <span>→</span></button>
+            <button class="btn btn-ghost btn-block" style="justify-content:space-between;color:var(--danger)">♻ Purge DLQ <span>→</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-accent-gold">
+      <div class="card-header"><span class="card-title">Quick-Start Code · JS SDK</span><span style="font-size:.7rem;color:var(--gold);cursor:pointer">📋 Copy</span></div>
+      <div class="card-body">
+        <div class="code-block">
+<span class="c">// npm install @yuba/sdk</span><br>
+<span class="k">import</span> { YubaClient } <span class="k">from</span> <span class="s">'@yuba/sdk'</span>;<br><br>
+<span class="k">const</span> yuba = <span class="k">new</span> YubaClient({<br>
+&nbsp;&nbsp;apiKey: process.env.<span class="k">YUBA_API_KEY</span>,<br>
+&nbsp;&nbsp;environment: <span class="s">'staging'</span>,<br>
+&nbsp;&nbsp;idempotencyStore: <span class="s">'redis'</span><br>
+});<br><br>
+<span class="c">// Fetch network + trust metrics</span><br>
+<span class="k">const</span> connections = <span class="k">await</span> yuba.networks.get(<span class="s">42</span>, {<br>
+&nbsp;&nbsp;expand: [<span class="s">'trust_score'</span>, <span class="s">'endorsements'</span>],<br>
+&nbsp;&nbsp;include: <span class="s">'mutuals'</span><br>
+});<br><br>
+<span class="c">// Trigger recommendation engine</span><br>
+<span class="k">const</span> recs = <span class="k">await</span> yuba.ai.recommend({<br>
+&nbsp;&nbsp;model: <span class="s">'career-path-v3'</span>,<br>
+&nbsp;&nbsp;userId: <span class="s">42</span>,<br>
+&nbsp;&nbsp;explain: <span class="k">true</span><br>
+});
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Labor Relations & Employment Strategy. Developer Console · Internal only.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Dev Tools</h4><ul><li>API Playground</li><li>Webhooks</li><li>Feature Flags</li><li>Experiments</li></ul></div>
+  <div class="footer-col"><h4>Infrastructure</h4><ul><li>Health</li><li>Cache</li><li>Rate Limits</li><li>DLQ</li></ul></div>
+  <div class="footer-col"><h4>Resources</h4><ul><li>API Docs</li><li>SDKs</li><li>Status Page</li><li>Support</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Dev Console v3.2.1</span><span>Trace build: a1b2c3d</span></div></footer>
+</body></html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Experiments · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search experiments..."><div class="hub-search-filter"><span>⚙</span><span>All</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Pro Dev</button><button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#0E1E35,#C5A059);color:#fff">DV</div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span><a href="dev-console.html">Dev Console</a><span class="breadcrumb-sep">/</span>Experiments</div>
+  <h1 class="page-title">Experiment Console</h1>
+  <p class="page-sub">A/B tests, multivariate experiments, and holdout groups. Sequential testing, sample ratio monitor (SRM), and automatic significance detection.</p>
+</div></div>
+
+<div class="layout-full">
+  <div class="grid-4" style="margin-bottom:24px">
+    <div class="stat-card"><div class="label">Running</div><div class="value">4</div><div class="delta">2 near significant</div></div>
+    <div class="stat-card"><div class="label">Total Experiments</div><div class="value">142</div><div class="delta">YTD</div></div>
+    <div class="stat-card"><div class="label">Won</div><div class="value">38</div><div class="delta" style="color:var(--ok)">+27% lift avg</div></div>
+    <div class="stat-card"><div class="label">SRM Alerts</div><div class="value" style="color:var(--warn)">1</div><div class="delta down">Needs review</div></div>
+  </div>
+
+  <div class="card card-accent-gold" style="margin-bottom:20px">
+    <div class="card-header"><span class="card-title">Active Experiment · AI Recommendation Ranking v4</span><span class="tag tag-ok">Running · Day 14/21</span></div>
+    <div class="card-body">
+      <div class="grid-2" style="gap:24px;margin-bottom:20px">
+        <div>
+          <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:6px">Variant A (Control)</div>
+          <div style="font-family:var(--serif);font-size:1.8rem;font-weight:bold;color:var(--ink)">4.2%</div>
+          <div style="font-size:.72rem;color:var(--muted)">CTR · 24,182 users</div>
+        </div>
+        <div>
+          <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:6px">Variant B (Treatment)</div>
+          <div style="font-family:var(--serif);font-size:1.8rem;font-weight:bold;color:var(--ok)">5.9%</div>
+          <div style="font-size:.72rem;color:var(--muted)">CTR · 24,108 users · <span style="color:var(--ok);font-weight:700">+40.5%</span></div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:8px;font-size:.72rem;color:var(--muted);display:flex;justify-content:space-between"><span>Confidence</span><span style="font-weight:700;color:var(--ok)">98.7% · Significant</span></div>
+      <div class="sig-bar"><div class="sig-a" style="width:45%"></div><div class="sig-b" style="width:55%"></div></div>
+
+      <div class="divider"></div>
+
+      <div class="grid-3" style="gap:20px">
+        <div><div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:4px">P-value</div><div style="font-family:var(--serif);font-weight:bold">0.013</div></div>
+        <div><div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:4px">Sample Ratio</div><div style="font-family:var(--serif);font-weight:bold">1.003 · <span style="color:var(--ok)">OK</span></div></div>
+        <div><div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:4px">Lift Estimate</div><div style="font-family:var(--serif);font-weight:bold">+40.5% ± 8.2%</div></div>
+      </div>
+
+      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:20px">
+        <button class="btn btn-outline btn-sm">Pause</button>
+        <button class="btn btn-outline btn-sm">Extend</button>
+        <button class="btn btn-gold btn-sm">Ship Variant B</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><span class="card-title">All Experiments</span></div>
+    <div class="card-body" style="padding:0">
+      <table class="table">
+        <thead><tr><th>Name</th><th>Status</th><th>Variants</th><th>Primary Metric</th><th>Lift</th><th>Confidence</th></tr></thead>
+        <tbody>
+          <tr><td><strong>AI Recommendation Ranking v4</strong></td><td><span class="tag tag-ok">Running</span></td><td>A/B</td><td>CTR</td><td style="color:var(--ok);font-weight:700">+40.5%</td><td>98.7%</td></tr>
+          <tr><td><strong>Pricing Page CTA Color</strong></td><td><span class="tag tag-ok">Running</span></td><td>A/B/C</td><td>Signup</td><td style="color:var(--ok);font-weight:700">+12.1%</td><td>94.2%</td></tr>
+          <tr><td><strong>Onboarding Flow v3</strong></td><td><span class="tag tag-ok">Running</span></td><td>A/B</td><td>Completion</td><td>-2.4%</td><td>68.1%</td></tr>
+          <tr><td><strong>Email Digest Frequency</strong></td><td><span class="tag tag-warn">Paused (SRM)</span></td><td>A/B/C/D</td><td>Open Rate</td><td>—</td><td>—</td></tr>
+          <tr><td><strong>Graph Visualization Themes</strong></td><td><span class="tag tag-ok">Running</span></td><td>A/B/C</td><td>Engagement</td><td style="color:var(--ok);font-weight:700">+8.7%</td><td>91.3%</td></tr>
+          <tr><td><strong>Skill Endorsement Prompt</strong></td><td><span class="tag">Ended</span></td><td>A/B</td><td>Endorsements</td><td style="color:var(--ok);font-weight:700">+22.4%</td><td>99.1%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Experiment Console · Data-driven product decisions.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Experiments</h4><ul><li>Running</li><li>Paused</li><li>Ended</li><li>Archive</li></ul></div>
+  <div class="footer-col"><h4>Governance</h4><ul><li>SRM Monitor</li><li>Sequential Tests</li><li>Bonferroni</li><li>Bayesian</li></ul></div>
+  <div class="footer-col"><h4>Resources</h4><ul><li>Best Practices</li><li>Power Calculator</li><li>Templates</li><li>Support</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Experiments v3.2.1</span><span>4 active · 142 YTD</span></div></footer>
+</body></html>

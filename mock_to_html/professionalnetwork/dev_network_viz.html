@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Network Visualization Engine · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Query graph: MATCH (u:User)-[:CONNECTED]->..."><div class="hub-search-filter"><span>⚙</span><span>Cypher</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Pro Dev</button><button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#0E1E35,#C5A059);color:#fff">DV</div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span><a href="dev-console.html">Dev Console</a><span class="breadcrumb-sep">/</span>Network Visualization Engine</div>
+  <h1 class="page-title">Network Visualization Engine</h1>
+  <p class="page-sub">Interactive graph exploration of connections, groups, endorsements, and trust. Query with Cypher, style with CSS, embed anywhere.</p>
+</div></div>
+
+<div class="layout-full">
+
+  <!-- Visualization Toolbar -->
+  <div class="toolbar-viz">
+    <button class="tool active">◆ Force Layout</button>
+    <button class="tool">◉ Radial Layout</button>
+    <button class="tool">▤ Hierarchical</button>
+    <button class="tool">〰 Sankey</button>
+    <button class="tool">◐ Chord</button>
+    <div style="flex:1"></div>
+    <button class="tool">🔍 Zoom In</button>
+    <button class="tool">🔍 Zoom Out</button>
+    <button class="tool">📸 Snapshot</button>
+    <button class="tool">⬇ Export SVG</button>
+    <button class="tool">🔗 Share View</button>
+    <button class="tool" style="border-color:var(--gold);color:var(--gold)">⚡ Live Mode</button>
+  </div>
+
+  <!-- Main Canvas -->
+  <div class="canvas-wrap">
+    <div class="canvas-grid"></div>
+
+    <!-- SVG Graph (static representation; JS-rendered in production) -->
+    <svg class="graph-svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet">
+      <!-- Edges -->
+      <g stroke="#C5A059" stroke-opacity="0.35" stroke-width="1.5" fill="none">
+        <line x1="600" y1="280" x2="380" y2="180"/>
+        <line x1="600" y1="280" x2="820" y2="180"/>
+        <line x1="600" y1="280" x2="380" y2="400"/>
+        <line x1="600" y1="280" x2="820" y2="400"/>
+        <line x1="380" y1="180" x2="250" y2="120"/>
+        <line x1="380" y1="180" x2="280" y2="260"/>
+        <line x1="820" y1="180" x2="950" y2="120"/>
+        <line x1="820" y1="180" x2="920" y2="260"/>
+        <line x1="380" y1="400" x2="250" y2="460"/>
+        <line x1="820" y1="400" x2="950" y2="460"/>
+        <line x1="600" y1="280" x2="600" y2="100"/>
+        <line x1="600" y1="280" x2="600" y2="480"/>
+      </g>
+      <!-- Nodes -->
+      <g>
+        <!-- Center node -->
+        <circle cx="600" cy="280" r="42" fill="#C5A059" stroke="#F8F7F2" stroke-width="3"/>
+        <text x="600" y="286" text-anchor="middle" fill="#122A4D" font-family="Georgia" font-weight="bold" font-size="14">YOU</text>
+        <!-- Tier 1 -->
+        <circle cx="380" cy="180" r="28" fill="#122A4D" stroke="#C5A059" stroke-width="2"/>
+        <text x="380" y="185" text-anchor="middle" fill="#C5A059" font-family="Georgia" font-weight="bold" font-size="11">NK</text>
+        <circle cx="820" cy="180" r="28" fill="#122A4D" stroke="#C5A059" stroke-width="2"/>
+        <text x="820" y="185" text-anchor="middle" fill="#C5A059" font-family="Georgia" font-weight="bold" font-size="11">JM</text>
+        <circle cx="380" cy="400" r="28" fill="#122A4D" stroke="#C5A059" stroke-width="2"/>
+        <text x="380" y="405" text-anchor="middle" fill="#C5A059" font-family="Georgia" font-weight="bold" font-size="11">RS</text>
+        <circle cx="820" cy="400" r="28" fill="#122A4D" stroke="#C5A059" stroke-width="2"/>
+        <text x="820" y="405" text-anchor="middle" fill="#C5A059" font-family="Georgia" font-weight="bold" font-size="11">AB</text>
+        <!-- Tier 2 -->
+        <circle cx="250" cy="120" r="20" fill="#244368" stroke="#C5A059" stroke-width="1.5"/>
+        <text x="250" y="125" text-anchor="middle" fill="#C8D4E2" font-size="9">LM</text>
+        <circle cx="280" cy="260" r="20" fill="#244368" stroke="#C5A059" stroke-width="1.5"/>
+        <text x="280" y="265" text-anchor="middle" fill="#C8D4E2" font-size="9">KA</text>
+        <circle cx="950" cy="120" r="20" fill="#244368" stroke="#C5A059" stroke-width="1.5"/>
+        <text x="950" y="125" text-anchor="middle" fill="#C8D4E2" font-size="9">PO</text>
+        <circle cx="920" cy="260" r="20" fill="#244368" stroke="#C5A059" stroke-width="1.5"/>
+        <text x="920" y="265" text-anchor="middle" fill="#C8D4E2" font-size="9">FN</text>
+        <circle cx="250" cy="460" r="20" fill="#244368" stroke="#C5A059" stroke-width="1.5"/>
+        <text x="250" y="465" text-anchor="middle" fill="#C8D4E2" font-size="9">DO</text>
+        <circle cx="950" cy="460" r="20" fill="#244368" stroke="#C5A059" stroke-width="1.5"/>
+        <text x="950" y="465" text-anchor="middle" fill="#C8D4E2" font-size="9">SJ</text>
+        <!-- Top/bottom -->
+        <circle cx="600" cy="100" r="22" fill="#C5A059" stroke="#F8F7F2" stroke-width="2"/>
+        <text x="600" y="105" text-anchor="middle" fill="#122A4D" font-weight="bold" font-size="10">GRP</text>
+        <circle cx="600" cy="480" r="22" fill="#C5A059" stroke="#F8F7F2" stroke-width="2"/>
+        <text x="600" y="485" text-anchor="middle" fill="#122A4D" font-weight="bold" font-size="10">CO</text>
+      </g>
+    </svg>
+
+    <!-- Legend -->
+    <div class="legend">
+      <div class="legend-title">Legend</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#C5A059"></span>You / Anchor Node</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#122A4D;border:1px solid #C5A059"></span>Tier 1 Connections</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#244368"></span>Tier 2 Extended</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#C5A059;border-radius:2px"></span>Group / Company</div>
+      <div style="margin-top:10px;font-size:.68rem;color:#8A96A3;font-family:'Courier New',monospace">Nodes: 12 · Edges: 12</div>
+    </div>
+
+    <!-- Inspector Panel -->
+    <div class="inspector">
+      <div class="field"><span class="field-label">Selected Node</span><span class="field-value">YOU · user_id:42</span></div>
+      <div class="field"><span class="field-label">Degree</span><span class="field-value">12</span></div>
+      <div class="field"><span class="field-label">Trust Score</span><span class="field-value">94</span></div>
+      <div class="field"><span class="field-label">Betweenness</span><span class="field-value">0.42</span></div>
+      <div class="field"><span class="field-label">Cluster</span><span class="field-value">Labor Relations</span></div>
+      <div class="field"><span class="field-label">Render Time</span><span class="field-value">42ms</span></div>
+    </div>
+  </div>
+
+  <!-- Developer Interface: Code Panel -->
+  <div class="grid-2" style="margin-top:20px;align-items:start">
+    <div class="card card-accent-gold">
+      <div class="card-header"><span class="card-title">Query Editor · Cypher</span><span style="font-size:.7rem;color:var(--gold);cursor:pointer">▶ Execute · ⌘↵</span></div>
+      <div class="card-body" style="padding:0">
+        <div style="background:#0A1622;padding:18px;font-family:'Courier New',monospace;font-size:.8rem;line-height:1.8;color:#C8D4E2;border-radius:0 0 2px 2px">
+          <span style="color:#6B7A8F">// Find mutual connections with high trust</span><br>
+          <span style="color:#C5A059;font-weight:bold">MATCH</span> (me:User {id: <span style="color:#8AB4F8">42</span>})-[:CONNECTED*1..2]-(peer:User)<br>
+          <span style="color:#C5A059;font-weight:bold">WHERE</span> peer.trust_score &gt; <span style="color:#8AB4F8">85</span><br>
+          &nbsp;&nbsp;<span style="color:#C5A059;font-weight:bold">AND</span> peer.industry = <span style="color:#7FD4A8">'Legal'</span><br>
+          <span style="color:#C5A059;font-weight:bold">RETURN</span> peer.name, peer.trust_score,<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;size((me)-[:CONNECTED]-(peer)) <span style="color:#C5A059;font-weight:bold">AS</span> mutual<br>
+          <span style="color:#C5A059;font-weight:bold">ORDER BY</span> peer.trust_score <span style="color:#C5A059;font-weight:bold">DESC</span><br>
+          <span style="color:#C5A059;font-weight:bold">LIMIT</span> <span style="color:#8AB4F8">50</span>;<br><br>
+          <span style="color:#6B7A8F">// Execution: 84ms · 47 rows · index: idx_user_connections</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-title">Embed Config</span><span style="font-size:.7rem;color:var(--gold);cursor:pointer">📋 Copy</span></div>
+      <div class="card-body" style="padding:0">
+        <div style="background:#0A1622;padding:18px;font-family:'Courier New',monospace;font-size:.8rem;line-height:1.8;color:#C8D4E2">
+&lt;<span style="color:#C5A059">yuba-graph</span><br>
+&nbsp;&nbsp;<span style="color:#8AB4F8">anchor</span>=<span style="color:#7FD4A8">"user:42"</span><br>
+&nbsp;&nbsp;<span style="color:#8AB4F8">depth</span>=<span style="color:#7FD4A8">"2"</span><br>
+&nbsp;&nbsp;<span style="color:#8AB4F8">layout</span>=<span style="color:#7FD4A8">"force"</span><br>
+&nbsp;&nbsp;<span style="color:#8AB4F8">theme</span>=<span style="color:#7FD4A8">"yuba-dark"</span><br>
+&nbsp;&nbsp;<span style="color:#8AB4F8">filter</span>=<span style="color:#7FD4A8">"industry:Legal"</span><br>
+&nbsp;&nbsp;<span style="color:#8AB4F8">onNodeClick</span>=<span style="color:#7FD4A8">"openProfile"</span>&gt;<br>
+&lt;/<span style="color:#C5A059">yuba-graph</span>&gt;
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Network Visualization Engine · Real-time graph rendering.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Layouts</h4><ul><li>Force</li><li>Radial</li><li>Hierarchical</li><li>Sankey</li></ul></div>
+  <div class="footer-col"><h4>Use Cases</h4><ul><li>Network Explorer</li><li>Org Chart</li><li>Skill Tree</li><li>Trust Graph</li></ul></div>
+  <div class="footer-col"><h4>Resources</h4><ul><li>Graph API</li><li>Cypher Guide</li><li>Themes</li><li>Examples</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Network Viz Engine v3.2.1</span><span>Render: 42ms</span></div></footer>
+</body></html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Decision Appeal Center · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search appeals..."><div class="hub-search-filter"><span>⚙</span><span>Transparency</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Pro</button><button class="profile-trigger"><div class="avatar">MT<span class="avatar-online"></span></div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span>AI Decision Appeal Center</div>
+  <h1 class="page-title">AI Decision Appeal Center</h1>
+  <p class="page-sub">Every algorithmic decision explained. Every decision appealable. Full transparency on how AI shapes your experience.</p>
+</div></div>
+
+<div class="layout-full">
+
+  <div class="appeal-hero">
+    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;position:relative">
+      <div style="flex:1;min-width:280px">
+        <span class="tag tag-gold" style="margin-bottom:12px;display:inline-block">◆ ALGORITHMIC TRANSPARENCY</span>
+        <h2 style="font-family:var(--serif);font-size:1.5rem;margin-bottom:8px">Every AI decision is contestable</h2>
+        <p style="opacity:.88;font-size:.88rem">When a recommendation, ranking, or moderation decision affects you, you deserve to know why. And to change it.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-4" style="margin-bottom:24px">
+    <div class="stat-card"><div class="label">AI Decisions (30 days)</div><div class="value">1,842</div><div class="delta">All logged</div></div>
+    <div class="stat-card"><div class="label">Appeals Filed</div><div class="value">3</div><div class="delta">By you</div></div>
+    <div class="stat-card"><div class="label">Appeals Upheld</div><div class="value" style="color:var(--ok)">2</div><div class="delta">67% success</div></div>
+    <div class="stat-card"><div class="label">Avg Response</div><div class="value">8h</div><div class="delta">SLA: 24h</div></div>
+  </div>
+
+  <div class="grid-2" style="align-items:start;margin-bottom:24px">
+    <div>
+      <div style="font-family:var(--serif);font-size:1.1rem;font-weight:bold;margin-bottom:14px">◆ Your Recent AI Decisions</div>
+
+      <div class="appeal-card">
+        <div class="meta"><span class="tag tag-gold">Recommendation Ranking</span><span class="tag">Nov 12, 14:22</span></div>
+        <div class="title">Your profile ranked #47 in "Senior HR Search"</div>
+        <div class="desc">You searched for "Senior HR Manager" roles and your profile appeared in the results. Your ranking was #47 of 142 matching profiles.</div>
+        <button class="btn btn-outline btn-sm">Explain This Decision</button>
+      </div>
+
+      <div class="appeal-card">
+        <div class="meta"><span class="tag tag-warn">Content Moderation</span><span class="tag">Nov 10, 09:15</span></div>
+        <div class="title">Post flagged for "Promotional Content"</div>
+        <div class="desc">Your post about an upcoming webinar was auto-flagged by our moderation algorithm as potential promotion. Post visibility reduced by 40%.</div>
+        <button class="btn btn-outline btn-sm">View Full Reasoning</button>
+      </div>
+
+      <div class="appeal-card" style="border-left-color:var(--ok)">
+        <div class="meta"><span class="tag tag-ok">Appeal Upheld</span><span class="tag">Nov 8, 16:40</span></div>
+        <div class="title">Recommendation model update applied</div>
+        <div class="desc">Your appeal against "recommendation suppression" was upheld. Algorithm weights adjusted. Your profile is now included in relevant searches.</div>
+        <span class="tag tag-ok">✓ Resolved in 8 hours</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="card card-accent-gold" style="margin-bottom:16px">
+        <div class="card-header"><span class="card-title">◆ How Ranking Works · Full Explanation</span></div>
+        <div class="card-body">
+          <div class="explain-box">
+            <span class="k">Algorithm:</span> <span class="v">search-rank-v4.2</span><br>
+            <span class="k">Computed:</span> <span class="v">2024-11-12 14:22:18 UTC</span><br>
+            <span class="k">Search query:</span> <span class="v">"Senior HR Manager"</span><br>
+            <span class="k">Total matches:</span> <span class="v">142 profiles</span><br>
+            <span class="k">Your rank:</span> <span class="v">#47 (top 33%)</span><br><br>
+            <span class="k">// Score components (weighted sum)</span><br>
+            skill_match_score = <span class="v">0.82</span> × <span class="k">0.30</span> = <span class="v">0.246</span><br>
+            trust_score_normalized = <span class="v">0.94</span> × <span class="k">0.25</span> = <span class="v">0.235</span><br>
+            activity_recency = <span class="v">0.65</span> × <span class="k">0.20</span> = <span class="v">0.130</span><br>
+            connection_strength = <span class="v">0.42</span> × <span class="k">0.15</span> = <span class="v">0.063</span><br>
+            content_engagement = <span class="v">0.51</span> × <span class="k">0.10</span> = <span class="v">0.051</span><br><br>
+            <span class="k">// TOTAL:</span> <span class="v">0.725 (ranked #47)</span>
+          </div>
+          <div style="padding:12px;background:rgba(197,160,89,.06);border-left:3px solid var(--gold);border-radius:2px;font-size:.78rem;color:var(--ink2);line-height:1.6">
+            <strong style="color:var(--ink)">To improve your rank:</strong> Increase activity recency (+0.20), strengthen connections to search originator (+0.15), publish more content (+0.10). YUBA estimates top-10 achievable in 3-4 weeks.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><span class="card-title">◆ Appeal Your Own Decision</span></div>
+        <div class="card-body">
+          <p style="font-size:.82rem;color:var(--ink2);line-height:1.6;margin-bottom:14px">Believe an AI decision was unfair? File an appeal. A human reviewer (not an AI) will assess your case within 24 hours.</p>
+          <div class="form-group" style="margin-bottom:14px"><label style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin-bottom:6px;display:block">Decision to Appeal</label><select style="width:100%;padding:10px 12px;border:1px solid var(--line-strong);border-radius:2px;font-size:.85rem"><option>Select a decision...</option><option>Ranking suppression (Nov 12)</option><option>Content moderation (Nov 10)</option><option>Recommendation exclusion</option><option>Other</option></select></div>
+          <div class="form-group" style="margin-bottom:14px"><label style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin-bottom:6px;display:block">Your Explanation</label><textarea style="width:100%;min-height:100px;padding:10px 12px;border:1px solid var(--line-strong);border-radius:2px;font-family:var(--font-sans);font-size:.82rem;outline:none;resize:vertical" placeholder="Explain why you believe this decision was incorrect..."></textarea></div>
+          <button class="btn btn-gold btn-block">File Appeal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-accent-top">
+    <div class="card-header"><span class="card-title">◆ Your Appeal History</span></div>
+    <div class="card-body">
+      <div class="step-track">
+        <div class="done">Submitted</div>
+        <div class="done">Reviewed</div>
+        <div class="done">Human Evaluation</div>
+        <div class="done">Decision</div>
+        <div class="active">Outcome Shared</div>
+      </div>
+      <div style="font-size:.82rem;color:var(--ink2);line-height:1.9">
+        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--line)"><span><strong style="color:var(--ink)">APP-4821 · Ranking Suppression</strong><br><span style="font-size:.72rem;color:var(--muted)">Filed Nov 8 · Reviewed in 8 hours</span></span><span class="tag tag-ok">✓ Upheld</span></div>
+        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--line)"><span><strong style="color:var(--ink)">APP-4718 · Content Flag</strong><br><span style="font-size:.72rem;color:var(--muted)">Filed Oct 22 · Reviewed in 12 hours</span></span><span class="tag tag-ok">✓ Upheld</span></div>
+        <div style="display:flex;justify-content:space-between;padding:8px 0"><span><strong style="color:var(--ink)">APP-4502 · Search Ranking</strong><br><span style="font-size:.72rem;color:var(--muted)">Filed Sep 15 · Reviewed in 6 hours</span></span><span class="tag tag-danger">✕ Not Upheld</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">AI Appeals · You deserve to know why.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Appeals</h4><ul><li>My Appeals</li><li>File New</li><li>History</li><li>Statistics</li></ul></div>
+  <div class="footer-col"><h4>Transparency</h4><ul><li>How Ranking Works</li><li>Model Cards</li><li>Audit Reports</li><li>Governance</li></ul></div>
+  <div class="footer-col"><h4>Support</h4><ul><li>Policy</li><li>Guidance</li><li>Help</li><li>Contact</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · AI Appeals v3.2.1</span><span>67% appeal success rate</span></div></footer>
+</body></html>

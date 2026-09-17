@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Recommendation Tuner · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search models..."><div class="hub-search-filter"><span>⚙</span><span>career-path-v3.2</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Pro Dev</button><button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#0E1E35,#C5A059);color:#fff">DV</div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span><a href="dev-console.html">Dev Console</a><span class="breadcrumb-sep">/</span>Recommendation Tuner</div>
+  <h1 class="page-title">Recommendation Tuner</h1>
+  <p class="page-sub">Tune feature weights, explore counterfactuals, and preview recommendation changes live before deploying.</p>
+</div></div>
+
+<div class="layout-2col">
+  <aside class="sidebar">
+    <div class="card card-accent-top">
+      <div class="card-header"><span class="card-title">Active Model</span></div>
+      <div class="card-body" style="font-size:.8rem;line-height:1.9">
+        <div style="font-weight:bold;color:var(--ink)">career-path-v3.2</div>
+        <div style="color:var(--muted);font-size:.72rem">GBM · Trained 2d ago</div>
+        <div class="divider" style="margin:10px 0"></div>
+        <div>F1: <strong style="color:var(--ok)">0.94</strong></div>
+        <div>NDCG@10: <strong>0.91</strong></div>
+        <div>Latency p99: <strong>142ms</strong></div>
+        <div>Drift: <strong style="color:var(--ok)">Low</strong></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body"><button class="btn btn-gold btn-block">💾 Save Weights</button></div>
+    </div>
+  </aside>
+
+  <main>
+    <div class="card card-accent-gold" style="margin-bottom:20px">
+      <div class="card-header"><span class="card-title">Feature Weights</span><span style="font-size:.7rem;color:var(--gold);cursor:pointer">↺ Reset to Default</span></div>
+      <div class="card-body">
+        <div class="slider-row"><label>Skill Match</label><input type="range" min="0" max="100" value="35"><span class="value">0.35</span></div>
+        <div class="slider-row"><label>Market Demand</label><input type="range" min="0" max="100" value="25"><span class="value">0.25</span></div>
+        <div class="slider-row"><label>Gap Severity</label><input type="range" min="0" max="100" value="20"><span class="value">0.20</span></div>
+        <div class="slider-row"><label>Time to Ready</label><input type="range" min="0" max="100" value="20"><span class="value">0.20</span></div>
+        <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:14px">
+          <button class="btn btn-outline btn-sm">Preview Change</button>
+          <button class="btn btn-primary btn-sm">🚀 Deploy to Staging</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="align-items:start">
+      <div class="card card-accent-gold">
+        <div class="card-header"><span class="card-title">Live Preview · User #42</span></div>
+        <div class="card-body" style="padding:0">
+          <div class="live-preview">
+<span class="rank">#1</span> Senior Labor Relations Manager <span class="score">· 94%</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;→ Sasol · Johannesburg<br>
+&nbsp;&nbsp;&nbsp;&nbsp;→ Drivers: Skill 0.96, Demand 0.92<br><br>
+<span class="rank">#2</span> Employee Relations Consultant <span class="score">· 87%</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;→ MTN Group · Lagos<br>
+&nbsp;&nbsp;&nbsp;&nbsp;→ Drivers: Skill 0.88, Demand 0.85<br><br>
+<span class="rank">#3</span> Policy Advisor — Labor Standards <span class="score">· 82%</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;→ ILO · Geneva<br>
+&nbsp;&nbsp;&nbsp;&nbsp;→ Drivers: Skill 0.79, Demand 0.88<br><br>
+<span style="color:#6B7A8F">// Recomputed in 84ms · 3.4k candidates</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><span class="card-title">Counterfactual Analysis</span></div>
+        <div class="card-body" style="font-size:.85rem;color:var(--ink2);line-height:1.8">
+          <p style="margin-bottom:12px">If you increase <strong>Market Demand</strong> weight from 0.25 to 0.40, the top recommendation changes to:</p>
+          <div style="padding:14px;border-left:3px solid var(--gold);background:rgba(197,160,89,.05);border-radius:2px">
+            <div style="font-family:var(--serif);font-weight:bold;font-size:.95rem;color:var(--ink);margin-bottom:4px">Policy Advisor — ILO</div>
+            <div style="font-size:.75rem;color:var(--muted)">Was #3 → now #1 · 89% match</div>
+          </div>
+          <div class="divider"></div>
+          <button class="btn btn-gold btn-block btn-sm">Apply Counterfactual</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Recommendation Tuner · Real-time weight manipulation.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Models</h4><ul><li>Career Path</li><li>Skill Match</li><li>Job Rec</li><li>Connection</li></ul></div>
+  <div class="footer-col"><h4>Governance</h4><ul><li>Fairness</li><li>Drift</li><li>Explainability</li><li>Audit</li></ul></div>
+  <div class="footer-col"><h4>Resources</h4><ul><li>SDK</li><li>Examples</li><li>Papers</li><li>Support</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Recommendation Tuner v3.2.1</span><span>Preview: 84ms</span></div></footer>
+</body></html>

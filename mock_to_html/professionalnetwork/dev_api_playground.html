@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>API Playground · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+</head><body>
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search endpoints, methods..."><div class="hub-search-filter"><span>⚙</span><span>v3</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Pro Dev</button><button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#0E1E35,#C5A059);color:#fff">DV</div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span><a href="dev-console.html">Dev Console</a><span class="breadcrumb-sep">/</span>API Playground</div>
+  <h1 class="page-title">API Playground</h1>
+  <p class="page-sub">Explore, test, and debug YUBA REST & GraphQL APIs. Authenticated requests, live responses, history saved.</p>
+</div></div>
+
+<div class="layout-2col">
+  <aside class="sidebar">
+    <div class="card card-accent-top">
+      <div class="card-header"><span class="card-title">Endpoints</span></div>
+      <div class="card-body" style="padding:8px 0">
+        <div class="side-nav-item active"><span class="tag tag-ok" style="margin-right:8px">GET</span>/v3/users/:id</div>
+        <div class="side-nav-item"><span class="tag tag-gold" style="margin-right:8px">POST</span>/v3/jobs/apply</div>
+        <div class="side-nav-item"><span class="tag tag-ok" style="margin-right:8px">GET</span>/v3/companies</div>
+        <div class="side-nav-item"><span class="tag tag-ok" style="margin-right:8px">GET</span>/v3/networks/:id</div>
+        <div class="side-nav-item"><span class="tag" style="margin-right:8px">PATCH</span>/v3/profiles/:id</div>
+        <div class="side-nav-item"><span class="tag tag-gold" style="margin-right:8px">POST</span>/v3/ai/recommend</div>
+        <div class="side-nav-item"><span class="tag tag-danger" style="margin-right:8px">DEL</span>/v3/content/:id</div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <div class="card card-accent-gold">
+      <div class="card-header"><span class="card-title">Request Builder</span></div>
+      <div class="card-body">
+        <div class="form-row">
+          <div class="form-group" style="flex:0 0 120px"><label>Method</label><select><option>GET</option><option>POST</option><option>PATCH</option><option>DELETE</option></select></div>
+          <div class="form-group"><label>URL</label><input value="https://api.yuba.io/v3/users/42"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Authorization</label><select><option>Bearer Token</option><option>API Key</option><option>OAuth 2.0</option></select></div>
+          <div class="form-group"><label>Idempotency Key</label><input placeholder="9f2a-4d8c-a1b2"></div>
+        </div>
+        <div style="display:flex;gap:10px;justify-content:flex-end"><button class="btn btn-ghost">Clear</button><button class="btn btn-primary">▶ Send Request</button></div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:20px;align-items:start">
+      <div class="card">
+        <div class="card-header"><span class="card-title">Response · 200 OK</span><span style="font-size:.68rem;color:var(--muted)">84ms · 1.2 KB</span></div>
+        <div class="card-body" style="padding:0">
+          <div style="background:#0A1622;padding:18px;font-family:'Courier New',monospace;font-size:.78rem;line-height:1.7;color:#C8D4E2;max-height:400px;overflow-y:auto">
+{<br>
+&nbsp;&nbsp;<span style="color:#7FD4A8">"id"</span>: <span style="color:#8AB4F8">42</span>,<br>
+&nbsp;&nbsp;<span style="color:#7FD4A8">"name"</span>: <span style="color:#7FD4A8">"Mokoena Thabo"</span>,<br>
+&nbsp;&nbsp;<span style="color:#7FD4A8">"headline"</span>: <span style="color:#7FD4A8">"Labor Relations Strategist"</span>,<br>
+&nbsp;&nbsp;<span style="color:#7FD4A8">"trust_score"</span>: <span style="color:#8AB4F8">92</span>,<br>
+&nbsp;&nbsp;<span style="color:#7FD4A8">"location"</span>: <span style="color:#7FD4A8">"Johannesburg, SA"</span>,<br>
+&nbsp;&nbsp;<span style="color:#7FD4A8">"connections"</span>: <span style="color:#8AB4F8">89</span>,<br>
+&nbsp;&nbsp;<span style="color:#7FD4A8">"verified_credentials"</span>: [<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span style="color:#7FD4A8">"type"</span>: <span style="color:#7FD4A8">"LLM"</span>, <span style="color:#7FD4A8">"issuer"</span>: <span style="color:#7FD4A8">"UP"</span>, <span style="color:#7FD4A8">"on_chain"</span>: <span style="color:#8AB4F8">true</span> },<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{ <span style="color:#7FD4A8">"type"</span>: <span style="color:#7FD4A8">"CIArb"</span>, <span style="color:#7FD4A8">"on_chain"</span>: <span style="color:#8AB4F8">true</span> }<br>
+&nbsp;&nbsp;]<br>
+}
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><span class="card-title">Response Headers</span></div>
+        <div class="card-body" style="padding:0">
+          <div style="background:#0A1622;padding:18px;font-family:'Courier New',monospace;font-size:.78rem;line-height:1.7;color:#C8D4E2">
+x-request-id: a1b2c3d4e5f6<br>
+x-ratelimit-limit: 1000<br>
+x-ratelimit-remaining: 987<br>
+x-ratelimit-reset: 1730102400<br>
+x-trace-id: trace_8a2f1b9c<br>
+cache-control: private, max-age=60<br>
+content-type: application/json; charset=utf-8
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <div class="card-header"><span class="card-title">Request History</span></div>
+      <div class="card-body" style="padding:0">
+        <table class="table">
+          <thead><tr><th>Method</th><th>Endpoint</th><th>Status</th><th>Time</th><th>When</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tag-ok">GET</span></td><td>/v3/users/42</td><td>200</td><td>84ms</td><td>just now</td></tr>
+            <tr><td><span class="tag tag-gold">POST</span></td><td>/v3/jobs/apply</td><td>201</td><td>142ms</td><td>5m ago</td></tr>
+            <tr><td><span class="tag">PATCH</span></td><td>/v3/profiles/42</td><td>200</td><td>98ms</td><td>12m ago</td></tr>
+            <tr><td><span class="tag tag-danger">ERR</span></td><td>/v3/recommendations</td><td>503</td><td>2.1s</td><td>18m ago</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">API Playground · Environment: Development.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>REST</h4><ul><li>Users</li><li>Jobs</li><li>Companies</li><li>Content</li></ul></div>
+  <div class="footer-col"><h4>GraphQL</h4><ul><li>Schema</li><li>Queries</li><li>Mutations</li><li>Subscriptions</li></ul></div>
+  <div class="footer-col"><h4>Resources</h4><ul><li>SDK Docs</li><li>Rate Limits</li><li>Errors</li><li>Support</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · API Playground v3.2.1</span><span>Trace: a1b2c3d</span></div></footer>
+</body></html>

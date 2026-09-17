@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Content Takedown Manager · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+</head><body>
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search takedowns..."><div class="hub-search-filter"><span>⚙</span><span>Legal</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#3A1F1F,#A83232)">LG</div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span>Content Takedown Manager</div>
+  <h1 class="page-title">Content Takedown Manager</h1>
+  <p class="page-sub">Track DMCA notices, court orders, and legal removal requests end-to-end with SLA enforcement.</p>
+</div></div>
+
+<div class="layout-full">
+  <div class="grid-4" style="margin-bottom:24px">
+    <div class="stat-card"><div class="label">Open Takedowns</div><div class="value">24</div><div class="delta down">+4 this week</div></div>
+    <div class="stat-card"><div class="label">DMCA Notices (30d)</div><div class="value">42</div><div class="delta">100% acknowledged</div></div>
+    <div class="stat-card"><div class="label">Avg Processing</div><div class="value">38h</div><div class="delta">SLA: 48h</div></div>
+    <div class="stat-card"><div class="label">Counter-Notices</div><div class="value">6</div><div class="delta">2 escalated to legal</div></div>
+  </div>
+
+  <div class="card" style="margin-bottom:20px">
+    <div class="card-header"><span class="card-title">Active Takedowns</span><span style="font-size:.68rem;color:var(--gold);cursor:pointer">+ New Request</span></div>
+    <div class="card-body" style="padding:0">
+      <table class="table">
+        <thead><tr><th>ID</th><th>Type</th><th>Target</th><th>Requester</th><th>Deadline</th><th>Status</th><th></th></tr></thead>
+        <tbody>
+          <tr><td><strong>TD-2024-1147</strong></td><td><span class="tag tag-danger">DMCA</span></td><td>Content #48291</td><td>Legal@Publisher</td><td>+22h</td><td><span class="tag tag-warn">Under Review</span></td><td><button class="btn btn-ghost btn-sm">Open</button></td></tr>
+          <tr><td><strong>TD-2024-1146</strong></td><td><span class="tag tag-danger">Court Order</span></td><td>User #28471</td><td>Johannesburg High Court</td><td>+8h</td><td><span class="tag tag-danger">Urgent</span></td><td><button class="btn btn-ghost btn-sm">Open</button></td></tr>
+          <tr><td><strong>TD-2024-1145</strong></td><td><span class="tag tag-warn">Trademark</span></td><td>Content #48288</td><td>Sasol Legal</td><td>+3d</td><td><span class="tag tag-ok">Actioned</span></td><td><button class="btn btn-ghost btn-sm">Open</button></td></tr>
+          <tr><td><strong>TD-2024-1144</strong></td><td><span class="tag tag-danger">DMCA</span></td><td>Content #48271</td><td>Universal Music</td><td>+42h</td><td><span class="tag tag-warn">Under Review</span></td><td><button class="btn btn-ghost btn-sm">Open</button></td></tr>
+          <tr><td><strong>TD-2024-1143</strong></td><td><span class="tag">Privacy</span></td><td>Content #48260</td><td>DSAR Team</td><td>+5d</td><td><span class="tag tag-ok">Actioned</span></td><td><button class="btn btn-ghost btn-sm">Open</button></td></tr>
+          <tr><td><strong>TD-2024-1142</strong></td><td><span class="tag tag-warn">Trademark</span></td><td>User #31592</td><td>MTN Legal</td><td>+6d</td><td><span class="tag tag-ok">Actioned</span></td><td><button class="btn btn-ghost btn-sm">Open</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="grid-2" style="align-items:start">
+    <div class="card card-accent-gold">
+      <div class="card-header"><span class="card-title">Takedown Workflow</span></div>
+      <div class="card-body">
+        <div class="pipe-node"><span class="num">1</span> Receive notice (email/portal)</div>
+        <div class="pipe-node"><span class="num">2</span> Acknowledge within 4h</div>
+        <div class="pipe-node"><span class="num">3</span> Legal validity review</div>
+        <div class="pipe-node"><span class="num">4</span> Notify content owner (if applicable)</div>
+        <div class="pipe-node"><span class="num">5</span> Action: remove / reject / partial</div>
+        <div class="pipe-node"><span class="num">6</span> Confirm to requester</div>
+        <div class="pipe-node"><span class="num">7</span> Archive with audit trail</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-title">SLA Compliance</span></div>
+      <div class="card-body">
+        <div style="margin-bottom:14px"><div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:6px"><span>DMCA (48h)</span><span style="font-weight:700;color:var(--ok)">100%</span></div><div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div></div>
+        <div style="margin-bottom:14px"><div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:6px"><span>Court Order (24h)</span><span style="font-weight:700;color:var(--ok)">98%</span></div><div class="progress-bar"><div class="progress-fill" style="width:98%"></div></div></div>
+        <div style="margin-bottom:14px"><div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:6px"><span>Trademark (72h)</span><span style="font-weight:700;color:var(--ok)">96%</span></div><div class="progress-bar"><div class="progress-fill" style="width:96%"></div></div></div>
+        <div><div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:6px"><span>Privacy (7d)</span><span style="font-weight:700;color:var(--ok)">100%</span></div><div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Takedown Manager · Legal compliance enforced.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Requests</h4><ul><li>DMCA</li><li>Court Orders</li><li>Trademark</li><li>Privacy</li></ul></div>
+  <div class="footer-col"><h4>Workflow</h4><ul><li>Acknowledge</li><li>Review</li><li>Action</li><li>Archive</li></ul></div>
+  <div class="footer-col"><h4>Legal</h4><ul><li>Playbook</li><li>Contacts</li><li>SLA</li><li>Audit</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Takedown Manager v3.2.1</span><span>24 open · 100% SLA</span></div></footer>
+</body></html>

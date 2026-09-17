@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Schema Explorer · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search tables, columns..."><div class="hub-search-filter"><span>⚙</span><span>v3.2.1</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Pro Dev</button><button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#0E1E35,#C5A059);color:#fff">DV</div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span><a href="dev-console.html">Dev Console</a><span class="breadcrumb-sep">/</span>Schema Explorer</div>
+  <h1 class="page-title">Schema Explorer</h1>
+  <p class="page-sub">Browse all 312+ tables, columns, indexes, and migrations. Trace data lineage down to the column level.</p>
+</div></div>
+
+<div class="layout-2col">
+  <aside class="sidebar">
+    <div class="card card-accent-top">
+      <div class="card-header"><span class="card-title">Schema Groups</span></div>
+      <nav class="side-nav">
+        <a class="side-nav-item active"><span class="side-nav-icon">◆</span><span>All Tables</span><span class="side-nav-badge">312</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">👤</span><span>Users & Profiles</span><span class="side-nav-badge">26</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">🏢</span><span>Companies & Jobs</span><span class="side-nav-badge">38</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">📄</span><span>Content</span><span class="side-nav-badge">28</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">📚</span><span>Learning</span><span class="side-nav-badge">17</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">👥</span><span>Groups</span><span class="side-nav-badge">10</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">🧪</span><span>AI & ML</span><span class="side-nav-badge">14</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">💳</span><span>Billing</span><span class="side-nav-badge">22</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">🛡</span><span>Compliance</span><span class="side-nav-badge">19</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">⚙</span><span>Infrastructure</span><span class="side-nav-badge">28</span></a>
+      </nav>
+    </div>
+    <div class="card card-accent-gold">
+      <div class="card-header"><span class="card-title">Schema Stats</span></div>
+      <div class="card-body" style="font-size:.78rem;line-height:1.9;color:var(--ink2)">
+        <div>📊 Tables: <strong>312</strong></div>
+        <div>👁 Views: <strong>4</strong></div>
+        <div>📈 Materialized: <strong>10</strong></div>
+        <div>🔧 Functions: <strong>25</strong></div>
+        <div>⚡ Triggers: <strong>12</strong></div>
+        <div>🔐 RLS Policies: <strong>71</strong></div>
+        <div>🔢 Sequences: <strong>6</strong></div>
+        <div>🧩 Enums: <strong>48</strong></div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <div class="card card-accent-gold" style="margin-bottom:20px">
+      <div class="card-header"><span class="card-title">Selected Table · users</span><span style="font-size:.68rem;color:var(--gold);cursor:pointer">📋 Copy DDL</span></div>
+      <div class="card-body" style="padding:0">
+        <div class="schema-tree">
+<span class="tbl">CREATE TABLE</span> users (<br>
+&nbsp;&nbsp;<span class="col">id</span> <span class="type">BIGSERIAL</span> <span class="pk">PRIMARY KEY</span>,<br>
+&nbsp;&nbsp;<span class="col">uuid</span> <span class="type">UUID</span> <span class="pk">UNIQUE NOT NULL</span> <span class="type">DEFAULT gen_random_uuid()</span>,<br>
+&nbsp;&nbsp;<span class="col">email</span> <span class="type">VARCHAR(255) UNIQUE NOT NULL</span>,<br>
+&nbsp;&nbsp;<span class="col">email_verified</span> <span class="type">BOOLEAN DEFAULT FALSE</span>,<br>
+&nbsp;&nbsp;<span class="col">phone</span> <span class="type">VARCHAR(32)</span>,<br>
+&nbsp;&nbsp;<span class="col">password_hash</span> <span class="type">VARCHAR(255)</span>,<br>
+&nbsp;&nbsp;<span class="col">first_name</span> <span class="type">VARCHAR(100)</span>,<br>
+&nbsp;&nbsp;<span class="col">last_name</span> <span class="type">VARCHAR(100)</span>,<br>
+&nbsp;&nbsp;<span class="col">headline</span> <span class="type">VARCHAR(200)</span>,<br>
+&nbsp;&nbsp;<span class="col">location</span> <span class="type">VARCHAR(200)</span>,<br>
+&nbsp;&nbsp;<span class="col">avatar_url</span> <span class="type">TEXT</span>,<br>
+&nbsp;&nbsp;<span class="col">trust_score</span> <span class="type">SMALLINT DEFAULT 0</span>,<br>
+&nbsp;&nbsp;<span class="col">status</span> <span class="type">VARCHAR(32) DEFAULT 'active'</span>,<br>
+&nbsp;&nbsp;<span class="col">last_login_at</span> <span class="type">TIMESTAMPTZ</span>,<br>
+&nbsp;&nbsp;<span class="col">created_at</span> <span class="type">TIMESTAMPTZ DEFAULT now()</span>,<br>
+&nbsp;&nbsp;<span class="col">updated_at</span> <span class="type">TIMESTAMPTZ DEFAULT now()</span><br>
+);<br><br>
+<span class="tbl">-- Indexes</span><br>
+<span class="col">CREATE INDEX</span> idx_users_email <span class="col">ON</span> users(email);<br>
+<span class="col">CREATE INDEX</span> idx_users_trust <span class="col">ON</span> users(trust_score <span class="type">DESC</span>);<br>
+<span class="col">CREATE INDEX</span> idx_users_active <span class="col">ON</span> users(status) <span class="col">WHERE</span> status = <span class="type">'active'</span>;<br><br>
+<span class="tbl">-- RLS Policies</span><br>
+<span class="col">POLICY</span> users_self_policy <span class="col">ON</span> users <span class="col">FOR SELECT USING</span> (id = current_user_id());<br>
+<span class="col">POLICY</span> users_admin_policy <span class="col">ON</span> users <span class="col">FOR ALL USING</span> (user_has_permission(<span class="type">'admin.users'</span>));
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-title">Related Tables (Foreign Keys)</span></div>
+      <div class="card-body" style="padding:0">
+        <table class="table">
+          <thead><tr><th>Table</th><th>Column</th><th>References</th><th>On Delete</th></tr></thead>
+          <tbody>
+            <tr><td><code>user_profiles</code></td><td>user_id</td><td>users(id)</td><td>CASCADE</td></tr>
+            <tr><td><code>user_roles</code></td><td>user_id</td><td>users(id)</td><td>CASCADE</td></tr>
+            <tr><td><code>sessions</code></td><td>user_id</td><td>users(id)</td><td>CASCADE</td></tr>
+            <tr><td><code>user_connections</code></td><td>user_id</td><td>users(id)</td><td>CASCADE</td></tr>
+            <tr><td><code>contents</code></td><td>author_id</td><td>users(id)</td><td>SET NULL</td></tr>
+            <tr><td><code>job_applications</code></td><td>applicant_id</td><td>users(id)</td><td>CASCADE</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <div class="card-header"><span class="card-title">Data Lineage · users → downstream</span></div>
+      <div class="card-body" style="font-size:.82rem;line-height:1.9;color:var(--ink2);font-family:'Courier New',monospace">
+        <div>users → <strong style="color:var(--ink)">user_profiles</strong> → <strong style="color:var(--ink)">user_skills</strong> → <strong style="color:var(--ink)">skill_endorsements</strong></div>
+        <div>users → <strong style="color:var(--ink)">user_engagement_metrics</strong> → <strong style="color:var(--ink)">mv_user_activity_dashboard</strong></div>
+        <div>users → <strong style="color:var(--ink)">trust_reputation_scores</strong> → <strong style="color:var(--ink)">recommendation_models</strong></div>
+        <div>users → <strong style="color:var(--ink)">career_path_simulations</strong> → <strong style="color:var(--ink)">ai_career_recommendations</strong></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Schema Explorer · 312 tables · v3.2.1</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Schema</h4><ul><li>Tables</li><li>Views</li><li>Functions</li><li>Triggers</li></ul></div>
+  <div class="footer-col"><h4>Lineage</h4><ul><li>Column-level</li><li>Table-level</li><li>Impact Analysis</li><li>Orphans</li></ul></div>
+  <div class="footer-col"><h4>Resources</h4><ul><li>ERD</li><li>Migration Log</li><li>Naming Guide</li><li>Support</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Schema Explorer v3.2.1</span><span>Last migration: 2h ago</span></div></footer>
+</body></html>

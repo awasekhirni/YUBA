@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anonymized Engagement Analytics · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search engagement data..."><div class="hub-search-filter"><span>⚙</span><span>k-anon: 25</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Pro Dev</button><button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#0E1E35,#C5A059);color:#fff">DV</div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span><a href="dev-console.html">Dev Console</a><span class="breadcrumb-sep">/</span>Anonymized Engagement Analytics</div>
+  <h1 class="page-title">Anonymized Engagement Analytics</h1>
+  <p class="page-sub">k-anonymized engagement data across all content, connections, and interactions. Zero individual identification — full population insight.</p>
+</div></div>
+
+<div class="layout-full">
+
+  <div class="hero-banner" style="margin-bottom:20px">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;position:relative">
+      <div>
+        <span class="k-anon-badge" style="margin-bottom:12px">◆ K-Anonymity: 25 minimum</span>
+        <h2>Anonymized Engagement Report — Q4 2024</h2>
+        <p>Every individual like, unlike, share, and comment represented in aggregate. No user is identifiable. Full population patterns are preserved.</p>
+      </div>
+      <div style="text-align:right"><div style="font-size:.68rem;opacity:.8;text-transform:uppercase;letter-spacing:1px;font-weight:700">Total Events</div><div style="font-family:var(--serif);font-size:2rem;font-weight:bold;color:var(--gold)">2.4M</div></div>
+    </div>
+  </div>
+
+  <div class="grid-4" style="margin-bottom:24px">
+    <div class="stat-card"><div class="label">Total Likes</div><div class="value">1,842,109</div><div class="delta">+18% QoQ</div></div>
+    <div class="stat-card"><div class="label">Total Unlikes</div><div class="value">284,412</div><div class="delta down">-4% QoQ</div></div>
+    <div class="stat-card"><div class="label">Like-to-Unlike Ratio</div><div class="value">6.48 : 1</div><div class="delta">Healthy sentiment</div></div>
+    <div class="stat-card"><div class="label">Unique Contents Engaged</div><div class="value">84,201</div><div class="delta">Sparse-tail content</div></div>
+  </div>
+
+  <div class="grid-2" style="align-items:start;margin-bottom:20px">
+    <div class="card card-accent-gold">
+      <div class="card-header"><span class="card-title">Likes vs Unlikes · By Content Category</span><span class="k-anon-badge">k≥100</span></div>
+      <div class="card-body">
+        <div class="cohort-bar"><span class="cohort-name">Career Insights</span><div class="cohort-track"><div class="cohort-fill" style="width:88%"></div></div><span class="cohort-val">+88%</span></div>
+        <div class="cohort-bar"><span class="cohort-name">Job Postings</span><div class="cohort-track"><div class="cohort-fill" style="width:74%"></div></div><span class="cohort-val">+74%</span></div>
+        <div class="cohort-bar"><span class="cohort-name">Learning Content</span><div class="cohort-track"><div class="cohort-fill" style="width:82%"></div></div><span class="cohort-val">+82%</span></div>
+        <div class="cohort-bar"><span class="cohort-name">Company Announcements</span><div class="cohort-track"><div class="cohort-fill" style="width:56%"></div></div><span class="cohort-val">+56%</span></div>
+        <div class="cohort-bar"><span class="cohort-name">Opinion / Debate</span><div class="cohort-track"><div class="cohort-fill negative" style="width:22%"></div></div><span class="cohort-val" style="color:var(--danger)">-22%</span></div>
+        <div class="cohort-bar"><span class="cohort-name">Industry News</span><div class="cohort-track"><div class="cohort-fill" style="width:64%"></div></div><span class="cohort-val">+64%</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-title">Like / Unlike Ratio Over Time</span></div>
+      <div class="card-body">
+        <svg viewBox="0 0 500 220" style="width:100%;height:220px">
+          <line x1="40" y1="180" x2="480" y2="180" stroke="#E2E0D8"/>
+          <line x1="40" y1="140" x2="480" y2="140" stroke="#E2E0D8" stroke-dasharray="2,4"/>
+          <line x1="40" y1="100" x2="480" y2="100" stroke="#E2E0D8" stroke-dasharray="2,4"/>
+          <line x1="40" y1="60" x2="480" y2="60" stroke="#E2E0D8" stroke-dasharray="2,4"/>
+          <polyline points="60,150 120,142 180,128 240,118 300,105 360,90 420,78 460,72" fill="none" stroke="#C5A059" stroke-width="2.5"/>
+          <polyline points="60,168 120,170 180,168 240,172 300,168 360,170 420,168 460,170" fill="none" stroke="#A83232" stroke-width="2" stroke-dasharray="4,3"/>
+          <g font-family="Helvetica" font-size="10" fill="#8A96A3">
+            <text x="60" y="200">Q1 '23</text><text x="180" y="200">Q3 '23</text><text x="300" y="200">Q1 '24</text><text x="420" y="200">Q3 '24</text>
+          </g>
+          <g font-family="Helvetica" font-size="10" fill="#C5A059" font-weight="bold"><text x="20" y="76">6.5</text></g>
+          <g font-family="Helvetica" font-size="10" fill="#A83232" font-weight="bold"><text x="20" y="172">1.0</text></g>
+        </svg>
+        <div style="display:flex;gap:20px;justify-content:center;font-size:.78rem;margin-top:10px"><span><span style="display:inline-block;width:20px;height:3px;background:#C5A059;vertical-align:middle;margin-right:6px"></span>Likes trend</span><span><span style="display:inline-block;width:20px;height:3px;background:#A83232;vertical-align:middle;margin-right:6px"></span>Unlikes trend</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-accent-gold" style="margin-bottom:20px">
+    <div class="card-header"><span class="card-title">Engagement Heatmap · Anonymized by Hour & Day</span><span class="k-anon-badge">k≥50 per cell</span></div>
+    <div class="card-body">
+      <div class="heatmap-grid">
+        <div></div>
+        <div style="text-align:center;font-weight:700;color:var(--muted);padding:6px 0">Mon</div>
+        <div style="text-align:center;font-weight:700;color:var(--muted);padding:6px 0">Tue</div>
+        <div style="text-align:center;font-weight:700;color:var(--muted);padding:6px 0">Wed</div>
+        <div style="text-align:center;font-weight:700;color:var(--muted);padding:6px 0">Thu</div>
+        <div style="text-align:center;font-weight:700;color:var(--muted);padding:6px 0">Fri</div>
+        <div style="text-align:center;font-weight:700;color:var(--muted);padding:6px 0">Sat</div>
+        <div style="text-align:center;font-weight:700;color:var(--muted);padding:6px 0">Sun</div>
+
+        <div style="display:flex;align-items:center;font-weight:700;color:var(--muted);font-size:.7rem">6am</div>
+        <div class="heatmap-cell h1">12%</div><div class="heatmap-cell h1">14%</div><div class="heatmap-cell h1">18%</div><div class="heatmap-cell h2">22%</div><div class="heatmap-cell h2">24%</div><div class="heatmap-cell h1">8%</div><div class="heatmap-cell h1">6%</div>
+
+        <div style="display:flex;align-items:center;font-weight:700;color:var(--muted);font-size:.7rem">10am</div>
+        <div class="heatmap-cell h3">48%</div><div class="heatmap-cell h4">68%</div><div class="heatmap-cell h4">72%</div><div class="heatmap-cell h4">74%</div><div class="heatmap-cell h3">52%</div><div class="heatmap-cell h2">18%</div><div class="heatmap-cell h1">12%</div>
+
+        <div style="display:flex;align-items:center;font-weight:700;color:var(--muted);font-size:.7rem">2pm</div>
+        <div class="heatmap-cell h4">62%</div><div class="heatmap-cell h4">78%</div><div class="heatmap-cell h4">82%</div><div class="heatmap-cell h4">76%</div><div class="heatmap-cell h3">58%</div><div class="heatmap-cell h2">24%</div><div class="heatmap-cell h1">18%</div>
+
+        <div style="display:flex;align-items:center;font-weight:700;color:var(--muted);font-size:.7rem">6pm</div>
+        <div class="heatmap-cell h5">88%</div><div class="heatmap-cell h5">92%</div><div class="heatmap-cell h5">96%</div><div class="heatmap-cell h5">94%</div><div class="heatmap-cell h4">72%</div><div class="heatmap-cell h3">46%</div><div class="heatmap-cell h3">42%</div>
+
+        <div style="display:flex;align-items:center;font-weight:700;color:var(--muted);font-size:.7rem">10pm</div>
+        <div class="heatmap-cell h2">28%</div><div class="heatmap-cell h3">34%</div><div class="heatmap-cell h3">38%</div><div class="heatmap-cell h3">36%</div><div class="heatmap-cell h2">26%</div><div class="heatmap-cell h2">22%</div><div class="heatmap-cell h2">24%</div>
+      </div>
+      <div style="margin-top:14px;padding:12px;background:var(--bg);border-radius:2px;font-size:.78rem;color:var(--ink2);line-height:1.6">
+        <strong style="color:var(--ink)">Insight:</strong> Peak engagement consistently occurs on <strong>Wednesday 6pm</strong> (96%). Evening weekday sessions dominate. Schedule critical content releases for Tues–Thurs, 5–8pm.
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="align-items:start;margin-bottom:20px">
+    <div class="card card-accent-top">
+      <div class="card-header"><span class="card-title">Anonymized Unlike Patterns</span><span class="k-anon-badge">k≥50</span></div>
+      <div class="card-body" style="padding:0">
+        <div class="opp-item" style="padding:12px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Promotional / Sales Posts</div><div style="font-size:.72rem;color:var(--muted)">Users actively unlike within 8 seconds of seeing</div></div><span class="tag tag-danger">-42%</span></div>
+        <div class="opp-item" style="padding:12px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Political Content</div><div style="font-size:.72rem;color:var(--muted)">High unlike rate despite high reach</div></div><span class="tag tag-danger">-28%</span></div>
+        <div class="opp-item" style="padding:12px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Long-form Text</div><div style="font-size:.72rem;color:var(--muted)">Users unlike when reading time &gt;90s</div></div><span class="tag tag-warn">-14%</span></div>
+        <div class="opp-item" style="padding:12px 16px;border-bottom:none"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Duplicate Content</div><div style="font-size:.72rem;color:var(--muted)">Same content across 3+ spaces</div></div><span class="tag tag-warn">-18%</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-title">Aggregate Signal Correlation</span><span class="k-anon-badge">Pearson r</span></div>
+      <div class="card-body" style="padding:0">
+        <div class="opp-item" style="padding:12px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Video → Likes</div><div style="font-size:.72rem;color:var(--muted)">Strong positive correlation</div></div><span class="tag tag-ok">r = +0.84</span></div>
+        <div class="opp-item" style="padding:12px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Narrative Length → Completion</div><div style="font-size:.72rem;color:var(--muted)">Longer = fewer completions</div></div><span class="tag tag-danger">r = -0.62</span></div>
+        <div class="opp-item" style="padding:12px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Consistency → Trust Score</div><div style="font-size:.72rem;color:var(--muted)">Regular posters gain trust faster</div></div><span class="tag tag-ok">r = +0.71</span></div>
+        <div class="opp-item" style="padding:12px 16px;border-bottom:none"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Endorsements → Replies</div><div style="font-size:.72rem;color:var(--muted)">Weak correlation</div></div><span class="tag">r = +0.28</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-accent-gold">
+    <div class="card-header"><span class="card-title">K-Anonymity Guarantee · Privacy Statement</span></div>
+    <div class="card-body">
+      <div class="grid-4" style="gap:14px">
+        <div style="padding:14px;background:rgba(46,125,91,.04);border-left:3px solid var(--ok);border-radius:2px"><div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--ok);font-weight:700;margin-bottom:4px">Minimum Bucket</div><div style="font-family:var(--serif);font-weight:bold">k = 25</div><div style="font-size:.72rem;color:var(--ink2)">No cohort smaller than 25</div></div>
+        <div style="padding:14px;background:rgba(46,125,91,.04);border-left:3px solid var(--ok);border-radius:2px"><div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--ok);font-weight:700;margin-bottom:4px">Differential Privacy</div><div style="font-family:var(--serif);font-weight:bold">ε = 0.8</div><div style="font-size:.72rem;color:var(--ink2)">Laplacian noise on totals</div></div>
+        <div style="padding:14px;background:rgba(46,125,91,.04);border-left:3px solid var(--ok);border-radius:2px"><div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--ok);font-weight:700;margin-bottom:4px">Re-ID Risk</div><div style="font-family:var(--serif);font-weight:bold">&lt;0.01%</div><div style="font-size:.72rem;color:var(--ink2)">Indistinguishability guaranteed</div></div>
+        <div style="padding:14px;background:rgba(46,125,91,.04);border-left:3px solid var(--ok);border-radius:2px"><div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--ok);font-weight:700;margin-bottom:4px">Audit</div><div style="font-family:var(--serif);font-weight:bold">Monthly</div><div style="font-size:.72rem;color:var(--ink2)">Public attestation</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Anonymized Analytics · Population insight, zero identification.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Analytics</h4><ul><li>Engagement</li><li>Heatmaps</li><li>Correlations</li><li>Reports</li></ul></div>
+  <div class="footer-col"><h4>Privacy</h4><ul><li>k-Anonymity</li><li>Differential Privacy</li><li>Audit</li><li>Methodology</li></ul></div>
+  <div class="footer-col"><h4>Support</h4><ul><li>Docs</li><li>API</li><li>Help</li><li>Contact</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Anon Engagement v3.2.1</span><span>k=25 · ε=0.8</span></div></footer>
+</body></html>

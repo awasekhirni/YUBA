@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Console · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+
+<div class="admin-strip">
+  <span class="admin-strip-label">◆ Admin Console</span>
+  <div class="admin-strip-item">🛡️ Moderation Queue <span class="count">12</span></div>
+  <div class="admin-strip-item">⚠️ SLA Breaches <span class="count">3</span></div>
+  <div class="admin-strip-item">📥 DSAR Requests <span class="count">5</span></div>
+  <div class="admin-strip-item">🔔 System Alerts <span class="count">2</span></div>
+  <div class="admin-strip-item">📊 DLQ <span class="count">7</span></div>
+</div>
+
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search users, content, tickets..."><div class="hub-search-filter"><span>⚙</span><span>Filters</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#3A1F1F,#A83232)">AD</div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span>Admin Console</div>
+  <h1 class="page-title">Admin Console</h1>
+  <p class="page-sub">Platform administration, moderation, compliance, and system health.</p>
+</div></div>
+
+<div class="layout-2col">
+  <aside class="sidebar">
+    <div class="card card-accent-top">
+      <nav class="side-nav">
+        <a class="side-nav-item active"><span class="side-nav-icon">📊</span><span>Overview</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">🛡️</span><span>Moderation</span><span class="side-nav-badge">12</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">👥</span><span>Users</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">🏢</span><span>Companies</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">📄</span><span>Content</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">⚠️</span><span>SLA & Alerts</span><span class="side-nav-badge">3</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">📥</span><span>DSAR</span><span class="side-nav-badge">5</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">🔧</span><span>System Health</span></a>
+        <a class="side-nav-item"><span class="side-nav-icon">📋</span><span>Audit Logs</span></a>
+      </nav>
+    </div>
+  </aside>
+
+  <main>
+    <div class="grid-4" style="margin-bottom:20px">
+      <div class="stat-card"><div class="label">Active Users</div><div class="value">48,247</div><div class="delta">+2.4% today</div></div>
+      <div class="stat-card"><div class="label">Pending Moderation</div><div class="value" style="color:var(--danger)">12</div><div class="delta down">+3 new</div></div>
+      <div class="stat-card"><div class="label">Open DSARs</div><div class="value" style="color:var(--warn)">5</div><div class="delta down">2 near SLA</div></div>
+      <div class="stat-card"><div class="label">System Health</div><div class="value" style="color:var(--ok)">99.7%</div><div class="delta">All systems ok</div></div>
+    </div>
+
+    <div class="grid-2" style="align-items:start;margin-bottom:20px">
+      <div class="card card-accent-gold">
+        <div class="card-header"><span class="card-title">Moderation Queue (12)</span><span style="font-size:.7rem;color:var(--gold);cursor:pointer">View All</span></div>
+        <div class="card-body" style="padding:0">
+          <div class="opp-item" style="padding:14px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Reported Post · Content #48291</div><div style="font-size:.72rem;color:var(--muted)">Reported by 3 users · Harassment</div></div><span class="tag tag-danger">High</span></div>
+          <div class="opp-item" style="padding:14px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Reported Comment · #10293</div><div style="font-size:.72rem;color:var(--muted)">Reported by 1 user · Spam</div></div><span class="tag tag-warn">Medium</span></div>
+          <div class="opp-item" style="padding:14px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Reported Profile · User #28471</div><div style="font-size:.72rem;color:var(--muted)">Reported by 2 users · Impersonation</div></div><span class="tag tag-danger">High</span></div>
+          <div class="opp-item" style="padding:14px 16px;border-bottom:none"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Reported Job · Listing #1029</div><div style="font-size:.72rem;color:var(--muted)">Reported by 1 user · Misleading</div></div><span class="tag">Low</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><span class="card-title">SLA Breaches</span></div>
+        <div class="card-body" style="padding:0">
+          <div class="opp-item" style="padding:14px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">DSAR-2024-1147</div><div style="font-size:.72rem;color:var(--muted)">Data access request · 28 days old</div></div><span class="tag tag-danger">Breach: 2d</span></div>
+          <div class="opp-item" style="padding:14px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Support TKT-2024-2847</div><div style="font-size:.72rem;color:var(--muted)">Priority escalation · 48h+ untouched</div></div><span class="tag tag-warn">At risk</span></div>
+          <div class="opp-item" style="padding:14px 16px;border-bottom:none"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Moderation Queue</div><div style="font-size:.72rem;color:var(--muted)">12 items pending >24h</div></div><span class="tag tag-warn">At risk</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-accent-gold">
+      <div class="card-header"><span class="card-title">System Health Monitoring</span></div>
+      <div class="card-body">
+        <div class="grid-4" style="gap:12px">
+          <div style="padding:12px;border-left:3px solid var(--ok);background:var(--bg)"><div style="font-size:.7rem;text-transform:uppercase;color:var(--muted);font-weight:700">API Gateway</div><div style="font-family:var(--serif);font-weight:bold;margin-top:4px">99.98% uptime</div></div>
+          <div style="padding:12px;border-left:3px solid var(--ok);background:var(--bg)"><div style="font-size:.7rem;text-transform:uppercase;color:var(--muted);font-weight:700">Database</div><div style="font-family:var(--serif);font-weight:bold;margin-top:4px">99.94% uptime</div></div>
+          <div style="padding:12px;border-left:3px solid var(--warn);background:var(--bg)"><div style="font-size:.7rem;text-transform:uppercase;color:var(--muted);font-weight:700">Search Service</div><div style="font-family:var(--serif);font-weight:bold;margin-top:4px">97.2% (degraded)</div></div>
+          <div style="padding:12px;border-left:3px solid var(--ok);background:var(--bg)"><div style="font-size:.7rem;text-transform:uppercase;color:var(--muted);font-weight:700">Queue Workers</div><div style="font-family:var(--serif);font-weight:bold;margin-top:4px">Healthy · 0 DLQ</div></div>
+        </div>
+        <div class="divider"></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--ink2)"><span>Last health check: 42 seconds ago</span><button class="btn btn-outline btn-sm">View Full Health Dashboard</button></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <div class="card-header"><span class="card-title">Recent Audit Activity</span></div>
+      <div class="card-body" style="padding:0">
+        <table class="table">
+          <thead><tr><th>Timestamp</th><th>Actor</th><th>Action</th><th>Target</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>2m ago</td><td>admin@yuba.io</td><td>moderation_action</td><td>Content #48291</td><td><span class="tag tag-ok">Success</span></td></tr>
+            <tr><td>12m ago</td><td>system</td><td>cache_invalidation</td><td>mv_search_quality</td><td><span class="tag tag-ok">Success</span></td></tr>
+            <tr><td>34m ago</td><td>ops@yuba.io</td><td>feature_flag_toggle</td><td>ai_career_recommendations</td><td><span class="tag tag-ok">Success</span></td></tr>
+            <tr><td>1h ago</td><td>system</td><td>sla_breach_detected</td><td>DSAR-2024-1147</td><td><span class="tag tag-danger">Alert</span></td></tr>
+            <tr><td>2h ago</td><td>compliance@yuba.io</td><td>consent_record_updated</td><td>User #1024</td><td><span class="tag tag-ok">Success</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <a class="view-all">View Full Audit Log →</a>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Labor Relations & Employment Strategy.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Platform</h4><ul><li>Directory</li><li>Networks</li><li>Opportunities</li></ul></div>
+  <div class="footer-col"><h4>Legal</h4><ul><li>Privacy</li><li>Terms</li><li>GDPR</li></ul></div>
+  <div class="footer-col"><h4>Support</h4><ul><li>Help</li><li>Tickets</li><li>Status</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA</span><span>v3.2.1</span></div></footer>
+</body></html>

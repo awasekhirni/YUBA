@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Digital Twin · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search twin activity..."><div class="hub-search-filter"><span>⚙</span><span>AI</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Pro</button><button class="profile-trigger"><div class="avatar">MT<span class="avatar-online"></span></div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span>Digital Twin</div>
+  <h1 class="page-title">Digital Twin</h1>
+  <p class="page-sub">An AI version of your professional self. It pre-screens opportunities, responds to recruiters, and books interviews — so you only engage with the best.</p>
+</div></div>
+
+<div class="layout-full">
+
+  <div class="twin-vis" style="margin-bottom:24px">
+    <div class="twin-avatar">MT</div>
+    <div class="twin-info">
+      <h2>Mokoena-Thabo.v3 is active</h2>
+      <p>Trained on your profile, preferences, past conversations, and 12,000+ successful matches. Currently screening 47 opportunities.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <span class="twin-tag">● Live · 24/7</span>
+        <span class="twin-tag">◆ 12k matches trained</span>
+        <span class="twin-tag">✓ 94% accuracy</span>
+      </div>
+    </div>
+    <button class="btn btn-gold" style="position:relative">Configure Twin</button>
+  </div>
+
+  <div class="grid-4" style="margin-bottom:24px">
+    <div class="stat-card"><div class="label">Offers Screened</div><div class="value">47</div><div class="delta">Last 30 days</div></div>
+    <div class="stat-card"><div class="label">Auto-Declined</div><div class="value" style="color:var(--muted)">38</div><div class="delta">Below your bar</div></div>
+    <div class="stat-card"><div class="label">Escalated to You</div><div class="value" style="color:var(--ok)">9</div><div class="delta">Worth your time</div></div>
+    <div class="stat-card"><div class="label">Time Saved</div><div class="value">~28h</div><div class="delta">This month</div></div>
+  </div>
+
+  <div class="grid-2" style="align-items:start;margin-bottom:20px">
+    <div class="card card-accent-gold">
+      <div class="card-header"><span class="card-title">Today's Twin Activity</span><span class="tag tag-ok">● Live</span></div>
+      <div class="card-body" style="padding:0">
+        <div class="opp-item" style="padding:12px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Screened offer from Standard Bank</div><div style="font-size:.72rem;color:var(--muted)">Match: 88% · Escalated to you · 2h ago</div></div><span class="tag tag-ok">Escalated</span></div>
+        <div class="opp-item" style="padding:12px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Declined offer from Quick Corp Ltd</div><div style="font-size:.72rem;color:var(--muted)">Match: 42% · Below salary floor · 3h ago</div></div><span class="tag tag-warn">Auto-Declined</span></div>
+        <div class="opp-item" style="padding:12px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Responded to recruiter inquiry</div><div style="font-size:.72rem;color:var(--muted)">Sent interest + availability window · 5h ago</div></div><span class="tag tag-ok">Replied</span></div>
+        <div class="opp-item" style="padding:12px 16px"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Scheduled interview</div><div style="font-size:.72rem;color:var(--muted)">Sasol · Tue 14:00 SAST · 6h ago</div></div><span class="tag tag-gold">Booked</span></div>
+        <div class="opp-item" style="padding:12px 16px;border-bottom:none"><div class="opp-body"><div style="font-weight:700;font-size:.85rem">Flagged low-fit opportunity</div><div style="font-size:.72rem;color:var(--muted)">Role misaligned with career GPS · 8h ago</div></div><span class="tag">Flagged</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-title">Twin Configuration</span><span style="font-size:.68rem;color:var(--gold);cursor:pointer">Advanced</span></div>
+      <div class="card-body">
+        <div style="margin-bottom:14px"><label style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);display:block;margin-bottom:6px">Twin Personality</label><select style="width:100%;padding:10px 12px;border:1px solid var(--line-strong);border-radius:2px;font-size:.85rem"><option>Balanced · Analytical + Warm</option><option>Analytical · Data-driven responses</option><option>Enthusiastic · High energy tone</option><option>Executive · Concise & formal</option></select></div>
+        <div style="margin-bottom:14px"><label style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);display:block;margin-bottom:6px">Auto-Decline Threshold</label><select style="width:100%;padding:10px 12px;border:1px solid var(--line-strong);border-radius:2px;font-size:.85rem"><option>Decline if match below 70%</option><option>Below 80%</option><option>Below 60%</option><option>Never auto-decline</option></select></div>
+        <div style="margin-bottom:14px"><label style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);display:block;margin-bottom:6px">Auto-Respond to Recruiters</label><select style="width:100%;padding:10px 12px;border:1px solid var(--line-strong);border-radius:2px;font-size:.85rem"><option>Yes · With my approval in draft</option><option>Yes · Fully autonomous</option><option>No · Escalate all to me</option></select></div>
+        <div style="margin-bottom:14px"><label style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);display:block;margin-bottom:6px">Schedule Interviews</label><select style="width:100%;padding:10px 12px;border:1px solid var(--line-strong);border-radius:2px;font-size:.85rem"><option>Yes · Within my calendar rules</option><option>No · I schedule manually</option></select></div>
+        <button class="btn btn-gold btn-block">Save Configuration</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-accent-gold">
+    <div class="card-header"><span class="card-title">Twin vs You · Decision Analysis</span></div>
+    <div class="card-body">
+      <div class="grid-4" style="gap:16px">
+        <div style="padding:16px;background:var(--bg);border-radius:2px"><div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:6px">Agreement Rate</div><div style="font-family:var(--serif);font-size:1.8rem;font-weight:bold;color:var(--ok);line-height:1">94%</div><div style="font-size:.72rem;color:var(--ink2);margin-top:4px">Your twin usually thinks like you</div></div>
+        <div style="padding:16px;background:var(--bg);border-radius:2px"><div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:6px">Times It Differed</div><div style="font-family:var(--serif);font-size:1.8rem;font-weight:bold;line-height:1">6%</div><div style="font-size:.72rem;color:var(--ink2);margin-top:4px">Review these to fine-tune</div></div>
+        <div style="padding:16px;background:var(--bg);border-radius:2px"><div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:6px">Escalations</div><div style="font-family:var(--serif);font-size:1.8rem;font-weight:bold;line-height:1">9</div><div style="font-size:.72rem;color:var(--ink2);margin-top:4px">Worth your attention</div></div>
+        <div style="padding:16px;background:var(--bg);border-radius:2px"><div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:6px">Accuracy Trend</div><div style="font-family:var(--serif);font-size:1.8rem;font-weight:bold;color:var(--ok);line-height:1">↑</div><div style="font-size:.72rem;color:var(--ink2);margin-top:4px">Improving monthly</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Digital Twin · AI proxy for your career.</p><div class="footer-status"><span class="status-dot"></span>Twin active 24/7</div></div>
+  <div class="footer-col"><h4>Twin</h4><ul><li>Activity</li><li>Config</li><li>Training</li><li>Accuracy</li></ul></div>
+  <div class="footer-col"><h4>Control</h4><ul><li>Pause</li><li>Autonomy</li><li>Boundaries</li><li>Privacy</li></ul></div>
+  <div class="footer-col"><h4>Support</h4><ul><li>Explainability</li><li>Help</li><li>Ethics</li><li>Contact</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Digital Twin v3.2.1</span><span>94% accuracy · 47 screened</span></div></footer>
+</body></html>

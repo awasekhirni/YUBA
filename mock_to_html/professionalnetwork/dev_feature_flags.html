@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Feature Flags · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+
+</head><body>
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search flags..."><div class="hub-search-filter"><span>⚙</span><span>Prod</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Pro Dev</button><button class="profile-trigger"><div class="avatar" style="background:linear-gradient(135deg,#0E1E35,#C5A059);color:#fff">DV</div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span><a href="dev-console.html">Dev Console</a><span class="breadcrumb-sep">/</span>Feature Flags</div>
+  <h1 class="page-title">Feature Flag Manager</h1>
+  <p class="page-sub">Ship features safely. Toggle by environment, cohort, tenant, or user segment. Instant rollback.</p>
+</div></div>
+
+<div class="layout-full">
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;align-items:center">
+    <input type="text" placeholder="Search flags..." style="padding:10px 14px;border:1px solid var(--line-strong);border-radius:2px;font-size:.85rem;outline:none;min-width:260px">
+    <select style="padding:10px 14px;border:1px solid var(--line-strong);border-radius:2px;font-size:.85rem"><option>All Environments</option><option>Production</option><option>Staging</option><option>Dev</option></select>
+    <select style="padding:10px 14px;border:1px solid var(--line-strong);border-radius:2px;font-size:.85rem"><option>All Status</option><option>Enabled</option><option>Disabled</option><option>Scheduled</option></select>
+    <div style="flex:1"></div>
+    <button class="btn btn-gold btn-sm">+ New Flag</button>
+  </div>
+
+  <div class="card">
+    <div class="card-body" style="padding:0">
+      <table class="table">
+        <thead><tr><th>Flag</th><th>Key</th><th>Environment</th><th>Rollout</th><th>Status</th><th>Owner</th><th>Updated</th></tr></thead>
+        <tbody>
+          <tr><td><strong>AI Career Coach</strong></td><td><code style="font-size:.72rem;background:var(--bg);padding:2px 6px;border-radius:2px">ai_career_coach_v2</code></td><td>Prod</td><td>100%</td><td><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></td><td>ml@yuba.io</td><td>2h ago</td></tr>
+          <tr><td><strong>Blockchain Credentials</strong></td><td><code style="font-size:.72rem;background:var(--bg);padding:2px 6px;border-radius:2px">blockchain_creds</code></td><td>Prod</td><td>25%</td><td><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></td><td>trust@yuba.io</td><td>1d ago</td></tr>
+          <tr><td><strong>Graph Visualization v2</strong></td><td><code style="font-size:.72rem;background:var(--bg);padding:2px 6px;border-radius:2px">viz_engine_v2</code></td><td>Staging</td><td>100%</td><td><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></td><td>viz@yuba.io</td><td>3h ago</td></tr>
+          <tr><td><strong>Tenant Custom UI</strong></td><td><code style="font-size:.72rem;background:var(--bg);padding:2px 6px;border-radius:2px">frontend_designer</code></td><td>Staging</td><td>10%</td><td><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></td><td>platform@yuba.io</td><td>5h ago</td></tr>
+          <tr><td><strong>Multi-Currency Billing</strong></td><td><code style="font-size:.72rem;background:var(--bg);padding:2px 6px;border-radius:2px">multicurrency_v2</code></td><td>Dev</td><td>100%</td><td><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></td><td>billing@yuba.io</td><td>2d ago</td></tr>
+          <tr><td><strong>Legacy Search</strong></td><td><code style="font-size:.72rem;background:var(--bg);padding:2px 6px;border-radius:2px">legacy_search</code></td><td>Prod</td><td>0%</td><td><label class="switch"><input type="checkbox"><span class="slider"></span></label></td><td>search@yuba.io</td><td>1w ago</td></tr>
+          <tr><td><strong>Podcast Hub</strong></td><td><code style="font-size:.72rem;background:var(--bg);padding:2px 6px;border-radius:2px">podcast_hub</code></td><td>Prod</td><td>5%</td><td><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></td><td>content@yuba.io</td><td>4h ago</td></tr>
+          <tr><td><strong>Advanced Fairness Audit</strong></td><td><code style="font-size:.72rem;background:var(--bg);padding:2px 6px;border-radius:2px">fairness_audit_v2</code></td><td>Staging</td><td>100%</td><td><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></td><td>ml@yuba.io</td><td>6h ago</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="grid-3" style="margin-top:20px">
+    <div class="stat-card"><div class="label">Total Flags</div><div class="value">24</div><div class="delta">8 active in prod</div></div>
+    <div class="stat-card"><div class="label">Evaluations (24h)</div><div class="value">18.4M</div><div class="delta">p99 3ms</div></div>
+    <div class="stat-card"><div class="label">Last Rollback</div><div class="value" style="font-size:1.2rem">6 days ago</div><div class="delta">multicurrency_v1</div></div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Feature Flag Manager · Safe deploys, instant rollback.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Environments</h4><ul><li>Production</li><li>Staging</li><li>Development</li><li>Canary</li></ul></div>
+  <div class="footer-col"><h4>Targeting</h4><ul><li>Users</li><li>Cohorts</li><li>Tenants</li><li>Regions</li></ul></div>
+  <div class="footer-col"><h4>Resources</h4><ul><li>Docs</li><li>SDKs</li><li>Best Practices</li><li>Support</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Feature Flags v3.2.1</span><span>18.4M evals/24h</span></div></footer>
+</body></html>

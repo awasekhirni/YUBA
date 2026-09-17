@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Course Creator Studio · YUBA</title>
+<link rel="stylesheet" href="./assets/css/yuba-theme.css">
+<style>
+.creator-hero{background:linear-gradient(135deg,#1E3A5F,#0A1622);color:#fff;padding:32px;border-radius:2px;position:relative;overflow:hidden;margin-bottom:24px}
+.creator-hero::before{content:'◆';position:absolute;right:-30px;top:-50px;font-size:16rem;color:rgba(197,160,89,.08);line-height:1}
+.studio-layout{display:grid;grid-template-columns:280px 1fr 320px;gap:0;background:var(--white);border:1px solid var(--line);border-radius:2px;overflow:hidden;min-height:640px;box-shadow:var(--sh-md)}
+.module-panel{border-right:1px solid var(--line);background:#FAFAF8;padding:16px;overflow-y:auto;max-height:640px}
+.canvas-panel{background:var(--bg);padding:20px;overflow-y:auto;max-height:640px}
+.props-panel{border-left:1px solid var(--line);background:#FAFAF8;padding:16px;overflow-y:auto;max-height:640px}
+.module-item{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--gold);padding:10px 12px;margin-bottom:6px;border-radius:2px;cursor:grab;transition:all .2s;font-size:.78rem}
+.module-item:hover{transform:translateX(3px);border-left-color:var(--ok)}
+.module-item .mod-num{font-family:var(--serif);font-weight:bold;color:var(--accent-hover);margin-right:6px}
+.lesson-row{background:var(--white);border:1px solid var(--line);border-radius:2px;padding:14px;margin-bottom:8px;display:flex;gap:12px;align-items:center;transition:all .2s;cursor:pointer}
+.lesson-row:hover{box-shadow:var(--sh-sm);border-color:var(--gold)}
+.lesson-row .icon{width:36px;height:36px;background:var(--bg);border-radius:2px;display:flex;align-items:center;justify-content:center;color:var(--accent-hover);flex-shrink:0}
+.lesson-row .info{flex:1}
+.lesson-row .info .t{font-weight:700;font-size:.82rem;color:var(--ink);margin-bottom:2px}
+.lesson-row .info .m{font-size:.68rem;color:var(--muted)}
+.lesson-row .actions{display:flex;gap:4px}
+.course-preview{aspect-ratio:16/9;background:linear-gradient(135deg,var(--ink),#244368);border-radius:2px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:var(--serif);font-size:1.6rem;margin-bottom:14px;position:relative;overflow:hidden}
+.course-preview::before{content:'◆';position:absolute;top:-20px;right:-20px;font-size:6rem;color:rgba(197,160,89,.1)}
+</style>
+</head><body>
+
+<header class="topbar"><div class="topbar-inner">
+  <a href="index.html" class="brand"><div class="brand-logo">
+      <img src="./img/yuba_logo_small.png" alt="YUBA Logo">
+    </div></a>
+  <div class="hub-search"><span class="hub-search-icon">⌕</span><input placeholder="Search courses, lessons..."><div class="hub-search-filter"><span>⚙</span><span>Creator</span></div></div>
+  <div class="topbar-actions"><button class="icon-btn">✉<span class="badge-dot">3</span></button><button class="icon-btn">🔔<span class="badge-dot gold">8</span></button><button class="upgrade-cta"><span class="crown">◆</span>Studio</button><button class="profile-trigger"><div class="avatar">MT<span class="avatar-online"></span></div></button></div>
+</div></header>
+
+<div class="page-head"><div class="page-head-inner">
+  <div class="breadcrumb"><a href="index.html">Dashboard</a><span class="breadcrumb-sep">/</span>Course Creator Studio</div>
+  <h1 class="page-title">Course Creator Studio</h1>
+  <p class="page-sub">Build, publish, and monetize professional courses. YUBA handles hosting, payments, certificates, and student support.</p>
+</div></div>
+
+<div class="layout-full">
+
+  <div class="creator-hero">
+    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;position:relative">
+      <div style="flex:1;min-width:280px">
+        <span class="tag tag-gold" style="margin-bottom:12px;display:inline-block">◆ COURSE CREATOR</span>
+        <h2 style="font-family:var(--serif);font-size:1.5rem;margin-bottom:8px">Advanced Arbitration Practice · v1.2 (Draft)</h2>
+        <p style="opacity:.88;font-size:.9rem;max-width:640px">6 modules · 24 lessons · 8.4 hours of content · Est. R184k/year revenue based on your audience size.</p>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-gold">▶ Preview Course</button>
+        <button class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.4)">Save Draft</button>
+        <button class="btn btn-accent">🚀 Publish</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-4" style="margin-bottom:24px">
+    <div class="stat-card"><div class="label">Modules</div><div class="value">6</div><div class="delta">24 lessons total</div></div>
+    <div class="stat-card"><div class="label">Content</div><div class="value">8.4h</div><div class="delta">Video + exercises</div></div>
+    <div class="stat-card"><div class="label">Enrolled (Preview)</div><div class="value">284</div><div class="delta">Beta testers</div></div>
+    <div class="stat-card"><div class="label">Proj. Revenue</div><div class="value" style="color:var(--ok)">R184k</div><div class="delta">Year 1 estimate</div></div>
+  </div>
+
+  <!-- Studio -->
+  <div class="studio-layout">
+
+    <div class="module-panel">
+      <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin-bottom:10px">◆ Course Structure</div>
+      <div class="module-item"><span class="mod-num">01</span>Foundations of Arbitration</div>
+      <div class="module-item"><span class="mod-num">02</span>Legal Framework & Jurisdiction</div>
+      <div class="module-item"><span class="mod-num">03</span>Evidence & Fact-Finding</div>
+      <div class="module-item" style="border-left-color:var(--ok)"><span class="mod-num">04</span>Award Writing & Reasoning</div>
+      <div class="module-item"><span class="mod-num">05</span>Enforcement & Appeals</div>
+      <div class="module-item"><span class="mod-num">06</span>Practical Simulations</div>
+      <button class="btn btn-outline btn-block btn-sm" style="margin-top:10px">+ Add Module</button>
+
+      <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin:20px 0 10px">◆ Course Resources</div>
+      <div class="module-item">📄 Reading Materials</div>
+      <div class="module-item">🎥 Video Library</div>
+      <div class="module-item">📝 Quizzes</div>
+      <div class="module-item">🎯 Case Studies</div>
+      <div class="module-item">🏆 Certificate Template</div>
+    </div>
+
+    <div class="canvas-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px">
+        <div>
+          <div style="font-family:var(--serif);font-size:1.1rem;font-weight:bold;color:var(--ink)">Module 04 · Award Writing & Reasoning</div>
+          <div style="font-size:.72rem;color:var(--muted)">4 lessons · 1h 42min · 78% of enrolled students completed</div>
+        </div>
+        <span class="tag tag-ok">✓ Live</span>
+      </div>
+
+      <div class="lesson-row">
+        <div class="icon">🎥</div>
+        <div class="info">
+          <div class="t">4.1 · Structure of an Arbitration Award</div>
+          <div class="m">Video lesson · 22 min · Published</div>
+        </div>
+        <div class="actions"><button class="btn btn-ghost btn-sm">✎</button><button class="btn btn-ghost btn-sm">👁</button></div>
+      </div>
+
+      <div class="lesson-row">
+        <div class="icon">🎥</div>
+        <div class="info">
+          <div class="t">4.2 · Writing Clear Reasoning</div>
+          <div class="m">Video lesson · 28 min · Published</div>
+        </div>
+        <div class="actions"><button class="btn btn-ghost btn-sm">✎</button><button class="btn btn-ghost btn-sm">👁</button></div>
+      </div>
+
+      <div class="lesson-row">
+        <div class="icon">📝</div>
+        <div class="info">
+          <div class="t">4.3 · Quiz: Award Requirements</div>
+          <div class="m">Interactive quiz · 12 questions · Published</div>
+        </div>
+        <div class="actions"><button class="btn btn-ghost btn-sm">✎</button><button class="btn btn-ghost btn-sm">📊</button></div>
+      </div>
+
+      <div class="lesson-row">
+        <div class="icon">🎯</div>
+        <div class="info">
+          <div class="t">4.4 · Case Study: Writing a Landmark Award</div>
+          <div class="m">Interactive case · 24 min · Draft</div>
+        </div>
+        <span class="tag tag-warn">Draft</span>
+        <div class="actions"><button class="btn btn-ghost btn-sm">✎</button></div>
+      </div>
+
+      <button class="btn btn-outline btn-block btn-sm" style="margin-top:10px;border-style:dashed">+ Add Lesson</button>
+
+      <div class="card card-accent-gold" style="margin-top:20px">
+        <div class="card-header"><span class="card-title">◆ Lesson Type · Quick Add</span></div>
+        <div class="card-body">
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px">
+            <div style="text-align:center;padding:14px;background:var(--bg);border-radius:2px;cursor:pointer;font-size:.78rem;font-weight:600"><div style="font-size:1.4rem;margin-bottom:4px">🎥</div>Video</div>
+            <div style="text-align:center;padding:14px;background:var(--bg);border-radius:2px;cursor:pointer;font-size:.78rem;font-weight:600"><div style="font-size:1.4rem;margin-bottom:4px">📝</div>Text</div>
+            <div style="text-align:center;padding:14px;background:var(--bg);border-radius:2px;cursor:pointer;font-size:.78rem;font-weight:600"><div style="font-size:1.4rem;margin-bottom:4px">📊</div>Quiz</div>
+            <div style="text-align:center;padding:14px;background:var(--bg);border-radius:2px;cursor:pointer;font-size:.78rem;font-weight:600"><div style="font-size:1.4rem;margin-bottom:4px">🎯</div>Case Study</div>
+            <div style="text-align:center;padding:14px;background:var(--bg);border-radius:2px;cursor:pointer;font-size:.78rem;font-weight:600"><div style="font-size:1.4rem;margin-bottom:4px">💬</div>Discussion</div>
+            <div style="text-align:center;padding:14px;background:var(--bg);border-radius:2px;cursor:pointer;font-size:.78rem;font-weight:600"><div style="font-size:1.4rem;margin-bottom:4px">🎙</div>Audio</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="props-panel">
+      <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin-bottom:10px">◆ Course Cover Preview</div>
+      <div class="course-preview">ARBITRATION</div>
+
+      <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin:16px 0 8px">◆ Course Details</div>
+
+      <div style="margin-bottom:14px"><label style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);display:block;margin-bottom:6px">Title</label><input value="Advanced Arbitration Practice" style="width:100%;padding:8px 10px;border:1px solid var(--line-strong);border-radius:2px;font-size:.78rem"></div>
+
+      <div style="margin-bottom:14px"><label style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);display:block;margin-bottom:6px">Category</label><select style="width:100%;padding:8px 10px;border:1px solid var(--line-strong);border-radius:2px;font-size:.78rem"><option>Legal</option><option>Mediation</option><option>HR</option><option>Leadership</option></select></div>
+
+      <div style="margin-bottom:14px"><label style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);display:block;margin-bottom:6px">Level</label><select style="width:100%;padding:8px 10px;border:1px solid var(--line-strong);border-radius:2px;font-size:.78rem"><option>Advanced</option><option>Intermediate</option><option>Beginner</option></select></div>
+
+      <div style="margin-bottom:14px"><label style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);display:block;margin-bottom:6px">Price (ZAR)</label><input value="4800" style="width:100%;padding:8px 10px;border:1px solid var(--line-strong);border-radius:2px;font-size:.78rem;font-family:monospace"></div>
+
+      <div style="margin-bottom:14px"><label style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);display:block;margin-bottom:6px">Certificate</label>
+        <label style="display:flex;align-items:center;gap:8px;font-size:.78rem"><input type="checkbox" checked> Issue on completion</label>
+      </div>
+
+      <div style="margin-bottom:14px"><label style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);display:block;margin-bottom:6px">Blockchain Certificate</label>
+        <label style="display:flex;align-items:center;gap:8px;font-size:.78rem"><input type="checkbox" checked> Anchor on-chain</label>
+      </div>
+
+      <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin:16px 0 8px">◆ Pricing Model</div>
+
+      <div style="font-size:.78rem;color:var(--ink2);line-height:2">
+        <label style="display:flex;align-items:center;gap:8px"><input type="radio" name="price" checked> One-time purchase</label>
+        <label style="display:flex;align-items:center;gap:8px"><input type="radio" name="price"> Subscription access</label>
+        <label style="display:flex;align-items:center;gap:8px"><input type="radio" name="price"> Payment plan (3 mo)</label>
+      </div>
+
+      <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--line)">
+        <button class="btn btn-gold btn-block btn-sm" style="margin-bottom:8px">💾 Save Course</button>
+        <button class="btn btn-outline btn-block btn-sm">📊 View Analytics</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Student Analytics -->
+  <div class="card card-accent-gold" style="margin-top:24px">
+    <div class="card-header"><span class="card-title">◆ Course Analytics · Beta Cohort</span></div>
+    <div class="card-body">
+      <div class="grid-4" style="gap:16px">
+        <div style="padding:16px;background:var(--bg);border-radius:2px">
+          <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:6px">Enrolled</div>
+          <div style="font-family:var(--serif);font-size:1.6rem;font-weight:bold;color:var(--ink)">284</div>
+          <div style="font-size:.72rem;color:var(--ok);margin-top:4px;font-weight:700">78% completion</div>
+        </div>
+        <div style="padding:16px;background:var(--bg);border-radius:2px">
+          <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:6px">Avg Rating</div>
+          <div style="font-family:var(--serif);font-size:1.6rem;font-weight:bold;color:var(--ok)">4.8</div>
+          <div style="font-size:.72rem;color:var(--ink2);margin-top:4px">From 142 reviews</div>
+        </div>
+        <div style="padding:16px;background:var(--bg);border-radius:2px">
+          <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:6px">Completion Time</div>
+          <div style="font-family:var(--serif);font-size:1.6rem;font-weight:bold;color:var(--ink)">14 days</div>
+          <div style="font-size:.72rem;color:var(--ink2);margin-top:4px">Average</div>
+        </div>
+        <div style="padding:16px;background:var(--bg);border-radius:2px">
+          <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:6px">NPS Score</div>
+          <div style="font-family:var(--serif);font-size:1.6rem;font-weight:bold;color:var(--ok)">78</div>
+          <div style="font-size:.72rem;color:var(--ink2);margin-top:4px">World-class</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div><div class="footer-brand">MOKOENA JUSTICE HUB</div><p class="footer-desc">Course Studio · Teach what you know.</p><div class="footer-status"><span class="status-dot"></span>All Systems Operational</div></div>
+  <div class="footer-col"><h4>Studio</h4><ul><li>Modules</li><li>Lessons</li><li>Resources</li><li>Preview</li></ul></div>
+  <div class="footer-col"><h4>Business</h4><ul><li>Pricing</li><li>Analytics</li><li>Students</li><li>Revenue</li></ul></div>
+  <div class="footer-col"><h4>Support</h4><ul><li>Creator Guide</li><li>Templates</li><li>Help</li><li>Contact</li></ul></div>
+</div><div class="footer-bottom"><span>© 2024 YUBA · Course Studio v3.2.1</span><span>Draft v1.2 · 6 modules</span></div></footer>
+</body></html>
