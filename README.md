@@ -3,3 +3,7 @@
 # YUBA Platform - Professional and Social Network platform 
 # Your Ultimate Business Ally (YUBA)
 Author Awase Khirni Syed
+
+
+timshel—“Thou mayest”
+out of knowledge comes choice.
